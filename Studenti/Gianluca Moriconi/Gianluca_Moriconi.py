@@ -71,7 +71,10 @@ def moltiplicazione(n1,n2):
 
 def divisione(n1,n2):
     z = n1 / n2
-    risultato = print (f"Il risultato è: {z}")
+    if n2 == 0:                                            #controllo divisibilità per 0
+        risultato = print ("Il numero non può essere divisibile per 0")
+    else:
+        risultato = print (f"Il risultato è: {z}")
     return risultato
 #----------------------------------------------------------------------fine funzione divisione--------------------------------------------------------
 
