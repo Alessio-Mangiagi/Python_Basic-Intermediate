@@ -29,3 +29,6 @@ def is_input_int(s):
                 print(f"Invalid input, is not an integer: {s}")
                 return False
         return True
+
+def is_null_or_empty(value):
+    return value is None or value == ""

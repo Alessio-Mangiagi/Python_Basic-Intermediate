@@ -11,6 +11,11 @@ def personalized_hello():
                 MZ_utils.print_error("Invalid operation")
                 continue
         name = input("Enter your name: ")
+
+        if MZ_utils.is_null_or_empty(name):
+              MZ_utils.print_error("Invalid name");
+              continue
+
         age = input("Enter your age: ")
 
         if MZ_utils.is_input_int(age) == False:
