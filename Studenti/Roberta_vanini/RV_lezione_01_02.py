@@ -127,11 +127,3 @@ def calcolatrice():
 
 # Proviamo!
 calcolatrice()
-
-########## LEZIONE NUMERO 3
-
-
-
-########## LEZIONE NUMERO 4
-########## LEZIONE NUMERO 5
-########## LEZIONE NUMERO 6
