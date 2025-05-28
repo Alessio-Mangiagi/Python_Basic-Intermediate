@@ -1,43 +1,29 @@
-# calcolatrice con funzioni
+# creazione di liste
 
-print("benvenuto nella calcolatrice")
-numero_uno = int(input("Inserisci il primo numero: "))
-numero_due = int(input("Inserisci il secondo numero: "))
-print("Scegli l'operazione da eseguire:\n1. Somma\n2. Sottrazione\n3. Moltiplicazione\n4. Divisione")
-numero_operazione = input("Inserisci il numero dell'operazione: ")
-print(f"Hai scelto l'operazione numero: {numero_operazione}")
+alunni = ["Tony", "Nicola", "Francesca", "Giada", "Giuseppe", "Massimilano", "Costanza", "Gianluca", "Stefano", "Annalisa", "Roberta"]
 
-def calcolatrice(numero_uno, numero_due,numero_operazione):
-    if numero_operazione == "1":
-        risultato = int(numero_uno) + int(numero_due)
-        print(f"La somma di {numero_uno} e {numero_due} è: {risultato}")
-    elif numero_operazione == "2":
-        risultato = int(numero_uno) - int(numero_due)
-        print(f"La sottrazione di {numero_uno} e {numero_due} è: {risultato}")
-    elif numero_operazione == "3":
-        risultato = int(numero_uno) * int(numero_due)
-        print(f"La moltiplicazione di {numero_uno} e {numero_due} è: {risultato}")
-    elif numero_operazione == "4":
-        if int(numero_due) != 0:
-            risultato = int(numero_uno) / int(numero_due)
-            print(f"La divisione di {numero_uno} e {numero_due} è: {risultato}")
-        else:
-            print("Errore: Divisione per zero non consentita.")
-    else:
-        print("Operazione non valida.")
+print("Lista degli alunni:")
+for alunno in alunni:
+    print(alunno)
 
 
-calcolatrice(numero_uno, numero_due, numero_operazione)
+for i in range(len(alunni)):
+    print(f"Alunno {i+1}: {alunni[i]}")
+    print(range(0, 2, 2))
 
-# controllo numeri pari e dispari
 
-numero = input("Inserisci un numero per verificare se è pari o dispari: ")
 
-def pari_dispari(numero):
-    if int(numero) % 2 == 0:
-        print(f"{numero} è un numero pari.")
-    else:
-        print(f"{numero} è un numero dispari.") 
+x=2545245245245245245225
+y=str(x)
+print(len(y))
 
-pari_dispari(numero)
+
+
+r="fdgagasfgasfbfbwrbrbrbrbrebwrgawrgagarggasfgafavbafcv"
+for i in range(3,len(r)):
+    
+    print(i)
+
+
+
 
