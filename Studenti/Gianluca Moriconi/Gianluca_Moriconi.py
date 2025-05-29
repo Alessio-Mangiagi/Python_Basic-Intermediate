@@ -23,21 +23,35 @@ else:                                   #altrimenti in tutti gli altri casi facc
 
 def calcolatrice ():                                    #definisco la funzione calcolatrice
     print("Benvenuto nella calcolatrice!")              #stampo benvenuto
-    n1 = float(input("inserisci il primo numero: "))    #prendo ad input un valore convertito in float e lo inserisco in n1
-    n2 = float(input("inserisci il secondo numero: "))  #prendo ad input un valore convertito in float e lo inserisco in n2
+    j = True
+    while j:
+        n1 = float(input("inserisci il primo numero: "))    #prendo ad input un valore convertito in float e lo inserisco in n1
+        n2 = float(input("inserisci il secondo numero: "))  #prendo ad input un valore convertito in float e lo inserisco in n2
 
-    operazione = input("inserisci operazione:\n 1. Somma \n 2. Sottrazione \n 3. Moltiplicazione \n 4. Divisione \n") #inserisco una scelta in operazione
-    if operazione == "1":                               #se operazione == 1
-        somma(n1,n2)                                    # faccio somma
-    elif operazione == "2":                             #se operazione == 2
-        sottrazione(n1,n2)                              # faccio somma
-    elif operazione == "3":                             #se operazione == 3
-        moltiplicazione(n1,n2)                          # faccio somma
-    elif operazione == "4":                             #se operazione == 4
-        divisione(n1,n2)                                # faccio somma
-    else:
-        print("azz, c'è un errore")                     #se diverso, do messaggio
-
+        operazione = input("inserisci operazione:\n 1. Somma \n 2. Sottrazione \n 3. Moltiplicazione \n 4. Divisione \n") #inserisco una scelta in operazione
+        if operazione == "1":                               #se operazione == 1
+            somma(n1,n2)                                    # faccio somma
+        elif operazione == "2":                             #se operazione == 2
+            sottrazione(n1,n2)                              # faccio somma
+        elif operazione == "3":                             #se operazione == 3
+            moltiplicazione(n1,n2)                          # faccio somma
+        elif operazione == "4":                             #se operazione == 4
+            divisione(n1,n2)                                # faccio somma
+        else:
+            print("azz, c'è un errore")                     #se diverso, do messaggio
+        k = True
+        while k:
+            continua = input("vuoi fare altro? y/n ")
+            if continua.lower() == 'y':      
+                k = False
+                print("\n\n\n") 
+            elif continua.lower() == 'n':
+                j = False
+                k = False
+                print("arrivederci") 
+            else:    
+               
+                print("non ho capito") 
 #--------------------------------------------------------------fine funzione calcolatrice--------------------------------------------------------
 
 #----------------------------------------------------------------------inizio funzione somma--------------------------------------------------------
