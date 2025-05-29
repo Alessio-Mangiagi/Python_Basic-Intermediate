@@ -50,8 +50,8 @@ def calcolatrice ():                                    #definisco la funzione c
                 k = False
                 print("arrivederci") 
             else:    
-                j = False
-                print("arrivederci") 
+               
+                print("non ho capito") 
 #--------------------------------------------------------------fine funzione calcolatrice--------------------------------------------------------
 
 #----------------------------------------------------------------------inizio funzione somma--------------------------------------------------------
