@@ -15,12 +15,10 @@ def print_first_N_numbers():
                continue
         n_i = MZ_utils.to_int(n)
 
-        MZ_utils.print_result("Theese are the numbers to print (one for each line): ")
-        for i in range(n_i):
-                MZ_utils.print_result(i)
-
         out = ""
-        for i in range(n_i):
+        MZ_utils.print_result("Theese are the numbers to print (one for each line): ")
+        for i in range(1, n_i + 1):
+                MZ_utils.print_result(i)
                 out += str(i)
                 if (i < n_i - 1):
                        out += ", "
