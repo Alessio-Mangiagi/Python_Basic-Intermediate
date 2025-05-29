@@ -58,7 +58,7 @@ for indice, lettera in enumerate(parola):
 
 x = 0
 while x in range(10):
-    x = x+1
+    x += 1
     print(x)
 
 #########################################################
@@ -87,12 +87,29 @@ max_tre(3,5,10)
 
 def conta_fino(n):
     """Inserisci il numero intero fino a cui vuoi contare"""
-    return range(n)
+    for i in range(n):
+        print(i)
 
 conta_fino(30)
 
 
 # 4 Somma dei numeri da 1 a N con for
+
+def somma_fino(n):
+    """Inserisci il numero intero di cui vuoi conoscere il fattoriale.
+    Fattoriale = n! = (1+2+...+n)"""
+    x = 1
+    while x <= n:
+        x += 1
+        return x
+
+somma_fino(4)
+
+# funzione per scegliere un nome casuale di una lista
+
+
+
+
 
 # 5. Uso del ciclo while per contare al contrario
 
