@@ -1,6 +1,4 @@
 import MZ_utils
-import statistics
-import sys
 
 def conditional_counter():
      print("---------------------------\nWelcome to the conditional counter script!")

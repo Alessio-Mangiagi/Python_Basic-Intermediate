@@ -1,6 +1,4 @@
 import MZ_utils
-import statistics
-import sys
 
 def check_prime_number():
      print("---------------------------\nWelcome to the check prime number script!")
