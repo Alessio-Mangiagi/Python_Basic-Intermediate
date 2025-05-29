@@ -13,6 +13,7 @@ def list_item_search():
 
         do_exit = False
         ROUND_CIPHER = 2
+        sum = 0
 
         while do_exit == False:
                 e = input("Element to insert: ")
@@ -35,12 +36,15 @@ def list_item_search():
                               v_max = list[i]
                         if list[i] < v_min:
                               v_min = list[i]
+                        sum += list[i]
 
+                v_mean = round(sum / len(list), ROUND_CIPHER)
                 v_max = round(v_max, ROUND_CIPHER)
                 v_min = round(v_min, ROUND_CIPHER)
                 median = round(get_median(list), ROUND_CIPHER)
                 std_deviation = round(get_std_deviation(list), ROUND_CIPHER)
 
+                f_mean = round(statistics.mean(list), ROUND_CIPHER)
                 f_max = round(max(list), ROUND_CIPHER)
                 f_min = round(min(list), ROUND_CIPHER)
                 statistics_median = round( statistics.median(list), ROUND_CIPHER)
@@ -51,6 +55,8 @@ def list_item_search():
                 MZ_utils.print_result(f"Max calculated with max function       : {f_max}")
                 MZ_utils.print_result(f"Min calculated with for cyrcle         : {v_min}")
                 MZ_utils.print_result(f"Min calculated with max function       : {f_min}")
+                MZ_utils.print_result(f"Mean calculated with for cyrcle        : {v_mean}")
+                MZ_utils.print_result(f"Mean calculated with max function      : {f_mean}")
                 MZ_utils.print_result(f"Median calculated with formula         : {median}")
                 MZ_utils.print_result(f"Median calculated with statistic module: {statistics_median}")
                 MZ_utils.print_result(f"StdDev calculated with formula         : {std_deviation}")
