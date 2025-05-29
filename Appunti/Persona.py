@@ -8,3 +8,10 @@ class Persona:
 
 persona = Persona("Alice", 30)
 print(persona)  # Output: Alice, 30 anni
+
+
+if __name__ == "__main__":
+    # Esempio di utilizzo
+    p = Persona("Bob", 25)
+    print(p)  # Output: Bob, 25 anni 
+

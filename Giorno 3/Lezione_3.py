@@ -38,7 +38,7 @@ def calcolatrice():
             continua = input("Vuoi eseguire un'altra operazione? (s/n): ")
             if continua.lower() == 's':
                 print("\n\n\n")
-                y= False
+                y = False
             elif continua.lower() == 'n':
                 x = False
                 y = False
