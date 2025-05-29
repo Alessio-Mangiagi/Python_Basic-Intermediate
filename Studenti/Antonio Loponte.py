@@ -26,4 +26,11 @@ for i in range(3,len(r)):
 
 
 
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+
+
+
 

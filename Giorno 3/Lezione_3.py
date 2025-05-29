@@ -45,7 +45,7 @@ def calcolatrice():
                 print("Grazie per aver usato la calcolatrice!")
             else:
                 x: False
-                print("Scusa non ho capito")
+                print("Scusa non ho capito la tua scelta, riprova.")
             
         
 
