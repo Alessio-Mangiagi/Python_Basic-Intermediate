@@ -5,7 +5,6 @@ import sys
 def conditional_counter():
      print("---------------------------\nWelcome to the conditional counter script!")
 
-     list = []
      exit_script = False
 
      while exit_script == False:
