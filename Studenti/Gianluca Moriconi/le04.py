@@ -1,7 +1,9 @@
-def nome_maiuscolo(nome, eta):
-    return nome.upper(), eta                                  #.upper per convertire il nome in maiuscolo
-
-x = True                                                      #inizializzo la variabile x a True per entrare nel ciclo while
+def nome_maiuscolo(nome, eta): #DIFINIZIONE DELLA FUNZIONE
+    """Conversione del testo in maiuscolo """ #DOCSTRING - spiegazione della funzione
+    return nome.upper(), eta   #VALORE DI RITORNO             #QUANDO LO SCOPE AL'INTERNO DELLA FUNZIONE È LOCALE, LE VARIABILI NON SONO VISIBILI FUORI DALLA FUNZIONE
+                                                              #LE VARIABILI USATE NELLE FUNZIONI SONO LOCALI, QUINDI "MUOIONO" DENTRO LA FUNZIONE STESSA
+                                                              #IN QUESTO CASO, RICEVE VALORI DALL'ESTERNO, PERCIO' ABBIAMO UNO SCOPE GLOBALE
+x = True                                                      #X VARIABILE GLOBALE PRESENTE NEL CORPO DEL PROGRAMMA E NON NELLA FUNZIONE
 while x:                                                      #il ciclo while continua finché x è True       
     nome = input("Nome:")
     eta = input("Età:")
