@@ -35,8 +35,8 @@ lista_studenti = ["Alice", "Zaza", "Bob", "Charlie", "Dave"]
 # print(lista_studenti_ordinata)
 # print(lista_studenti.sort())
 
-# lista_numeri_inversi = lista_numeri.copy()
-# lista_numeri_inversi.reverse()
+lista_numeri_inversi = lista_numeri.copy()
+lista_numeri_inversi.reverse()
 # liste = [lista_numeri_inversi, lista_numeri]
 # print(liste)
 # print(sorted(liste))
@@ -49,11 +49,24 @@ lista_studenti = ["Alice", "Zaza", "Bob", "Charlie", "Dave"]
 # print(lista_numeri.index(2))
 
 #! LIST COMPREHENSION
-lista_potenza = [n**2 for n in lista_numeri]
-print(lista_potenza)
+lista_potenza = [n**2 for n in lista_numeri] # list comprehension sintassi base
+#print(lista_potenza)
 
-lista_potenza = [n**2 for n in lista_numeri if n % 2 == 0]
-print(lista_potenza)
+lista_potenza_invertita = [i**2 for i in lista_numeri_inversi]
+print(lista_potenza_invertita)
+
+#lista_potenza = [n**2 for n in lista_numeri if n % 2 == 0] # filtri condizionali 
+#print(lista_potenza)
+
+listona_potenze = [lista_potenza for studente in lista_studenti] 
+print(listona_potenze) 
+
+#listona_potenze = [[n**2 for n in lista_numeri] for studente in lista_studenti]  
+#print(listona_potenze) 
+
+listona_potenze_rev = [[i+n for i in lista_numeri_inversi] for n in lista_potenza] # list comprehension complessa 
+#print(listona_potenze_rev)
 
 # lista_potenza = [n**2 if n % 2 == 0 else print("numero dispari") for n in lista_numeri]
 # print(lista_potenza)
+
