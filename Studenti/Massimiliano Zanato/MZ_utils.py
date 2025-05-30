@@ -19,14 +19,14 @@ def print_result(r):
 def is_input_float(s):
         r = to_float(s)
         if r == None:
-                print(f"Invalid input, is not a real number: {s}")
+                print_error(f"Invalid input, is not a real number: {s}")
                 return False
         return True
 
 def is_input_int(s):
         r = to_int(s)
         if r == None:
-                print(f"Invalid input, is not an integer: {s}")
+                print_error(f"Invalid input, is not an integer: {s}")
                 return False
         return True
 
