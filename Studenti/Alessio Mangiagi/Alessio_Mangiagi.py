@@ -55,3 +55,4 @@ salutami(name)'''
     return risultato
 print(mate())
 #si può usare per definire più funzioni e avere il risultato'''
+"tecnologia"
