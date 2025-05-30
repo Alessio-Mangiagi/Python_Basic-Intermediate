@@ -79,3 +79,57 @@ def che_ora_è():
     import datetime
     ora = datetime.datetime.now().strftime("%H:%M:%S")
     return f"L'ora attuale è {ora}"
+
+def calcolatrice(): 
+    print("Benvenuto")
+    
+   
+    x = True
+
+    numero_1 = input("dimmi il primo numero: ")  
+    numero_2 = input("dimmi il secondo numero: ") 
+
+    while x:
+        decisione = input("Scegli un'operazione:\n(1) Somma\n)2) Sottrazione\n(3) Moltiplicazione\n(4) Divisione\n")
+
+        if decisione == "1":
+            print("eseguo la somma")
+            
+            somma = float(numero_1) + float(numero_2 )
+            print(f"la somma è {somma}\n")   
+        elif decisione == "2":
+            print("eseguo la sottrazione")
+            
+            sottrazione = float(numero_1) - float(numero_2)
+            print(f"la sottrazione è {sottrazione}\n")
+        elif decisione == "3":
+            print("eseguo la moltiplicazione")
+           
+            moltiplicazione = float(numero_1) * float(numero_2)
+            print(f"la moltiplicazione è {moltiplicazione}\n")
+        elif decisione == "4":
+            print("eseguo la divisione")
+            
+            if numero_2 != "0":
+                divisione = float(numero_1) / float(numero_2)
+                print(f"la divisione è {divisione}\n")
+            else:
+                print("non si può inserire zero")
+        else: 
+            print("il valore inserito non è riconosciuto")
+        y = continua
+        while y:
+            continua= input("Vuoi continuare? (si/no): ").lower()
+            if continua.lower() == "si":
+                print("\n\n\n\n\n\n\n\n\n")
+                x = False  
+                print("\n\n\n\n\n\n\n\n\n")
+            elif continua.lower()== "no":
+                x = False
+                y = False
+                print("\n\n\n\n\n\n\n\n\n")
+                print("Grazie per aver usato la calcolatrice!") 
+            else:
+                x = False
+                print("scusa non ho capito")
+                

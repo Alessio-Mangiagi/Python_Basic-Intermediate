@@ -53,20 +53,20 @@ lista_potenza = [n**2 for n in lista_numeri] # list comprehension sintassi base
 #print(lista_potenza)
 
 lista_potenza_invertita = [i**2 for i in lista_numeri_inversi]
-print(lista_potenza_invertita)
+#print(lista_potenza_invertita)
 
-#lista_potenza = [n**2 for n in lista_numeri if n % 2 == 0] # filtri condizionali 
+lista_potenza = [n**2 for n in lista_numeri if n % 2 == 0] # filtri condizionali 
 #print(lista_potenza)
 
 listona_potenze = [lista_potenza for studente in lista_studenti] 
-print(listona_potenze) 
-
-#listona_potenze = [[n**2 for n in lista_numeri] for studente in lista_studenti]  
 #print(listona_potenze) 
 
-listona_potenze_rev = [[i+n for i in lista_numeri_inversi] for n in lista_potenza] # list comprehension complessa 
-#print(listona_potenze_rev)
-
+listona_potenze = [[n**2 for n in lista_numeri] for studente in lista_studenti]  
+#print(listona_potenze)
+ 
 # lista_potenza = [n**2 if n % 2 == 0 else print("numero dispari") for n in lista_numeri]
 # print(lista_potenza)
+
+listona_potenze_rev = [[i+n for i in lista_numeri_inversi] for n in lista_potenza] # list comprehension complessa 
+print(listona_potenze_rev)
 
