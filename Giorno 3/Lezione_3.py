@@ -2,13 +2,13 @@ def calcolatrice():
     print("Benvenuto")
     x = True
     while x:
-        decisione = input("Scegli un'operazione:\n(1) Somma\n)2) Sottrazione\n(3) Moltiplicazione\n(4) Divisione\n")
+        decisione = input("Scegli un'operazione:\n(1) Somma\n(2) Sottrazione\n(3) Moltiplicazione\n(4) Divisione\n")
 
         if decisione == "1":
             print("eseguo la somma")
             numero_1 = input("dimmi il primo numero: ")  
             numero_2 = input("dimmi il secondo numero: ") 
-            somma = float(numero_1) + float(numero_2 )
+            somma = float(numero_1) + float(numero_2)
             print(f"la somma è {somma}\n")   
         elif decisione == "2":
             print("eseguo la sottrazione")
