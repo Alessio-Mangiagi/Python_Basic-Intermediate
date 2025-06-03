@@ -88,15 +88,51 @@ with open("prova.txt",  "r", encoding="utf-8") as f:
 
 # per i CSV bisogna importare la libreria csv
 # writer fa parte della libreria csv
+# creiamo un file csv
 
 import csv
 
 lista_righe= [["nome1", "cognome1", 1], ["nome2", "cognome2", 2], ["nome3", "cognome3", 3]]
 
-with open("studenti.csv", "w", encoding= "utf-8", newline="") as f:
+with open(
+    "Python_Basic-Intermediate/Studenti/Roberta_vanini/studenti.csv", "w", encoding= "utf-8", newline=""
+    ) as f:
     writer = csv.writer(f)
-    writer.writerow("Nome", "Cognome", "Età") #scriviamo l'header
-    writer.writerow("Roberta", "Vanini", "32") #scriviamo singola riga
+    writer.writerow(["Nome", "Cognome", "Età"]) #scriviamo l'header
+    writer.writerow(["Roberta", "Vanini", "32"]) #scriviamo singola riga
     writer.writerows(lista_righe) #per aggiungere più righe in una volta
+    f.close()
 
+# vediamo il file
 
+with open("Python_Basic-Intermediate/Studenti/Roberta_vanini/studenti.csv", "r", encoding= "utf-8", newline="") as f:
+    reader = csv.DictReader(f)
+    for riga in reader:
+        print(riga["Nome"])
+    f.close()
+
+# GESTIONE DEGLI ERRORI: Introduzione eccezioni Try/Except
+# try contiene codice potenzialmente problematico
+# except definisce azioni da eseguire quando si verifica un'eccezione
+
+try:
+    risultato = 10/0
+except ZeroDivisionError:
+    print("Impossibile dividere per zero")
+    risultato = 0
+
+# si possono creare più eccezioni, scrivendo except con il tipo di errore specifico
+# nel caso di errore imprevisto
+
+try:
+    file = open("dati.txt", "r")
+    numero = int(file.readline())
+    risultato = 100/numero
+except Exception as e:
+    print(f"Errore imprevisto {e}")
+
+# Cosa fare?
+# Specificità: Andare a prendere in considerazione eccezioni specifiche
+# Logging: Registra errori significativi con dettagli per debugging futuro
+# Recovery: Implementa strategie per recupero quando possibile, fornendo valori o operazioni alternative
+# User experience: Messaggi comprensibili agli utenti anche non tecnici
