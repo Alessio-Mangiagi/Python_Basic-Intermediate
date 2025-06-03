@@ -5,3 +5,11 @@ for n in range(5):
     lista.append(nomi)
 
 print(lista)
+
+print("-------------")
+
+nomi_miei = lista.copy()
+
+nomi_miei.append("luca")
+nomi_miei.insert(2, "Marco")
+print(nomi_miei)
