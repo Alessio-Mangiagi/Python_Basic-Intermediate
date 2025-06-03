@@ -122,6 +122,8 @@ except ZeroDivisionError:
     risultato = 0
 
 # si possono creare più eccezioni, scrivendo except con il tipo di errore specifico
+# la cosa migliore è metterli in ordine di frequenza, in modo che l'errore più frequente venga valutato per primo
+# oppure eseguire il primo except in base alla sequenza logica (es: apro file -> errore FileNotFoundError, carico numeri -> ValueError)
 # nel caso di errore imprevisto
 
 try:
@@ -130,6 +132,15 @@ try:
     risultato = 100/numero
 except Exception as e:
     print(f"Errore imprevisto {e}")
+
+# else: viene eseguito nel caso nessuno degli except viene eseguito (non c'è errore)
+# finally: viene eseguito sempre anche se vengono eseguiti gli except ed è presente errore
+
+# Traceback: quando c'è un errore nel codice in VSC te lo segnala e spiega il perché
+# non è sempre accurato
+
+# KeyError: quando si accede a chiave inesistente di un dizionario.
+# Prevenibile con get() o controlli di esistenza con "in"
 
 # Cosa fare?
 # Specificità: Andare a prendere in considerazione eccezioni specifiche
