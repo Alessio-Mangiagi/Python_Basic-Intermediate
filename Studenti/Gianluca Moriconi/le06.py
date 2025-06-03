@@ -51,7 +51,7 @@ with open("file.txt", "r", encoding="utf-8") as file:               #apre il fil
     file.close()  
 """
 #-----------------------------------------------------
-import csv  # Importa il modulo csv per lavorare con i file CSV
+import csv                                                          # Importa il modulo csv per lavorare con i file CSV
 
 listastud_01 = [["Gianluca", "Neri", 33], 
                 ["Luca", "Rossi", 30],
@@ -59,9 +59,15 @@ listastud_01 = [["Gianluca", "Neri", 33],
 
 
 with open("studenti.csv", "w", encoding="utf-8", newline="") as file: 
-    writer = csv.writer(file)  # Crea un oggetto writer per scrivere nel file CSV       
-    writer.writerow("Nome,Cognome,Età\n")  # Scrive l'intestazione del CSV
-    writer.writerow("Gianluca,Moriconi,25\n")
-    writer.writerow("Luca,Rossi,30\n")
-    writer.writerow("Anna,Bianchi,22\n")
-    writer.writerows(listastud_01)  # Scrive le righe della lista nel CSV
+    writer = csv.writer(file)                                       # Crea un oggetto writer per scrivere nel file CSV       
+    writer.writerow(["Nome", "Cognome", "Età"])                     # Passa una lista, non una stringa
+    writer.writerow(["Gianluca", "Moriconi", 25])
+    writer.writerow(["Luca", "Rossi", 30])
+    writer.writerow(["Anna", "Bianchi", 22])
+    writer.writerows(listastud_01)                                  # Scrive le righe della lista nel CSV
+
+with open("studenti.csv", "r", encoding="utf-8") as file:
+    reader = csv.reader(file)                                       # Crea un oggetto reader per leggere dal file CSV
+    for row in reader:                                              # Itera su ogni riga del file CSV
+        print(row)                                                  # Stampa la riga corrente
+
