@@ -1,4 +1,4 @@
-## PROGRAMMAZIONE ORIENTATA AGLI OGGETTI
+## PROGRAMMAZIONE ORIENTATA AGLI OGGETTI (OOP)
 
 # Classe -> class seguita da nome in CamelCase per convenzione
 # Attributi: dati e proprietà della classe
@@ -64,3 +64,4 @@ class Moto(Veicolo):
 Moto1 = Moto("BMW", "R 1300 GS")
 
 # metodo STR: def __str__(self): definisce come la classe deve comportarsi quando chiamato come stringa
+
