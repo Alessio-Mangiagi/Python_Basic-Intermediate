@@ -55,3 +55,5 @@ print(sorted(lista)) '''
 print(lista_numeri.count(3))
 
 print(lista_numeri.index(2))
+
+
