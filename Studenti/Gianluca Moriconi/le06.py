@@ -51,8 +51,10 @@ with open("file.txt", "r", encoding="utf-8") as file:               #apre il fil
     file.close()  
 """
 #-----------------------------------------------------
+
 import csv                                                          # Importa il modulo csv per lavorare con i file CSV
 
+"""
 listastud_01 = [["Gianluca", "Neri", 33], 
                 ["Luca", "Rossi", 30],
                 ["Anna", "Bianchi", 22]] 
@@ -70,4 +72,20 @@ with open("studenti.csv", "r", encoding="utf-8") as file:
     reader = csv.reader(file)                                       # Crea un oggetto reader per leggere dal file CSV
     for row in reader:                                              # Itera su ogni riga del file CSV
         print(row)                                                  # Stampa la riga corrente
+"""
+#------------------------------------------------------
+"""
+with open("studenti.csv", "w", encoding="utf-8", newline="") as file: 
+    writer = csv.writer(file)                                       # Crea un oggetto writer per scrivere nel file CSV       
+    writer.writerow(["Nome", "Cognome", "Età"])                         
+    writer.writerow(["Gianluca", "Moriconi", 25])   
+    writer.writerow(["Luca", "Rossi", 30])
+    writer.writerow(["Anna", "Bianchi", 22])
+
+with open("studenti.csv", "r", encoding="utf-8") as file:
+    reader = csv.DictReader(file)                                  # Crea un oggetto DictReader per leggere il file CSV come dizionari
+    for rigadict in reader:     
+        print(rigadict)                                            # Stampa ogni riga come un dizionario
+"""
+#------------------------------------------------------
 

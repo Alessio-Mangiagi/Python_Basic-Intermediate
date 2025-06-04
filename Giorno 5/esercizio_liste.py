@@ -10,7 +10,7 @@ print("-------------")
 
 nomi_miei = lista.copy()
 
-nomi_miei.append("luca")
+nomi_miei.append("Luca")
 nomi_miei.insert(2, "Marco")
 print(nomi_miei)
 
