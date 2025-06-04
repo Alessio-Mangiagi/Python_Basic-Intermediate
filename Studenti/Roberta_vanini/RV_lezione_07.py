@@ -62,3 +62,5 @@ class Moto(Veicolo):
         print(f"Moto {self.marca} {self.modello}")
 
 Moto1 = Moto("BMW", "R 1300 GS")
+
+# metodo STR: def __str__(self): definisce come la classe deve comportarsi quando chiamato come stringa
