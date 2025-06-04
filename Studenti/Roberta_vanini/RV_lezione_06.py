@@ -88,15 +88,62 @@ with open("prova.txt",  "r", encoding="utf-8") as f:
 
 # per i CSV bisogna importare la libreria csv
 # writer fa parte della libreria csv
+# creiamo un file csv
 
 import csv
 
 lista_righe= [["nome1", "cognome1", 1], ["nome2", "cognome2", 2], ["nome3", "cognome3", 3]]
 
-with open("studenti.csv", "w", encoding= "utf-8", newline="") as f:
+with open(
+    "Python_Basic-Intermediate/Studenti/Roberta_vanini/studenti.csv", "w", encoding= "utf-8", newline=""
+    ) as f:
     writer = csv.writer(f)
-    writer.writerow("Nome", "Cognome", "Età") #scriviamo l'header
-    writer.writerow("Roberta", "Vanini", "32") #scriviamo singola riga
+    writer.writerow(["Nome", "Cognome", "Età"]) #scriviamo l'header
+    writer.writerow(["Roberta", "Vanini", "32"]) #scriviamo singola riga
     writer.writerows(lista_righe) #per aggiungere più righe in una volta
+    f.close()
 
+# vediamo il file
 
+with open("Python_Basic-Intermediate/Studenti/Roberta_vanini/studenti.csv", "r", encoding= "utf-8", newline="") as f:
+    reader = csv.DictReader(f)
+    for riga in reader:
+        print(riga["Nome"])
+    f.close()
+
+# GESTIONE DEGLI ERRORI: Introduzione eccezioni Try/Except
+# try contiene codice potenzialmente problematico
+# except definisce azioni da eseguire quando si verifica un'eccezione
+
+try:
+    risultato = 10/0
+except ZeroDivisionError:
+    print("Impossibile dividere per zero")
+    risultato = 0
+
+# si possono creare più eccezioni, scrivendo except con il tipo di errore specifico
+# la cosa migliore è metterli in ordine di frequenza, in modo che l'errore più frequente venga valutato per primo
+# oppure eseguire il primo except in base alla sequenza logica (es: apro file -> errore FileNotFoundError, carico numeri -> ValueError)
+# nel caso di errore imprevisto
+
+try:
+    file = open("dati.txt", "r")
+    numero = int(file.readline())
+    risultato = 100/numero
+except Exception as e:
+    print(f"Errore imprevisto {e}")
+
+# else: viene eseguito nel caso nessuno degli except viene eseguito (non c'è errore)
+# finally: viene eseguito sempre anche se vengono eseguiti gli except ed è presente errore
+
+# Traceback: quando c'è un errore nel codice in VSC te lo segnala e spiega il perché
+# non è sempre accurato
+
+# KeyError: quando si accede a chiave inesistente di un dizionario.
+# Prevenibile con get() o controlli di esistenza con "in"
+
+# Cosa fare?
+# Specificità: Andare a prendere in considerazione eccezioni specifiche
+# Logging: Registra errori significativi con dettagli per debugging futuro
+# Recovery: Implementa strategie per recupero quando possibile, fornendo valori o operazioni alternative
+# User experience: Messaggi comprensibili agli utenti anche non tecnici

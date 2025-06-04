@@ -25,13 +25,13 @@ def calcolatrice():
         elif decisione == "4":
             print("eseguo la divisione")
             numero_1 = input("dimmi il primo numero: ")  
-            numero_2 = input("dimmi il secondo numero: ") 
-            if numero_2 != "0":
+            numero_2 = input("dimmi il secondo numero: ")
+            try:
                 divisione = float(numero_1) / float(numero_2)
                 print(f"la divisione è {divisione}\n")
-            else:
+            except ZeroDivisionError:
                 print("non si può inserire zero")
-        else: 
+        else:
             print("il valore inserito non è riconosciuto")
         y = True
         while y:
