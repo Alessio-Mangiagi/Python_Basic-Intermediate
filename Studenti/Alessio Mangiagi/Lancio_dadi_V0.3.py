@@ -57,3 +57,4 @@ while x:
         print(f"Lista dei lanci: {lista_dadi}")
         print(toolbox_AM.Somma_lista(lista_dadi))
         print(f"Il giocatore {nomi_giocatori[0]} ha vinto con un punteggio di {toolbox_AM.Somma_lista(lista_dadi)}!")
+end = input("Premi un tasto per uscire.")   
