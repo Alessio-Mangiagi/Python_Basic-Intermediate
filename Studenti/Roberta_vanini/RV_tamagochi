@@ -1,9 +1,13 @@
-class Animali:
+# ===========================
+# CAPITOLO 1: Definizione Classi Animali
+# ===========================
+
+class Animali:                  # classe generica per assegnare "nome" ad ogni animale
     def __init__(self, nome):
         self.nome = nome
     
-    def parla(self):
-        print(f"L'animale {self.nome} fa un verso!")
+    def exit(self):             # comune a tutti gli animali. Interazione alla chiusura del gioco.
+        print(f"{self.nome} ti osserva mentre ti allontani. Aspetterà il tuo ritorno.")
 
 class Cane(Animali):
     def parla(self):
@@ -21,6 +25,9 @@ class Cane(Animali):
     def biscotto(self):
         print(f"Dai un biscotto a {self.nome}. Salta di gioia e lo sgranocchia con gusto!")
 
+    def osserva(self):
+        print(f"Osservi {self.nome}. Il cane ti guarda ed inclina la testa, scodinzolando.")
+
 class Gatto(Animali):
     def parla(self):
         print(f"Il gatto {self.nome} dice: Miao!")
@@ -36,6 +43,9 @@ class Gatto(Animali):
     
     def biscotto(self):
         print(f"Dai un biscotto a {self.nome}. Il gatto osserva il cibo e ci dà qualche colpetto con la zampa.")
+
+    def osserva(self):
+        print(f"Osservi {self.nome}. Il gatto si stiracchia e comincia a leccarsi.")
 
 class Pesce(Animali):
     def parla(self):
@@ -53,6 +63,9 @@ class Pesce(Animali):
     def biscotto(self):
         print(f"Dai un biscotto a {self.nome}. Il pesce avvicina alla superficie per mangiare le briciole!")
 
+    def osserva(self):
+        print(f"Osservi {self.nome}. Il pesce nuota nel suo acquario.")
+
 class Pappagallo(Animali):
     def parla(self):
         print(f"Il pappagallo {self.nome} dice: 'Ciao WRAAA!")
@@ -69,10 +82,18 @@ class Pappagallo(Animali):
     def biscotto(self):
         print(f"Dai un biscotto a {self.nome}. Il pappagallo afferra il biscotto con una zampa e lo sminuzza con il becco.")
 
+    def osserva(self):
+        print(f"Osservi {self.nome}. Il pappagallo vola su un trespolo e si sistema le piume con il becco.")
+
+
+# ===========================
+# CAPITOLO 2: Funzione di Interazione
+# ===========================
+
 def il_mio_animale():
     nome = input("Qual'è il nome del tuo animale? ")
 
-    while True:
+    while True: # selezione della specie
         specie = input("Di che specie è il tuo animale? ").lower()
 
         animale = None
@@ -88,16 +109,16 @@ def il_mio_animale():
             print("Specie non riconosciuta. Al momento puoi scegliere tra: cane, gatto, pesce, pappagallo.")
             continue  # torna a chiedere la specie
 
-        while True:
-            continua = input(f"Vuoi dire qualcosa a {nome}? (Y/N) ").lower()
+        while True: # selezione interazione
+            continua = input(f"Vuoi interagire con {nome}? (Y/N) ").lower()
             if continua == "n":
-                print(f"{nome} ti osserva mentre ti allontani. Aspetterà il tuo ritorno.")
-                return
+                animale.exit()
+                return # chiude il gioco
             elif continua == "y":
                 while True:
                     ordine = input(
                         f"Ecco le interazioni possibili:\n"
-                        "1. parla\n2. seduto\n3. terra\n4. bravo\n5. biscotto\n6. vado via\n"
+                        "1. parla\n2. seduto\n3. terra\n4. bravo\n5. biscotto\n6. osserva\n7. vado via\n"
                         "Scrivi il comando: "
                     ).lower()
                     if ordine == "parla" or ordine == "1":
@@ -113,16 +134,19 @@ def il_mio_animale():
                         animale.bravo()
                         print("")
                     elif ordine == "biscotto" or ordine == "5":
-                        animale.bravo()
+                        animale.biscotto()
                         print("")
-                    elif ordine == "vado via" or ordine == "6":
-                        print(f"{nome} ti osserva mentre ti allontani. Aspetterà il tuo ritorno.")
-                        return
+                    elif ordine == "osserva" or ordine == "6":
+                        animale.osserva()
+                        print("")
+                    elif ordine == "vado via" or ordine == "7":
+                        animale.exit()
+                        return # chiude il gioco
                     else:
                         print(f"{nome} è confuso. Non conosce quel comando.\nProva ancora.")
-                        continue #torna ai comandi
+                        continue # torna alle opzioni "ordine"
             else:
                 print(f"Non ho capito, le risposte accettate sono Y e N.\nRiprova.")
-                continue #chiede se vogliamo dare un ordine
+                continue # torna alle opzioni "ordine"
 
-il_mio_animale()
+il_mio_animale() # avvio gioco
