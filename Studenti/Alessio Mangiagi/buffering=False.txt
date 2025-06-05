@@ -1,0 +1,1 @@
+Errore: il numero di lanci deve essere un intero positivo.

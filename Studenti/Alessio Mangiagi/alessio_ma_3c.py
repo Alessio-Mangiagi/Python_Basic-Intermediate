@@ -4,6 +4,7 @@ def calcolatrice():
     x = True
 
     while x:
+        print("inseisci i numeri che vuoi calcolare")
         numero_1 = input("dimmi il primo numero: ")  
         numero_2 = input("dimmi il secondo numero: ") 
 
@@ -27,11 +28,11 @@ def calcolatrice():
         elif decisione == "4":
             print("eseguo la divisione")
             
-            if numero_2 != "0":
+            try: 
                 divisione = float(numero_1) / float(numero_2)
-                print(f"la divisione è {divisione}\n")
-            else:
-                print("non si può inserire zero")
+                print(f"la divisioneè {divisione}\n")
+            except ZeroDivisionError:
+                print("non puoi dividere per zero")
         else: 
             print("il valore inserito non è riconosciuto")
 
@@ -41,7 +42,7 @@ def calcolatrice():
             # x resta True, si continua
         elif continua == "no":
             x = False
-            print("\n" * 9)
+            print("\n" * 2)
             print("Grazie per aver usato la calcolatrice!") 
         else:
             print("scusa non ho capito, esco dal programma.")
