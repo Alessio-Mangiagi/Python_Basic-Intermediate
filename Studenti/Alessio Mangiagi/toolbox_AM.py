@@ -1,3 +1,7 @@
+''' 
+><(((º>  
+
+'''
 def Saluti():
     print("Ciao, sono Alessio Mangiagi e questo è il mio toolbox!")
     print("Spero che ti piaccia!")
@@ -132,4 +136,3 @@ def calcolatrice():
             else:
                 x = False
                 print("scusa non ho capito")
-                
