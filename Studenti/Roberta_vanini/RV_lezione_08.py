@@ -1,3 +1,5 @@
+import pandas as pd
+
 # Lista di veicolo che contiene bicicletta e oggetti auto
 # usa ciclo for per muovere tutti i veicoli nella lista.
 # Se il nome del veicolo contiene "panda" stampiamo: "revisione in scadenza"

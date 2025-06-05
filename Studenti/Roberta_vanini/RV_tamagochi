@@ -11,7 +11,7 @@ class Animali:                  # classe generica per assegnare "nome" ad ogni a
 
 # idea: aggiungi fame/felicità + vita/salute nella classe Animali.
 # -> fame e felicità scendono in base al tempo ed in base alle interazioni.
-# Alcuni animali hanno bisogno di più attenzioni?
+# Alcuni animali hanno bisogno di più attenzioni? felicità o fame cala più velocemente
 
 class Cane(Animali):
     def parla(self):
