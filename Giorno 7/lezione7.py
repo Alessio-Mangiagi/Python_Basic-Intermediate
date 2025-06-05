@@ -25,3 +25,7 @@ class Laptop(Computer, Ufficio):
 
 Laptop1 = Laptop("ASUS", "ROG", 2200, "Ufficio1", "Via Roma 1")
 Laptop2 = Laptop("Dell", "XPS", 1800, "Ufficio2", "Via Milano 2")
+''' 
+><(((º>  
+
+'''

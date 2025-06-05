@@ -1,3 +1,31 @@
+#----------------------------------------------------------------------------
+
+""" 
+class gatto:
+    def __init__(self, nome, eta):
+        self.nome = nome
+        self.eta = eta
+
+    def miagola(self):
+       print(f"{self.nome} dice: Miao!")
+il_mio_gatto = gatto("Whiskers", 3)  # Creazione di un'istanza della classe gatto
+il_mio_gatto.miagola()                # Chiamata al metodo miagola per il gatto
+
+class cane:
+    def __init__(self, nome, razza):
+        self.nome = nome
+        self.razza = razza
+    def abbaia(self):
+       print(f"{self.nome} dice: Bau!")
+    def abbaia(self):
+       print(f"{self.nome} dice: Bau!")
+il_mio_cane = cane("Fido", "pastore tedesco")        # Creazione di un'istanza della classe cane
+il_mio_cane.abbaia()                  # Chiamata al metodo abbaia per il cane
+"""
+
+#-----------------------------------------------------------------------------
+
+"""
 class Computer:
     def __init__(self, name, price, brand):
         self.name = name
@@ -28,25 +56,6 @@ class ComputerUfficio(Computer, Ufficio):       # ComputerUfficio eredita da Com
       
 laptop1 = ComputerUfficio("Dell XPS 13", 1200, "Dell", "123 Main St") # Creazione di un'istanza di ComputerUfficio
 laptop1.info()                                  # Chiamata al metodo info per registrare le informazioni nel file
+"""
 
-
-class gatto:
-    def __init__(self, nome, eta):
-        self.nome = nome
-        self.eta = eta
-
-    def miagola(self):
-       print(f"{self.nome} dice: Miao!")
-il_mio_gatto = gatto("Whiskers", 3)  # Creazione di un'istanza della classe gatto
-il_mio_gatto.miagola()                # Chiamata al metodo miagola per il gatto
-
-class cane:
-    def __init__(self, nome, razza):
-        self.nome = nome
-        self.razza = razza
-    def abbaia(self):
-       print(f"{self.nome} dice: Bau!")
-    def abbaia(self):
-       print(f"{self.nome} dice: Bau!")
-il_mio_cane = cane("Fido", "pastore tedesco")        # Creazione di un'istanza della classe cane
-il_mio_cane.abbaia()                  # Chiamata al metodo abbaia per il cane
+#-----------------------------------------------------------------------------
