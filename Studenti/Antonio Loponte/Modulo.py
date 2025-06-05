@@ -21,7 +21,8 @@ class Palestra(Allenamento, Professore):
         Professore.__init__(self, nome, materia)
 
     def info(self):
-        print (f"Allenamento: {self.tipo}, Esercizi: {', '.join(self.esercizi)}, Professore: {self.nome}, Materia: {self.materia}")
+       with open("C:\\Users\\lopon\\OneDrive\\Desktop\\account\\palestra.txt", "w") as file:
+            file.write(f"Allenamento: {self.tipo}, Esercizi: {', '.join(self.esercizi)}, Professore: {self.nome}, Materia: {self.materia}\n")
         
 partita = Palestra("Cardio", ["Corsa", "Bicicletta"], "Antonio", "Educazione Fisica")
 partita.info()     
