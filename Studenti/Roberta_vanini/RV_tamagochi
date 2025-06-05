@@ -21,6 +21,9 @@ class Cane(Animali):
     def biscotto(self):
         print(f"Dai un biscotto a {self.nome}. Salta di gioia e lo sgranocchia con gusto!")
 
+    def osserva(self):
+        print(f"Osservi {self.nome}. Il cane ti guarda ed inclina la testa, scodinzolando.")
+
 class Gatto(Animali):
     def parla(self):
         print(f"Il gatto {self.nome} dice: Miao!")
@@ -36,6 +39,9 @@ class Gatto(Animali):
     
     def biscotto(self):
         print(f"Dai un biscotto a {self.nome}. Il gatto osserva il cibo e ci dà qualche colpetto con la zampa.")
+
+    def osserva(self):
+        print(f"Osservi {self.nome}. Il gatto si stiracchia e comincia a leccarsi.")
 
 class Pesce(Animali):
     def parla(self):
@@ -53,6 +59,9 @@ class Pesce(Animali):
     def biscotto(self):
         print(f"Dai un biscotto a {self.nome}. Il pesce avvicina alla superficie per mangiare le briciole!")
 
+    def osserva(self):
+        print(f"Osservi {self.nome}. Il pesce nuota nel suo acquario.")
+
 class Pappagallo(Animali):
     def parla(self):
         print(f"Il pappagallo {self.nome} dice: 'Ciao WRAAA!")
@@ -68,6 +77,9 @@ class Pappagallo(Animali):
     
     def biscotto(self):
         print(f"Dai un biscotto a {self.nome}. Il pappagallo afferra il biscotto con una zampa e lo sminuzza con il becco.")
+
+    def osserva(self):
+        print(f"Osservi {self.nome}. Il pappagallo vola su un trespolo e si sistema le piume con il becco.")
 
 def il_mio_animale():
     nome = input("Qual'è il nome del tuo animale? ")
