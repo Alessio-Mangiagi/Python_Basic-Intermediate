@@ -1,12 +1,18 @@
 import tkinter as tk
 import random
+import toolbox_AM as tb
 
+# Creazione della finestra principale
 root = tk.Tk()
 root.title("bottoni rosso")
 root.geometry("900x500")
 
 canvas = tk.Canvas(root, width=900, height=500, bg="white")
 canvas.pack()
+
+#creazione bottoni numeri
+bottone2 = tk.Button(canvas, 50, 50, "1", "#E40E1A", "#08ADE9", 20, "bold")
+
 
 for i in range(10): # 10 righe
     color = "#E40E1A" if i % 2 == 0 else "#08ADE9"
