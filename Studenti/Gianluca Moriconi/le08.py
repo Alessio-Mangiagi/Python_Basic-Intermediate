@@ -41,7 +41,7 @@ auto.accendi_clima()
 auto.guida()
 
 """
-#----------------------------------------- ereditarietà e override + has-in ------------------------------------- 
+#----------------------------------------- ereditarietà e override + has-in ------------------------------------
                 # In questo esempio, la classe Veicolo è la superclasse e le classi Auto e Bicicletta sono le sottoclassi.
 """
 class Veicolo:
