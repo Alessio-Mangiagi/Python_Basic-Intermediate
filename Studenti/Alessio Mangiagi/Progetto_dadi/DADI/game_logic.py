@@ -1,18 +1,12 @@
 import random
-
-import Progetto_dadi.DADI
-import toolbox_AM
+from . import toolbox_AM
 import datetime
 import sys
 import os
-import Progetto_dadi
-
-
+from .variabili_dadi import nomi_giocatori
+from .. import test
+ 
 #gioco lancio dadi
-print("Benvenuto nel gioco del lancio dei dadi!")
-
-nomi_giocatori = []
-# Aggiungi i nomi dei giocatori alla lista
 while True:
     nome = input("Inserisci il nome del giocatore (o 'fine' per terminare): ")
     if nome.lower() == 'fine':
