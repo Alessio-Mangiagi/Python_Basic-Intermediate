@@ -9,3 +9,5 @@ except FileNotFoundError:
     print("Il file non esiste.")
 except Exception as e:
     print(f"Si è verificato un errore: {e}")
+finally:
+    print("")
