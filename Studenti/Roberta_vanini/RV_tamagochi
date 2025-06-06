@@ -1,3 +1,8 @@
+# idee:
+# aggiungi fame/felicità + vita/salute nella classe Animali.
+# -> fame e felicità scendono in base al tempo ed in base alle interazioni.
+# Alcuni animali hanno bisogno di più attenzioni? felicità o fame cala più velocemente
+
 # ===========================
 # CAPITOLO 1: Definizione Classi Animali
 # ===========================
@@ -8,10 +13,6 @@ class Animali:                  # classe generica per assegnare "nome" ad ogni a
     
     def exit(self):             # comune a tutti gli animali. Interazione alla chiusura del gioco.
         print(f"{self.nome} ti osserva mentre ti allontani. Aspetterà il tuo ritorno.")
-
-# idea: aggiungi fame/felicità + vita/salute nella classe Animali.
-# -> fame e felicità scendono in base al tempo ed in base alle interazioni.
-# Alcuni animali hanno bisogno di più attenzioni? felicità o fame cala più velocemente
 
 class Cane(Animali):
     def parla(self):
