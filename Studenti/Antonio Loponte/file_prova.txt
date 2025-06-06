@@ -1,1 +1,0 @@
-Nome: Ufficio1, Marca: Marca1, Prezzo: 1000€, Ufficio: Ufficio1, Indirizzo: Via Roma 1
