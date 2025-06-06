@@ -14,7 +14,6 @@ def mostra_csv():
     filename = "\\Users\\lopon\\OneDrive\\Desktop\\Corso Python\\Python_Basic-Intermediate\\studenti\\Antonio Loponte\\viaggi.csv"
     try:
         df = pd.read_csv(filename, delimiter=';')
-        # Crea una nuova finestra per la tabella
         win = tk.Toplevel(root)
         win.title("Tabella CSV")
         text = tk.Text(win, width=80, height=20)
