@@ -1,8 +1,5 @@
 # TO DO: 
-# 1. Inserire traduzioni in inglese:
-#       - Fare nuovo file "messages"
-#       - Creare dizionario contenente dizionari "IT" e "ENG" dove scrivere le versioni dei testi 
-#       - Creare key con alias le linee di testo (uguali per IT ed ENG) e associarle al testo nella lingua specifica 
+# 1. Creare interfaccia grafica 
 # 2 . Aggiungi fame/felicità + vita/salute nella classe Animali.
 # -> fame e felicità scendono in base al tempo ed in base alle interazioni.
 # Alcuni animali hanno bisogno di più attenzioni? felicità o fame cala più velocemente
@@ -28,10 +25,10 @@ def scegli_lingua():
 def il_mio_animale():
     lingua = scegli_lingua()
     msg = MSG[lingua]
-    nome = input(msg["nome"])
 
     while True: # selezione della specie
         specie = input(msg["specie"]).lower()
+        nome = input(msg["nome"])
 
         animale = None
         if specie == ("cane" if lingua == "it" else "dog"):
