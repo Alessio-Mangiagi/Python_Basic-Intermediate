@@ -1,0 +1,728 @@
+Pokemon Id,Pokedex Number,Pokemon Name,Legendary Type,Primary Type,Secondary Type,Primary Ability,Secondary Ability,Hidden Ability,Base Happiness,Game(s) of Origin,Health Stat,Attack Stat,Defense Stat,Special Attack Stat,Special Defense Stat,Speed Stat,Base Stat Total,Catch Rate,Experience Growth,Experience Growth Total,Evolution Details
+1,1,Bulbasaur,None,Grass,Poison,Overgrow,None,Chlorophyll,50,Red,45,49,49,65,65,45,318,45,Medium Slow,1059860,None
+2,2,Ivysaur,None,Grass,Poison,Overgrow,None,Chlorophyll,50,Red,60,62,63,80,80,60,405,45,Medium Slow,1059860,Level 16
+3,3,Venusaur,None,Grass,Poison,Overgrow,None,Chlorophyll,50,Red,80,82,83,100,100,80,525,45,Medium Slow,1059860,Level 32
+5,4,Charmander,None,Fire,None,Blaze,None,Solar Power,50,Red,39,52,43,60,50,65,309,45,Medium Slow,1059860,None
+6,5,Charmeleon,None,Fire,None,Blaze,None,Solar Power,50,Red,58,64,58,80,65,80,405,45,Medium Slow,1059860,Level 16
+7,6,Charizard,None,Fire,Flying,Blaze,None,Solar Power,50,Red,78,84,78,109,85,100,534,45,Medium Slow,1059860,Level 36
+10,7,Squirtle,None,Water,None,Torrent,None,Rain Dish,50,Red,44,48,65,50,64,43,314,45,Medium Slow,1059860,None
+11,8,Wartortle,None,Water,None,Torrent,None,Rain Dish,50,Red,59,63,80,65,80,58,405,45,Medium Slow,1059860,Level 16
+12,9,Blastoise,None,Water,None,Torrent,None,Rain Dish,50,Red,79,83,100,85,105,78,530,45,Medium Slow,1059860,Level 36
+32,10,Caterpie,None,Bug,None,Shield Dust,None,Run Away,50,Red,45,30,35,20,20,45,195,255,Medium Fast,1000000,None
+23,11,Metapod,None,Bug,None,Shed Skin,None,None,50,Red,50,20,55,25,25,30,205,120,Medium Fast,1000000,Level 7
+24,12,Butterfree,None,Bug,Flying,Compound Eyes,None,Tinted Lens,50,Red,60,45,50,90,80,70,395,45,Medium Fast,1000000,Level 10
+31,13,Weedle,None,Bug,Poison,Shield Dust,None,Run Away,50,Red,40,35,30,20,20,50,195,255,Medium Fast,1000000,None
+30,14,Kakuna,None,Bug,Poison,Shed Skin,None,None,50,Red,45,25,50,25,25,35,205,120,Medium Fast,1000000,Level 7
+27,15,Beedrill,None,Bug,Poison,Swarm,None,Sniper,50,Red,65,90,40,45,80,75,395,45,Medium Fast,1000000,Level 10
+76,16,Pidgey,None,Normal,Flying,Keen Eye,Tangled Feet,Big Pecks,50,Red,40,45,40,35,35,56,251,255,Medium Slow,1059860,None
+77,17,Pidgeotto,None,Normal,Flying,Keen Eye,Tangled Feet,Big Pecks,50,Red,63,60,55,50,50,71,349,120,Medium Slow,1059860,Level 18
+78,18,Pidgeot,None,Normal,Flying,Keen Eye,Tangled Feet,Big Pecks,50,Red,83,80,75,70,70,101,479,45,Medium Slow,1059860,Level 36
+80,19,Rattata,None,Normal,None,Run Away,Guts,Hustle,50,Red,30,56,35,25,35,72,253,255,Medium Fast,1000000,None
+82,20,Raticate,None,Normal,None,Run Away,Guts,Hustle,50,Red,55,81,60,50,70,97,413,127,Medium Fast,1000000,Level 20
+84,21,Spearow,None,Normal,Flying,Keen Eye,None,Sniper,50,Red,40,60,30,31,31,70,262,255,Medium Fast,1000000,None
+85,22,Fearow,None,Normal,Flying,Keen Eye,None,Sniper,50,Red,65,90,65,61,61,100,442,90,Medium Fast,1000000,Level 20
+86,23,Ekans,None,Poison,None,Intimidate,Shed Skin,Unnerve,50,Red,35,60,44,40,54,55,288,255,Medium Fast,1000000,None
+87,24,Arbok,None,Poison,None,Intimidate,Shed Skin,Unnerve,50,Red,60,95,69,65,79,80,448,90,Medium Fast,1000000,Level 22
+89,25,Pikachu,None,Electric,None,Static,None,Lightning Rod,50,Red,35,55,40,50,50,90,320,190,Medium Fast,1000000,None
+90,26,Raichu,None,Electric,None,Static,None,Lightning Rod,50,Red,60,90,55,90,80,110,485,75,Medium Fast,1000000,Thunder Stone
+90,26,Raichu,None,Electric,None,Static,None,Lightning Rod,50,Red,60,90,55,90,80,110,485,75,Medium Fast,1000000,Thunder Stone in Kanto (LGPE) or Ultra Space (USUM)
+90,26,Raichu,None,Electric,None,Static,None,Lightning Rod,50,Red,60,90,55,90,80,110,485,75,Medium Fast,1000000,Thunder Stone
+92,27,Sandshrew,None,Ground,None,Sand Veil,None,Sand Rush,50,Red,50,75,85,20,30,40,300,255,Medium Fast,1000000,None
+94,28,Sandslash,None,Ground,None,Sand Veil,None,Sand Rush,50,Red,75,100,110,45,55,65,450,90,Medium Fast,1000000,Level 22
+33,29,Nidoran (Female),None,Poison,None,Poison Point,Rivalry,Hustle,50,Red,55,47,52,40,40,41,275,235,Medium Slow,1059860,None
+17,30,Nidorina,None,Poison,None,Poison Point,Rivalry,Hustle,50,Red,70,62,67,55,55,56,365,120,Medium Slow,1059860,Level 16
+18,31,Nidoqueen,None,Poison,Ground,Poison Point,Rivalry,Sheer Force,50,Red,90,92,87,75,85,76,505,45,Medium Slow,1059860,Moon Stone
+48,32,Nidoran (Male),None,Poison,None,Poison Point,Rivalry,Hustle,50,Red,46,57,40,40,40,50,273,235,Medium Slow,1059860,None
+49,33,Nidorino,None,Poison,None,Poison Point,Rivalry,Hustle,50,Red,61,72,57,55,55,65,365,120,Medium Slow,1059860,Level 16
+50,34,Nidoking,None,Poison,Ground,Poison Point,Rivalry,Sheer Force,50,Red,81,102,77,85,75,85,505,45,Medium Slow,1059860,Moon Stone
+52,35,Clefairy,None,Normal,None,Cute Charm,Magic Guard,Friend Guard,140,Red,70,45,48,60,65,35,323,150,Fast,800000,None
+53,36,Clefable,None,Normal,None,Cute Charm,Magic Guard,Unaware,140,Red,95,70,73,95,90,60,483,25,Fast,800000,Moon Stone
+54,37,Vulpix,None,Fire,None,Flash Fire,None,Drought,50,Red,38,41,40,50,65,65,299,190,Medium Fast,1000000,None
+56,38,Ninetales,None,Fire,None,Flash Fire,None,Drought,50,Red,73,76,75,81,100,100,505,75,Medium Fast,1000000,Fire Stone
+59,39,Jigglypuff,None,Normal,None,Cute Charm,Competitive,Friend Guard,50,Red,115,45,20,45,25,20,270,170,Fast,800000,None
+60,40,Wigglytuff,None,Normal,None,Cute Charm,Competitive,Frisk,50,Red,140,70,45,85,50,45,435,50,Fast,800000,Moon Stone
+61,41,Zubat,None,Poison,Flying,Inner Focus,None,Infiltrator,50,Red,40,45,35,30,40,55,245,255,Medium Fast,1000000,None
+62,42,Golbat,None,Poison,Flying,Inner Focus,None,Infiltrator,50,Red,75,80,70,65,75,95,460,90,Medium Fast,1000000,Level 22
+64,43,Oddish,None,Grass,Poison,Chlorophyll,None,Run Away,50,Red,45,50,55,75,65,30,320,255,Medium Slow,1059860,None
+65,44,Gloom,None,Grass,Poison,Chlorophyll,None,Stench,50,Red,60,65,70,85,75,40,395,120,Medium Slow,1059860,Level 21
+66,45,Vileplume,None,Grass,Poison,Chlorophyll,None,Effect Spore,50,Red,75,80,85,110,90,50,490,45,Medium Slow,1059860,Leaf Stone
+68,46,Paras,None,Bug,Grass,Effect Spore,Dry Skin,Damp,50,Red,35,70,55,45,55,25,285,190,Medium Fast,1000000,None
+69,47,Parasect,None,Bug,Grass,Effect Spore,Dry Skin,Damp,50,Red,60,95,80,60,80,30,405,75,Medium Fast,1000000,Level 24
+70,48,Venonat,None,Bug,Poison,Compound Eyes,Tinted Lens,Run Away,50,Red,60,55,50,40,55,45,305,190,Medium Fast,1000000,None
+71,49,Venomoth,None,Bug,Poison,Shield Dust,Tinted Lens,Wonder Skin,50,Red,70,65,60,90,75,90,450,75,Medium Fast,1000000,Level 31
+72,50,Diglett,None,Ground,None,Sand Veil,Arena Trap,Sand Force,50,Red,10,55,25,35,45,95,265,255,Medium Fast,1000000,None
+73,51,Dugtrio,None,Ground,None,Sand Veil,Arena Trap,Sand Force,50,Red,35,100,50,50,70,120,425,50,Medium Fast,1000000,Level 26
+96,52,Meowth,None,Normal,None,Pickup,Technician,Unnerve,50,Red,40,45,35,40,40,90,290,255,Medium Fast,1000000,None
+100,53,Persian,None,Normal,None,Limber,Technician,Unnerve,50,Red,65,70,60,65,65,115,440,90,Medium Fast,1000000,Level 28
+102,54,Psyduck,None,Water,None,Damp,Cloud Nine,Swift Swim,50,Red,50,52,48,65,50,55,320,190,Medium Fast,1000000,None
+884,55,Golduck,None,Water,None,Damp,Cloud Nine,Swift Swim,50,Red,80,82,78,95,80,85,500,75,Medium Fast,1000000,Level 33
+895,56,Mankey,None,Fighting,None,Vital Spirit,Anger Point,Defiant,50,Red,40,80,35,35,45,70,305,190,Medium Fast,1000000,None
+924,57,Primeape,None,Fighting,None,Vital Spirit,Anger Point,Defiant,50,Red,65,105,60,60,70,95,455,75,Medium Fast,1000000,Level 28
+949,58,Growlithe,None,Fire,None,Intimidate,Flash Fire,Justified,50,Red,55,70,45,70,50,60,350,190,Slow,1250000,None
+960,59,Arcanine,None,Fire,None,Intimidate,Flash Fire,Justified,50,Red,90,110,80,100,80,95,555,75,Slow,1250000,Fire Stone
+971,60,Poliwag,None,Water,None,Water Absorb,Damp,Swift Swim,50,Red,40,50,40,40,40,90,300,255,Medium Slow,1059860,None
+982,61,Poliwhirl,None,Water,None,Water Absorb,Damp,Swift Swim,50,Red,65,65,65,50,50,90,385,120,Medium Slow,1059860,Level 25
+993,62,Poliwrath,None,Water,Fighting,Water Absorb,Damp,Swift Swim,50,Red,90,95,95,70,90,70,510,45,Medium Slow,1059860,Water Stone
+1004,63,Abra,None,Psychic,None,Synchronize,Inner Focus,Magic Guard,50,Red,25,20,15,105,55,90,310,200,Medium Slow,1059860,None
+1015,64,Kadabra,None,Psychic,None,Synchronize,Inner Focus,Magic Guard,50,Red,40,35,30,120,70,105,400,100,Medium Slow,1059860,Level 16
+1026,65,Alakazam,None,Psychic,None,Synchronize,Inner Focus,Magic Guard,50,Red,55,50,45,135,95,120,500,50,Medium Slow,1059860,None
+1026,65,Alakazam,None,Psychic,None,Synchronize,Inner Focus,Magic Guard,50,Red,55,50,45,135,95,120,500,50,Medium Slow,1059860,Trade Or Use Linking Cord In Legends: Arceus
+1076,66,Machop,None,Fighting,None,Guts,No Guard,Steadfast,50,Red,70,80,50,35,35,35,305,180,Medium Slow,1059860,None
+1087,67,Machoke,None,Fighting,None,Guts,No Guard,Steadfast,50,Red,80,100,70,50,60,45,405,90,Medium Slow,1059860,Level 28
+1097,68,Machamp,None,Fighting,None,Guts,No Guard,Steadfast,50,Red,90,130,80,65,85,55,505,45,Medium Slow,1059860,None
+1097,68,Machamp,None,Fighting,None,Guts,No Guard,Steadfast,50,Red,90,130,80,65,85,55,505,45,Medium Slow,1059860,Trade Or Use Linking Cord In Legends: Arceus
+1109,69,Bellsprout,None,Grass,Poison,Chlorophyll,None,Gluttony,50,Red,50,75,35,70,30,40,300,255,Medium Slow,1059860,None
+1128,70,Weepinbell,None,Grass,Poison,Chlorophyll,None,Gluttony,50,Red,65,90,50,85,45,55,390,120,Medium Slow,1059860,Level 21
+1139,71,Victreebel,None,Grass,Poison,Chlorophyll,None,Gluttony,50,Red,80,105,65,100,70,70,490,45,Medium Slow,1059860,Leaf Stone
+1150,72,Tentacool,None,Water,Poison,Clear Body,Liquid Ooze,Rain Dish,50,Red,40,40,35,50,100,70,335,190,Slow,1250000,None
+1254,73,Tentacruel,None,Water,Poison,Clear Body,Liquid Ooze,Rain Dish,50,Red,80,70,65,80,120,100,515,60,Slow,1250000,Level 30
+1265,74,Geodude,None,Rock,Ground,Rock Head,Sturdy,Sand Veil,50,Red,40,80,100,30,30,20,300,255,Medium Slow,1059860,None
+1276,75,Graveler,None,Rock,Ground,Rock Head,Sturdy,Sand Veil,50,Red,55,95,115,45,45,35,390,120,Medium Slow,1059860,Level 25
+1287,76,Golem,None,Rock,Ground,Rock Head,Sturdy,Sand Veil,50,Red,80,120,130,55,65,45,495,45,Medium Slow,1059860,None
+1287,76,Golem,None,Rock,Ground,Rock Head,Sturdy,Sand Veil,50,Red,80,120,130,55,65,45,495,45,Medium Slow,1059860,Trade Or Use Linking Cord In Legends: Arceus
+1297,77,Ponyta,None,Fire,None,Run Away,Flash Fire,Flame Body,50,Red,50,85,55,65,65,90,410,190,Medium Fast,1000000,None
+1308,78,Rapidash,None,Fire,None,Run Away,Flash Fire,Flame Body,50,Red,65,100,70,80,80,105,500,60,Medium Fast,1000000,Level 40
+1319,79,Slowpoke,None,Water,Psychic,Oblivious,Own Tempo,Regenerator,50,Red,90,65,65,40,40,15,315,190,Medium Fast,1000000,None
+1330,80,Slowbro,None,Water,Psychic,Oblivious,Own Tempo,Regenerator,50,Red,95,75,110,100,80,30,490,75,Medium Fast,1000000,Level 37
+46,81,Magnemite,None,Electric,Steel,Magnet Pull,Sturdy,Analytic,50,Red,25,35,70,95,55,45,325,190,Medium Fast,1000000,None
+1341,82,Magneton,None,Electric,Steel,Magnet Pull,Sturdy,Analytic,50,Red,50,60,95,120,70,70,465,60,Medium Fast,1000000,Level 30
+1342,83,Farfetch'd,None,Normal,Flying,Keen Eye,Inner Focus,Defiant,50,Red,52,90,55,58,62,60,377,45,Medium Fast,1000000,None
+1343,84,Doduo,None,Normal,Flying,Run Away,Early Bird,Tangled Feet,50,Red,35,85,45,35,35,75,310,190,Medium Fast,1000000,None
+1344,85,Dodrio,None,Normal,Flying,Run Away,Early Bird,Tangled Feet,50,Red,60,110,70,60,60,110,470,45,Medium Fast,1000000,Level 31
+1345,86,Seel,None,Water,None,Thick Fat,Hydration,Ice Body,50,Red,65,45,55,45,70,45,325,190,Medium Fast,1000000,None
+1346,87,Dewgong,None,Water,Ice,Thick Fat,Hydration,Ice Body,50,Red,90,70,80,70,95,70,475,75,Medium Fast,1000000,Level 34
+1347,88,Grimer,None,Poison,None,Stench,Sticky Hold,Poison Touch,50,Red,80,80,50,40,50,25,325,190,Medium Fast,1000000,None
+1348,89,Muk,None,Poison,None,Stench,Sticky Hold,Poison Touch,50,Red,105,105,75,65,100,50,500,75,Medium Fast,1000000,Level 38
+1349,90,Shellder,None,Water,None,Shell Armor,Skill Link,Overcoat,50,Red,30,65,100,45,25,40,305,190,Slow,1250000,None
+1350,91,Cloyster,None,Water,Ice,Shell Armor,Skill Link,Overcoat,50,Red,50,95,180,85,45,70,525,60,Slow,1250000,Water Stone
+1351,92,Gastly,None,Ghost,Poison,Levitate,None,None,50,Red,30,35,30,100,35,80,310,190,Medium Slow,1059860,None
+1352,93,Haunter,None,Ghost,Poison,Levitate,None,None,50,Red,45,50,45,115,55,95,405,90,Medium Slow,1059860,Level 25
+1353,94,Gengar,None,Ghost,Poison,Cursed Body,None,None,50,Red,60,65,60,130,75,110,500,45,Medium Slow,1059860,None
+1353,94,Gengar,None,Ghost,Poison,Cursed Body,None,None,50,Red,60,65,60,130,75,110,500,45,Medium Slow,1059860,Trade Or Use Linking Cord In Legends: Arceus
+1354,95,Onix,None,Rock,Ground,Rock Head,Sturdy,Weak Armor,50,Red,35,45,160,30,45,70,385,45,Medium Fast,1000000,None
+1355,96,Drowzee,None,Psychic,None,Insomnia,Forewarn,Inner Focus,50,Red,60,48,45,43,90,42,328,190,Medium Fast,1000000,None
+1356,97,Hypno,None,Psychic,None,Insomnia,Forewarn,Inner Focus,50,Red,85,73,70,73,115,67,483,75,Medium Fast,1000000,Level 26
+1357,98,Krabby,None,Water,None,Hyper Cutter,Shell Armor,Sheer Force,50,Red,30,105,90,25,25,50,325,225,Medium Fast,1000000,None
+1358,99,Kingler,None,Water,None,Hyper Cutter,Shell Armor,Sheer Force,50,Red,55,130,115,50,50,75,475,60,Medium Fast,1000000,Level 28
+47,100,Voltorb,None,Electric,None,Soundproof,Static,Aftermath,50,Red,40,30,50,55,55,100,330,190,Medium Fast,1000000,None
+105,101,Electrode,None,Electric,None,Soundproof,Static,Aftermath,50,Red,60,50,70,80,80,150,490,60,Medium Fast,1000000,Level 30
+136,102,Exeggcute,None,Grass,Psychic,Chlorophyll,None,Harvest,50,Red,60,40,80,60,45,40,325,90,Slow,1250000,None
+137,103,Exeggutor,None,Grass,Psychic,Chlorophyll,None,Harvest,50,Red,95,95,85,125,75,55,530,45,Slow,1250000,Leaf Stone
+137,103,Exeggutor,None,Grass,Psychic,Chlorophyll,None,Harvest,50,Red,95,95,85,125,75,55,530,45,Slow,1250000,Leaf Stone in Ultra Space - Only Available In USUM
+137,103,Exeggutor,None,Grass,Psychic,Chlorophyll,None,Harvest,50,Red,95,95,85,125,75,55,530,45,Slow,1250000,Leaf Stone
+138,104,Cubone,None,Ground,None,Rock Head,Lightning Rod,Battle Armor,50,Red,50,50,95,40,50,35,320,190,Medium Fast,1000000,None
+139,105,Marowak,None,Ground,None,Rock Head,Lightning Rod,Battle Armor,50,Red,60,80,110,50,80,45,425,75,Medium Fast,1000000,Level 28
+139,105,Marowak,None,Ground,None,Rock Head,Lightning Rod,Battle Armor,50,Red,60,80,110,50,80,45,425,75,Medium Fast,1000000,Level 28
+139,105,Marowak,None,Ground,None,Rock Head,Lightning Rod,Battle Armor,50,Red,60,80,110,50,80,45,425,75,Medium Fast,1000000,Level 28 in Ultra Space - Only Available In USUM
+140,106,Hitmonlee,None,Fighting,None,Limber,Reckless,Unburden,50,Red,50,120,53,35,110,87,455,45,Medium Fast,1000000,Level 20 With Attack > Defense
+141,107,Hitmonchan,None,Fighting,None,Keen Eye,Iron Fist,Inner Focus,50,Red,50,105,79,35,110,76,455,45,Medium Fast,1000000,Level 20 With Attack < Defense
+142,108,Lickitung,None,Normal,None,Own Tempo,Oblivious,Cloud Nine,50,Red,90,55,75,60,75,30,385,45,Medium Fast,1000000,None
+143,109,Koffing,None,Poison,None,Levitate,Neutralizing Gas,Stench,50,Red,40,65,95,60,45,35,340,190,Medium Fast,1000000,None
+144,110,Weezing,None,Poison,None,Levitate,Neutralizing Gas,Stench,50,Red,65,90,120,85,70,60,490,60,Medium Fast,1000000,Level 35
+145,111,Rhyhorn,None,Ground,Rock,Lightning Rod,Rock Head,Reckless,50,Red,80,85,95,30,30,25,345,120,Slow,1250000,None
+146,112,Rhydon,None,Ground,Rock,Lightning Rod,Rock Head,Reckless,50,Red,105,130,120,45,45,40,485,60,Slow,1250000,Level 42
+147,113,Chansey,None,Normal,None,Natural Cure,Serene Grace,Healer,140,Red,250,5,5,35,105,50,450,30,Fast,800000,Holding An Oval Stone During The Day
+148,114,Tangela,None,Grass,None,Chlorophyll,Leaf Guard,Regenerator,50,Red,65,55,115,100,40,60,435,45,Medium Fast,1000000,None
+211,115,Kangaskhan,None,Normal,None,Early Bird,Scrappy,Inner Focus,50,Red,105,95,80,40,80,90,490,45,Medium Fast,1000000,None
+212,116,Horsea,None,Water,None,Swift Swim,Sniper,Damp,50,Red,30,40,70,70,25,60,295,225,Medium Fast,1000000,None
+213,117,Seadra,None,Water,None,Poison Point,Sniper,Damp,50,Red,55,65,95,95,45,85,440,75,Medium Fast,1000000,Level 32
+214,118,Goldeen,None,Water,None,Swift Swim,Water Veil,Lightning Rod,50,Red,45,67,60,35,50,63,320,225,Medium Fast,1000000,None
+215,119,Seaking,None,Water,None,Swift Swim,Water Veil,Lightning Rod,50,Red,80,92,65,65,80,68,450,60,Medium Fast,1000000,Level 33
+216,120,Staryu,None,Water,None,Illuminate,Natural Cure,Analytic,50,Red,30,45,55,70,55,85,340,225,Slow,1250000,None
+217,121,Starmie,None,Water,Psychic,Illuminate,Natural Cure,Analytic,50,Red,60,75,85,100,85,115,520,60,Slow,1250000,Water Stone
+218,122,Mr. Mime,None,Psychic,None,Soundproof,Filter,Technician,50,Red,40,45,65,100,120,90,460,45,Medium Fast,1000000,Knowing Mimic
+219,123,Scyther,None,Bug,Flying,Swarm,Technician,Steadfast,50,Red,70,110,80,55,80,105,500,45,Medium Fast,1000000,None
+220,124,Jynx,None,Ice,Psychic,Oblivious,Forewarn,Dry Skin,50,Red,65,50,35,115,95,95,455,45,Medium Fast,1000000,Level 30
+221,125,Electabuzz,None,Electric,None,Static,None,Vital Spirit,50,Red,65,83,57,95,85,105,490,45,Medium Fast,1000000,Level 30
+222,126,Magmar,None,Fire,None,Flame Body,None,Vital Spirit,50,Red,65,95,57,100,85,93,495,45,Medium Fast,1000000,Level 30
+223,127,Pinsir,None,Bug,None,Hyper Cutter,Mold Breaker,Moxie,50,Red,65,125,100,55,70,85,500,45,Slow,1250000,None
+224,128,Tauros,None,Normal,None,Intimidate,Anger Point,Sheer Force,50,Red,75,100,95,40,70,110,490,45,Slow,1250000,None
+225,129,Magikarp,None,Water,None,Swift Swim,None,Rattled,50,Red,20,10,55,15,20,80,200,255,Slow,1250000,None
+226,130,Gyarados,None,Water,Flying,Intimidate,None,Moxie,50,Red,95,125,79,60,100,81,540,45,Slow,1250000,Level 20
+227,131,Lapras,None,Water,Ice,Water Absorb,Shell Armor,Hydration,50,Red,130,85,80,85,95,60,535,45,Slow,1250000,None
+29,132,Ditto,None,Normal,None,Limber,None,Imposter,50,Red,48,48,48,48,48,48,288,35,Medium Fast,1000000,None
+228,133,Eevee,None,Normal,None,Run Away,Adaptability,Anticipation,50,Red,55,55,50,45,65,55,325,45,Medium Fast,1000000,None
+229,134,Vaporeon,None,Water,None,Water Absorb,None,Hydration,50,Red,130,65,60,110,95,65,525,45,Medium Fast,1000000,Water Stone
+230,135,Jolteon,None,Electric,None,Volt Absorb,None,Quick Feet,50,Red,65,65,60,110,95,130,525,45,Medium Fast,1000000,Thunder Stone
+231,136,Flareon,None,Fire,None,Flash Fire,None,Guts,50,Red,65,130,60,95,110,65,525,45,Medium Fast,1000000,Fire Stone
+232,137,Porygon,None,Normal,None,Trace,Download,Analytic,50,Red,65,60,70,85,75,40,395,45,Medium Fast,1000000,None
+233,138,Omanyte,None,Rock,Water,Swift Swim,Shell Armor,Weak Armor,50,Red,35,40,100,90,55,35,355,45,Medium Fast,1000000,None
+234,139,Omastar,None,Rock,Water,Swift Swim,Shell Armor,Weak Armor,50,Red,70,60,125,115,70,55,495,45,Medium Fast,1000000,Level 40
+235,140,Kabuto,None,Rock,Water,Swift Swim,Battle Armor,Weak Armor,50,Red,30,80,90,55,45,55,355,45,Medium Fast,1000000,None
+236,141,Kabutops,None,Rock,Water,Swift Swim,Battle Armor,Weak Armor,50,Red,60,115,105,65,70,80,495,45,Medium Fast,1000000,Level 40
+237,142,Aerodactyl,None,Rock,Flying,Rock Head,Pressure,Unnerve,50,Red,80,105,65,60,75,130,515,45,Slow,1250000,None
+238,143,Snorlax,None,Normal,None,Immunity,Thick Fat,Gluttony,50,Red,160,110,65,65,110,30,540,25,Slow,1250000,None
+239,144,Articuno,Sub-Legendary,Ice,Flying,Pressure,None,Snow Cloak,35,Red,90,85,100,95,125,85,580,3,Slow,1250000,None
+240,145,Zapdos,Sub-Legendary,Electric,Flying,Pressure,None,Static,35,Red,90,90,85,125,90,100,580,3,Slow,1250000,None
+241,146,Moltres,Sub-Legendary,Fire,Flying,Pressure,None,Flame Body,35,Red,90,100,90,125,85,90,580,3,Slow,1250000,None
+242,147,Dratini,None,Dragon,None,Shed Skin,None,Marvel Scale,35,Red,41,64,45,50,50,50,300,45,Slow,1250000,None
+243,148,Dragonair,None,Dragon,None,Shed Skin,None,Marvel Scale,35,Red,61,84,65,70,70,70,420,45,Slow,1250000,Level 30
+244,149,Dragonite,None,Dragon,Flying,Inner Focus,None,Multiscale,35,Red,91,134,95,100,100,80,600,45,Slow,1250000,Level 55
+43,150,Mewtwo,Legendary,Psychic,None,Pressure,None,Unnerve,0,Red,106,110,90,154,90,130,680,3,Slow,1250000,None
+42,151,Mew,Mythical,Psychic,None,Synchronize,None,None,100,Red,100,100,100,100,100,100,600,45,Medium Slow,1059860,None
+245,152,Chikorita,None,Grass,None,Overgrow,None,Leaf Guard,50,Gold,45,49,65,49,65,45,318,45,Medium Slow,1059860,None
+246,153,Bayleef,None,Grass,None,Overgrow,None,Leaf Guard,50,Gold,60,62,80,63,80,60,405,45,Medium Slow,1059860,Level 16
+247,154,Meganium,None,Grass,None,Overgrow,None,Leaf Guard,50,Gold,80,82,100,83,100,80,525,45,Medium Slow,1059860,Level 32
+248,155,Cyndaquil,None,Fire,None,Blaze,None,Flash Fire,50,Gold,39,52,43,60,50,65,309,45,Medium Slow,1059860,None
+249,156,Quilava,None,Fire,None,Blaze,None,Flash Fire,50,Gold,58,64,58,80,65,80,405,45,Medium Slow,1059860,Level 14
+250,157,Typhlosion,None,Fire,None,Blaze,None,Flash Fire,50,Gold,78,84,78,109,85,100,534,45,Medium Slow,1059860,Level 36
+251,158,Totodile,None,Water,None,Torrent,None,Sheer Force,50,Gold,50,65,64,44,48,43,314,45,Medium Slow,1059860,None
+252,159,Croconaw,None,Water,None,Torrent,None,Sheer Force,50,Gold,65,80,80,59,63,58,405,45,Medium Slow,1059860,Level 18
+253,160,Feraligatr,None,Water,None,Torrent,None,Sheer Force,50,Gold,85,105,100,79,83,78,530,45,Medium Slow,1059860,Level 30
+254,161,Sentret,None,Normal,None,Run Away,Keen Eye,Frisk,50,Gold,35,46,34,35,45,20,215,255,Medium Fast,1000000,None
+255,162,Furret,None,Normal,None,Run Away,Keen Eye,Frisk,50,Gold,85,76,64,45,55,90,415,90,Medium Fast,1000000,Level 15
+256,163,Hoothoot,None,Normal,Flying,Insomnia,Keen Eye,Tinted Lens,50,Gold,60,30,30,36,56,50,262,255,Medium Fast,1000000,None
+257,164,Noctowl,None,Normal,Flying,Insomnia,Keen Eye,Tinted Lens,50,Gold,100,50,50,86,96,70,452,90,Medium Fast,1000000,Level 20
+258,165,Ledyba,None,Bug,Flying,Swarm,Early Bird,Rattled,50,Gold,40,20,30,40,80,55,265,255,Fast,800000,None
+259,166,Ledian,None,Bug,Flying,Swarm,Early Bird,Iron Fist,50,Gold,55,35,50,55,110,85,390,90,Fast,800000,Level 18
+260,167,Spinarak,None,Bug,Poison,Swarm,Insomnia,Sniper,50,Gold,40,60,40,40,40,30,250,255,Fast,800000,None
+261,168,Ariados,None,Bug,Poison,Swarm,Insomnia,Sniper,50,Gold,70,90,70,60,70,40,400,90,Fast,800000,Level 22
+63,169,Crobat,None,Poison,Flying,Inner Focus,None,Infiltrator,50,Gold,85,90,80,70,80,130,535,90,Medium Fast,1000000,None
+262,170,Chinchou,None,Water,Electric,Volt Absorb,Illuminate,Water Absorb,50,Gold,75,38,38,56,56,67,330,190,Slow,1250000,None
+263,171,Lanturn,None,Water,Electric,Volt Absorb,Illuminate,Water Absorb,50,Gold,125,58,58,76,76,67,460,75,Slow,1250000,Level 27
+88,172,Pichu,None,Electric,None,Static,None,Lightning Rod,50,Gold,20,40,15,35,35,60,205,190,Medium Fast,1000000,None
+51,173,Cleffa,None,Normal,None,Cute Charm,Magic Bounce,Friend Guard,140,Gold,50,25,28,45,55,15,218,150,Fast,800000,None
+58,174,Igglybuff,None,Normal,None,Cute Charm,Competitive,Friend Guard,50,Gold,90,30,15,40,20,15,210,170,Fast,800000,None
+264,175,Togepi,None,Normal,None,Hustle,Serene Grace,Super Luck,50,Gold,35,20,65,40,65,20,245,190,Fast,800000,None
+265,176,Togetic,None,Normal,Flying,Hustle,Serene Grace,Super Luck,50,Gold,55,40,85,80,105,40,405,75,Fast,800000,None
+266,177,Natu,None,Psychic,Flying,Synchronize,Early Bird,Magic Bounce,50,Gold,40,50,45,70,45,70,320,190,Medium Fast,1000000,None
+267,178,Xatu,None,Psychic,Flying,Synchronize,Early Bird,Magic Bounce,50,Gold,65,75,70,95,70,95,470,75,Medium Fast,1000000,Level 25
+278,179,Mareep,None,Electric,None,Static,None,Plus,50,Gold,55,40,40,65,45,35,280,235,Medium Slow,1059860,None
+279,180,Flaaffy,None,Electric,None,Static,None,Plus,50,Gold,70,55,55,80,60,45,365,120,Medium Slow,1059860,Level 15
+280,181,Ampharos,None,Electric,None,Static,None,Plus,50,Gold,90,75,85,115,90,55,510,45,Medium Slow,1059860,Level 30
+67,182,Bellossom,None,Grass,None,Chlorophyll,None,Healer,50,Gold,75,80,95,90,100,50,490,45,Medium Slow,1059860,Sun Stone
+283,183,Marill,None,Water,None,Thick Fat,Huge Power,Sap Sipper,50,Gold,70,20,50,20,50,40,250,190,Fast,800000,None
+284,184,Azumarill,None,Water,None,Thick Fat,Huge Power,Sap Sipper,50,Gold,100,50,80,60,80,50,420,75,Fast,800000,Level 18
+285,185,Sudowoodo,None,Rock,None,Sturdy,Rock Head,Rattled,50,Gold,70,110,115,30,65,30,420,65,Medium Fast,1000000,Knowing Mimic
+286,186,Politoed,None,Water,None,Water Absorb,Damp,Drizzle,50,Gold,90,75,75,90,100,70,500,45,Medium Slow,1059860,King's Rock
+287,187,Hoppip,None,Grass,Flying,Chlorophyll,Leaf Guard,Infiltrator,50,Gold,35,35,40,35,55,50,250,255,Medium Slow,1059860,None
+288,188,Skiploom,None,Grass,Flying,Chlorophyll,Leaf Guard,Infiltrator,50,Gold,55,45,50,45,65,80,340,120,Medium Slow,1059860,Level 18
+289,189,Jumpluff,None,Grass,Flying,Chlorophyll,Leaf Guard,Infiltrator,50,Gold,75,55,70,55,95,110,460,45,Medium Slow,1059860,Level 27
+290,190,Aipom,None,Normal,None,Run Away,Pickup,Skill Link,50,Gold,55,70,55,40,55,85,360,45,Fast,800000,None
+291,191,Sunkern,None,Grass,None,Chlorophyll,Solar Power,Early Bird,50,Gold,30,30,30,30,30,30,180,235,Medium Slow,1059860,None
+292,192,Sunflora,None,Grass,None,Chlorophyll,Solar Power,Early Bird,50,Gold,75,75,55,105,85,30,425,120,Medium Slow,1059860,Sun Stone
+293,193,Yanma,None,Bug,Flying,Speed Boost,Compound Eyes,Frisk,50,Gold,65,65,45,75,45,95,390,75,Medium Fast,1000000,None
+294,194,Wooper,None,Water,Ground,Damp,Water Absorb,Unaware,50,Gold,55,45,45,25,25,15,210,255,Medium Fast,1000000,None
+295,195,Quagsire,None,Water,Ground,Damp,Water Absorb,Unaware,50,Gold,95,85,85,65,65,35,430,90,Medium Fast,1000000,Level 20
+296,196,Espeon,None,Psychic,None,Synchronize,None,Magic Bounce,50,Gold,65,65,60,130,95,110,525,45,Medium Fast,1000000,During The Day
+297,197,Umbreon,None,Dark,None,Synchronize,None,Inner Focus,35,Gold,95,65,110,60,130,65,525,45,Medium Fast,1000000,During The Night
+298,198,Murkrow,None,Dark,Flying,Insomnia,Super Luck,Prankster,35,Gold,60,85,42,85,42,91,405,30,Medium Slow,1059860,None
+299,199,Slowking,None,Water,Psychic,Oblivious,Own Tempo,Regenerator,50,Gold,95,75,80,100,110,30,490,70,Medium Fast,1000000,King's Rock
+324,200,Misdreavus,None,Ghost,None,Levitate,None,None,35,Gold,60,60,60,85,85,85,435,45,Fast,800000,None
+325,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1834,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1835,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1836,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1837,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1838,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1839,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1840,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1841,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1842,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1843,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1844,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1845,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1846,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1847,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1848,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1849,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1850,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1851,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1852,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1853,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1854,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1855,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1856,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1857,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1858,201,Unown,None,Psychic,None,Levitate,None,None,50,Gold,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1859,201,Unown,None,Psychic,None,Levitate,None,None,50,Ruby,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+1860,201,Unown,None,Psychic,None,Levitate,None,None,50,Ruby,48,72,48,72,48,48,336,225,Medium Fast,1000000,None
+326,202,Wobbuffet,None,Psychic,None,Shadow Tag,None,Telepathy,50,Gold,190,33,58,33,58,33,405,45,Medium Fast,1000000,Level 15
+327,203,Girafarig,None,Normal,Psychic,Inner Focus,Early Bird,Sap Sipper,50,Gold,70,80,65,90,65,85,455,60,Medium Fast,1000000,None
+328,204,Pineco,None,Bug,None,Sturdy,None,Overcoat,50,Gold,50,65,90,35,35,15,290,190,Medium Fast,1000000,None
+329,205,Forretress,None,Bug,Steel,Sturdy,None,Overcoat,50,Gold,75,90,140,60,60,40,465,75,Medium Fast,1000000,Level 31
+330,206,Dunsparce,None,Normal,None,Serene Grace,Run Away,Rattled,50,Gold,100,70,70,65,65,45,415,190,Medium Fast,1000000,None
+331,207,Gligar,None,Ground,Flying,Hyper Cutter,Sand Veil,Immunity,50,Gold,65,75,105,35,65,85,430,60,Medium Slow,1059860,None
+332,208,Steelix,None,Steel,Ground,Rock Head,Sturdy,Sheer Force,50,Gold,75,85,200,55,65,30,510,25,Medium Fast,1000000,Metal Coat
+333,209,Snubbull,None,Normal,None,Intimidate,Run Away,Rattled,50,Gold,60,80,50,40,40,30,300,190,Fast,800000,None
+334,210,Granbull,None,Normal,None,Intimidate,Quick Feet,Rattled,50,Gold,90,120,75,60,60,45,450,75,Fast,800000,Level 23
+335,211,Qwilfish,None,Water,Poison,Poison Point,Swift Swim,Intimidate,50,Gold,65,95,85,55,55,85,440,45,Medium Fast,1000000,None
+336,212,Scizor,None,Bug,Steel,Swarm,Technician,Light Metal,50,Gold,70,130,100,55,80,65,500,25,Medium Fast,1000000,Metal Coat
+337,213,Shuckle,None,Bug,Rock,Sturdy,Gluttony,Contrary,50,Gold,20,10,230,10,230,5,505,190,Medium Slow,1059860,None
+338,214,Heracross,None,Bug,Fighting,Swarm,Guts,Moxie,50,Gold,80,125,75,40,95,85,500,45,Slow,1250000,None
+339,215,Sneasel,None,Dark,Ice,Inner Focus,Keen Eye,Pickpocket,35,Gold,55,95,55,35,75,115,430,60,Medium Slow,1059860,None
+340,216,Teddiursa,None,Normal,None,Pickup,Quick Feet,Honey Gather,50,Gold,60,80,50,50,50,40,330,120,Medium Fast,1000000,None
+341,217,Ursaring,None,Normal,None,Guts,Quick Feet,Unnerve,50,Gold,90,130,75,75,75,55,500,60,Medium Fast,1000000,Level 30
+342,218,Slugma,None,Fire,None,Magma Armor,Flame Body,Weak Armor,50,Gold,40,40,40,70,40,20,250,190,Medium Fast,1000000,None
+343,219,Magcargo,None,Fire,Rock,Magma Armor,Flame Body,Weak Armor,50,Gold,60,50,120,90,80,30,430,75,Medium Fast,1000000,Level 38
+344,220,Swinub,None,Ice,Ground,Oblivious,Snow Cloak,Thick Fat,50,Gold,50,50,40,30,30,50,250,225,Slow,1250000,None
+345,221,Piloswine,None,Ice,Ground,Oblivious,Snow Cloak,Thick Fat,50,Gold,100,100,80,60,60,50,450,75,Slow,1250000,Level 33
+346,222,Corsola,None,Water,Rock,Hustle,Natural Cure,Regenerator,50,Gold,65,55,95,65,95,35,410,60,Fast,800000,None
+347,223,Remoraid,None,Water,None,Hustle,Sniper,Moody,50,Gold,35,65,35,65,35,65,300,190,Medium Fast,1000000,None
+348,224,Octillery,None,Water,None,Suction Cups,Sniper,Moody,50,Gold,75,105,75,105,75,45,480,75,Medium Fast,1000000,Level 25
+349,225,Delibird,None,Ice,Flying,Vital Spirit,None,Insomnia,50,Gold,45,55,45,65,45,75,330,45,Fast,800000,None
+350,226,Mantine,None,Water,Flying,Swift Swim,Water Absorb,Water Veil,50,Gold,85,40,70,80,140,70,485,25,Slow,1250000,With Remoraid In The Party
+351,227,Skarmory,None,Steel,Flying,Keen Eye,Sturdy,Weak Armor,50,Gold,65,80,140,40,70,70,465,25,Slow,1250000,None
+352,228,Houndour,None,Dark,Fire,Early Bird,Flash Fire,Unnerve,35,Gold,45,60,30,80,50,65,330,120,Slow,1250000,None
+353,229,Houndoom,None,Dark,Fire,Early Bird,Flash Fire,Unnerve,35,Gold,75,90,50,110,80,95,500,45,Slow,1250000,Level 24
+354,230,Kingdra,None,Water,Dragon,Swift Swim,Sniper,Damp,50,Gold,75,95,95,95,95,85,540,45,Medium Fast,1000000,Dragon Scale
+355,231,Phanpy,None,Ground,None,Pickup,None,Sand Veil,50,Gold,90,60,60,40,40,40,330,120,Medium Fast,1000000,None
+356,232,Donphan,None,Ground,None,Sturdy,None,Sand Veil,50,Gold,90,120,120,60,60,50,500,60,Medium Fast,1000000,Level 25
+357,233,Porygon2,None,Normal,None,Trace,Download,Analytic,50,Gold,85,80,90,105,95,60,515,45,Medium Fast,1000000,Upgrade
+358,234,Stantler,None,Normal,None,Intimidate,Frisk,Sap Sipper,50,Gold,73,95,62,85,65,85,465,45,Slow,1250000,None
+359,235,Smeargle,None,Normal,None,Own Tempo,Technician,Moody,50,Gold,55,20,35,20,45,75,250,45,Fast,800000,None
+360,236,Tyrogue,None,Fighting,None,Guts,Steadfast,Vital Spirit,50,Gold,35,35,35,35,35,35,210,75,Medium Fast,1000000,None
+361,237,Hitmontop,None,Fighting,None,Intimidate,Technician,Steadfast,50,Gold,50,95,95,35,110,70,455,45,Medium Fast,1000000,Level 20 With Attack = Defense
+362,238,Smoochum,None,Ice,Psychic,Oblivious,Forewarn,Hydration,50,Gold,45,30,15,85,65,65,305,45,Medium Fast,1000000,None
+363,239,Elekid,None,Electric,None,Static,None,Vital Spirit,50,Gold,45,63,37,65,55,95,360,45,Medium Fast,1000000,None
+364,240,Magby,None,Fire,None,Flame Body,None,Vital Spirit,50,Gold,45,75,37,70,55,83,365,45,Medium Fast,1000000,None
+365,241,Miltank,None,Normal,None,Thick Fat,Scrappy,Sap Sipper,50,Gold,95,80,105,40,70,100,490,45,Slow,1250000,None
+366,242,Blissey,None,Normal,None,Natural Cure,Serene Grace,Healer,140,Gold,255,10,10,75,135,55,540,30,Fast,800000,None
+367,243,Raikou,Sub-Legendary,Electric,None,Pressure,None,Inner Focus,35,Gold,90,85,75,115,100,115,580,3,Slow,1250000,None
+368,244,Entei,Sub-Legendary,Fire,None,Pressure,None,Inner Focus,35,Gold,115,115,85,90,75,100,580,3,Slow,1250000,None
+369,245,Suicune,Sub-Legendary,Water,None,Pressure,None,Inner Focus,35,Gold,100,75,115,90,115,85,580,3,Slow,1250000,None
+370,246,Larvitar,None,Rock,Ground,Guts,None,Sand Veil,35,Gold,50,64,50,45,50,41,300,45,Slow,1250000,None
+371,247,Pupitar,None,Rock,Ground,Shed Skin,None,None,35,Gold,70,84,70,65,70,51,410,45,Slow,1250000,Level 30
+372,248,Tyranitar,None,Rock,Dark,Sand Stream,None,Unnerve,35,Gold,100,134,110,95,100,61,600,45,Slow,1250000,Level 55
+373,249,Lugia,Legendary,Psychic,Flying,Pressure,None,Multiscale,0,Gold,106,90,130,90,154,110,680,3,Slow,1250000,None
+374,250,Ho-Oh,Legendary,Fire,Flying,Pressure,None,Regenerator,0,Gold,106,130,90,110,154,90,680,3,Slow,1250000,None
+375,251,Celebi,Mythical,Psychic,Grass,Natural Cure,None,None,100,Gold,100,100,100,100,100,100,600,45,Medium Slow,1059860,None
+380,252,Treecko,None,Grass,None,Overgrow,None,Unburden,50,Ruby,40,45,35,65,55,70,310,45,Medium Slow,1059860,None
+381,253,Grovyle,None,Grass,None,Overgrow,None,Unburden,50,Ruby,50,65,45,85,65,95,405,45,Medium Slow,1059860,Level 16
+382,254,Sceptile,None,Grass,None,Overgrow,None,Unburden,50,Ruby,70,85,65,105,85,120,530,45,Medium Slow,1059860,Level 36
+383,255,Torchic,None,Fire,None,Blaze,None,Speed Boost,50,Ruby,45,60,40,70,50,45,310,45,Medium Slow,1059860,None
+384,256,Combusken,None,Fire,Fighting,Blaze,None,Speed Boost,50,Ruby,60,85,60,85,60,55,405,45,Medium Slow,1059860,Level 16
+385,257,Blaziken,None,Fire,Fighting,Blaze,None,Speed Boost,50,Ruby,80,120,70,110,70,80,530,45,Medium Slow,1059860,Level 36
+386,258,Mudkip,None,Water,None,Torrent,None,Damp,50,Ruby,50,70,50,50,50,40,310,45,Medium Slow,1059860,None
+387,259,Marshtomp,None,Water,Ground,Torrent,None,Damp,50,Ruby,70,85,70,60,70,50,405,45,Medium Slow,1059860,Level 16
+388,260,Swampert,None,Water,Ground,Torrent,None,Damp,50,Ruby,100,110,90,85,90,60,535,45,Medium Slow,1059860,Level 36
+389,261,Poochyena,None,Dark,None,Run Away,Quick Feet,Rattled,50,Ruby,35,55,35,30,30,35,220,255,Medium Fast,1000000,None
+390,262,Mightyena,None,Dark,None,Intimidate,Quick Feet,Moxie,50,Ruby,70,90,70,60,60,70,420,127,Medium Fast,1000000,Level 18
+391,263,Zigzagoon,None,Normal,None,Pickup,Gluttony,Quick Feet,50,Ruby,38,30,41,30,41,60,240,255,Medium Fast,1000000,None
+392,264,Linoone,None,Normal,None,Pickup,Gluttony,Quick Feet,50,Ruby,78,70,61,50,61,100,420,90,Medium Fast,1000000,Level 20
+393,265,Wurmple,None,Bug,None,Shield Dust,None,Run Away,50,Ruby,45,45,35,20,30,20,195,255,Medium Fast,1000000,None
+394,266,Silcoon,None,Bug,None,Shed Skin,None,None,50,Ruby,50,35,55,25,25,15,205,120,Medium Fast,1000000,Level 7 Based On Personality Value
+395,267,Beautifly,None,Bug,Flying,Swarm,None,Rivalry,50,Ruby,60,70,50,100,50,65,395,45,Medium Fast,1000000,Level 10
+396,268,Cascoon,None,Bug,None,Shed Skin,None,None,50,Ruby,50,35,55,25,25,15,205,120,Medium Fast,1000000,Level 7 Based On Personality Value
+397,269,Dustox,None,Bug,Poison,Shield Dust,None,Compound Eyes,50,Ruby,60,50,70,50,90,65,385,45,Medium Fast,1000000,Level 10
+398,270,Lotad,None,Water,Grass,Swift Swim,Rain Dish,Own Tempo,50,Ruby,40,30,30,40,50,30,220,255,Medium Slow,1059860,None
+399,271,Lombre,None,Water,Grass,Swift Swim,Rain Dish,Own Tempo,50,Ruby,60,50,50,60,70,50,340,120,Medium Slow,1059860,Level 14
+400,272,Ludicolo,None,Water,Grass,Swift Swim,Rain Dish,Own Tempo,50,Ruby,80,70,70,90,100,70,480,45,Medium Slow,1059860,Water Stone
+401,273,Seedot,None,Grass,None,Chlorophyll,Early Bird,Pickpocket,50,Ruby,40,40,50,30,30,30,220,255,Medium Slow,1059860,None
+402,274,Nuzleaf,None,Grass,Dark,Chlorophyll,Early Bird,Pickpocket,50,Ruby,70,70,40,60,40,60,340,120,Medium Slow,1059860,Level 14
+403,275,Shiftry,None,Grass,Dark,Chlorophyll,Wind Rider,Pickpocket,50,Ruby,90,100,60,90,60,80,480,45,Medium Slow,1059860,Leaf Stone
+404,276,Taillow,None,Normal,Flying,Guts,None,Scrappy,50,Ruby,40,55,30,30,30,85,270,200,Medium Slow,1059860,None
+405,277,Swellow,None,Normal,Flying,Guts,None,Scrappy,50,Ruby,60,85,60,75,50,125,455,45,Medium Slow,1059860,Level 22
+406,278,Wingull,None,Water,Flying,Keen Eye,Hydration,Rain Dish,50,Ruby,40,30,30,55,30,85,270,190,Medium Fast,1000000,None
+407,279,Pelipper,None,Water,Flying,Keen Eye,Drizzle,Rain Dish,50,Ruby,60,50,100,95,70,65,440,45,Medium Fast,1000000,Level 25
+408,280,Ralts,None,Psychic,None,Synchronize,Trace,Telepathy,35,Ruby,28,25,25,45,35,40,198,235,Slow,1250000,None
+409,281,Kirlia,None,Psychic,None,Synchronize,Trace,Telepathy,35,Ruby,38,35,35,65,55,50,278,120,Slow,1250000,Level 20
+410,282,Gardevoir,None,Psychic,None,Synchronize,Trace,Telepathy,35,Ruby,68,65,65,125,115,80,518,45,Slow,1250000,Level 30
+411,283,Surskit,None,Bug,Water,Swift Swim,None,Rain Dish,50,Ruby,40,30,32,50,52,65,269,200,Medium Fast,1000000,None
+412,284,Masquerain,None,Bug,Flying,Intimidate,None,Unnerve,50,Ruby,70,60,62,100,82,80,454,75,Medium Fast,1000000,Level 22
+413,285,Shroomish,None,Grass,None,Effect Spore,Poison Heal,Quick Feet,50,Ruby,60,40,60,40,60,35,295,255,Fluctuating,1640000,None
+414,286,Breloom,None,Grass,Fighting,Effect Spore,Poison Heal,Technician,50,Ruby,60,130,80,60,60,70,460,90,Fluctuating,1640000,Level 23
+415,287,Slakoth,None,Normal,None,Truant,None,None,50,Ruby,60,60,60,35,35,30,280,255,Slow,1250000,None
+416,288,Vigoroth,None,Normal,None,Vital Spirit,None,None,50,Ruby,80,80,80,55,55,90,440,120,Slow,1250000,Level 18
+417,289,Slaking,None,Normal,None,Truant,None,None,50,Ruby,150,160,100,95,65,100,670,45,Slow,1250000,Level 36
+418,290,Nincada,None,Bug,Ground,Compound Eyes,None,Run Away,50,Ruby,31,45,90,30,30,40,266,255,Erratic,600000,None
+419,291,Ninjask,None,Bug,Flying,Speed Boost,None,Infiltrator,50,Ruby,61,90,45,50,50,160,456,120,Erratic,600000,Level 20
+420,292,Shedinja,None,Bug,Ghost,Wonder Guard,None,None,50,Ruby,1,90,45,30,30,40,236,45,Erratic,600000,Have A Pokeball And Empty Space In Party
+421,293,Whismur,None,Normal,None,Soundproof,None,Rattled,50,Ruby,64,51,23,51,23,28,240,190,Medium Slow,1059860,None
+422,294,Loudred,None,Normal,None,Soundproof,None,Scrappy,50,Ruby,84,71,43,71,43,48,360,120,Medium Slow,1059860,Level 20
+423,295,Exploud,None,Normal,None,Soundproof,None,Scrappy,50,Ruby,104,91,63,91,73,68,490,45,Medium Slow,1059860,Level 40
+424,296,Makuhita,None,Fighting,None,Thick Fat,Guts,Sheer Force,50,Ruby,72,60,30,20,30,25,237,180,Fluctuating,1640000,None
+425,297,Hariyama,None,Fighting,None,Thick Fat,Guts,Sheer Force,50,Ruby,144,120,60,40,60,50,474,200,Fluctuating,1640000,Level 24
+426,298,Azurill,None,Normal,None,Thick Fat,Huge Power,Sap Sipper,50,Ruby,50,20,40,20,40,20,190,150,Fast,800000,None
+427,299,Nosepass,None,Rock,None,Sturdy,Magnet Pull,Sand Force,50,Ruby,30,45,135,45,90,30,375,255,Medium Fast,1000000,None
+428,300,Skitty,None,Normal,None,Cute Charm,Normalize,Wonder Skin,50,Ruby,50,45,45,35,35,50,260,255,Fast,800000,None
+429,301,Delcatty,None,Normal,None,Cute Charm,Normalize,Wonder Skin,50,Ruby,70,65,65,55,55,90,400,60,Fast,800000,Moon Stone
+430,302,Sableye,None,Dark,Ghost,Keen Eye,Stall,Prankster,35,Ruby,50,75,75,65,65,50,380,45,Medium Slow,1059860,None
+431,303,Mawile,None,Steel,None,Hyper Cutter,Intimidate,Sheer Force,50,Ruby,50,85,85,55,55,50,380,45,Fast,800000,None
+432,304,Aron,None,Steel,Rock,Sturdy,Rock Head,Heavy Metal,35,Ruby,50,70,100,40,40,30,330,180,Slow,1250000,None
+433,305,Lairon,None,Steel,Rock,Sturdy,Rock Head,Heavy Metal,35,Ruby,60,90,140,50,50,40,430,90,Slow,1250000,Level 32
+434,306,Aggron,None,Steel,Rock,Sturdy,Rock Head,Heavy Metal,35,Ruby,70,110,180,60,60,50,530,45,Slow,1250000,Level 42
+435,307,Meditite,None,Fighting,Psychic,Pure Power,None,Telepathy,50,Ruby,30,40,55,40,55,60,280,180,Medium Fast,1000000,None
+436,308,Medicham,None,Fighting,Psychic,Pure Power,None,Telepathy,50,Ruby,60,60,75,60,75,80,410,90,Medium Fast,1000000,Level 37
+437,309,Electrike,None,Electric,None,Static,Lightning Rod,Minus,50,Ruby,40,45,40,65,40,65,295,120,Slow,1250000,None
+438,310,Manectric,None,Electric,None,Static,Lightning Rod,Minus,50,Ruby,70,75,60,105,60,105,475,45,Slow,1250000,Level 26
+439,311,Plusle,None,Electric,None,Plus,None,Lightning Rod,50,Ruby,60,50,40,85,75,95,405,200,Medium Fast,1000000,None
+440,312,Minun,None,Electric,None,Minus,None,Volt Absorb,50,Ruby,60,40,50,75,85,95,405,200,Medium Fast,1000000,None
+441,313,Volbeat,None,Bug,None,Illuminate,Swarm,Prankster,50,Ruby,65,73,75,47,85,85,430,150,Erratic,600000,None
+442,314,Illumise,None,Bug,None,Oblivious,Tinted Lens,Prankster,50,Ruby,65,47,75,73,85,85,430,150,Fluctuating,1640000,None
+443,315,Roselia,None,Grass,Poison,Natural Cure,Poison Point,Leaf Guard,50,Ruby,50,60,45,100,80,65,400,150,Medium Slow,1059860,During The Day
+444,316,Gulpin,None,Poison,None,Liquid Ooze,Sticky Hold,Gluttony,50,Ruby,70,43,53,43,53,40,302,225,Fluctuating,1640000,None
+445,317,Swalot,None,Poison,None,Liquid Ooze,Sticky Hold,Gluttony,50,Ruby,100,73,83,73,83,55,467,75,Fluctuating,1640000,Level 26
+446,318,Carvanha,None,Water,Dark,Rough Skin,None,Speed Boost,35,Ruby,45,90,20,65,20,65,305,225,Slow,1250000,None
+447,319,Sharpedo,None,Water,Dark,Rough Skin,None,Speed Boost,35,Ruby,70,120,40,95,40,95,460,60,Slow,1250000,Level 30
+448,320,Wailmer,None,Water,None,Water Veil,Oblivious,Pressure,50,Ruby,130,70,35,70,35,60,400,125,Fluctuating,1640000,None
+449,321,Wailord,None,Water,None,Water Veil,Oblivious,Pressure,50,Ruby,170,90,45,90,45,60,500,60,Fluctuating,1640000,Level 40
+450,322,Numel,None,Fire,Ground,Oblivious,Simple,Own Tempo,50,Ruby,60,60,40,65,45,35,305,255,Medium Fast,1000000,None
+451,323,Camerupt,None,Fire,Ground,Magma Armor,Solid Rock,Anger Point,50,Ruby,70,100,70,105,75,40,460,150,Medium Fast,1000000,Level 33
+452,324,Torkoal,None,Fire,None,White Smoke,Drought,Shell Armor,50,Ruby,70,85,140,85,70,20,470,90,Medium Fast,1000000,None
+453,325,Spoink,None,Psychic,None,Thick Fat,Own Tempo,Gluttony,50,Ruby,60,25,35,70,80,60,330,255,Fast,800000,None
+454,326,Grumpig,None,Psychic,None,Thick Fat,Own Tempo,Gluttony,50,Ruby,80,45,65,90,110,80,470,60,Fast,800000,Level 32
+455,327,Spinda,None,Normal,None,Own Tempo,Tangled Feet,Contrary,50,Ruby,60,60,60,60,60,60,360,255,Fast,800000,None
+456,328,Trapinch,None,Ground,None,Hyper Cutter,Arena Trap,Sheer Force,50,Ruby,45,100,45,45,45,10,290,255,Medium Slow,1059860,None
+457,329,Vibrava,None,Ground,Dragon,Levitate,None,None,50,Ruby,50,70,50,50,50,70,340,120,Medium Slow,1059860,Level 35
+458,330,Flygon,None,Ground,Dragon,Levitate,None,None,50,Ruby,80,100,80,80,80,100,520,45,Medium Slow,1059860,Level 45
+459,331,Cacnea,None,Grass,None,Sand Veil,None,Water Absorb,35,Ruby,50,85,40,85,40,35,335,190,Medium Slow,1059860,None
+460,332,Cacturne,None,Grass,Dark,Sand Veil,None,Water Absorb,35,Ruby,70,115,60,115,60,55,475,60,Medium Slow,1059860,Level 32
+461,333,Swablu,None,Normal,Flying,Natural Cure,None,Cloud Nine,50,Ruby,45,40,60,40,75,50,310,255,Erratic,600000,None
+462,334,Altaria,None,Dragon,Flying,Natural Cure,None,Cloud Nine,50,Ruby,75,70,90,70,105,80,490,45,Erratic,600000,Level 35
+463,335,Zangoose,None,Normal,None,Immunity,None,Toxic Boost,50,Ruby,73,115,60,60,60,90,458,90,Erratic,600000,None
+464,336,Seviper,None,Poison,None,Shed Skin,None,Infiltrator,50,Ruby,73,100,60,100,60,65,458,90,Fluctuating,1640000,None
+465,337,Lunatone,None,Rock,Psychic,Levitate,None,None,50,Ruby,90,55,65,95,85,70,460,45,Fast,800000,None
+466,338,Solrock,None,Rock,Psychic,Levitate,None,None,50,Ruby,90,95,85,55,65,70,460,45,Fast,800000,None
+467,339,Barboach,None,Water,Ground,Oblivious,Anticipation,Hydration,50,Ruby,50,48,43,46,41,60,288,190,Medium Fast,1000000,None
+468,340,Whiscash,None,Water,Ground,Oblivious,Anticipation,Hydration,50,Ruby,110,78,73,76,71,60,468,75,Medium Fast,1000000,Level 30
+469,341,Corphish,None,Water,None,Hyper Cutter,Shell Armor,Adaptability,50,Ruby,43,80,65,50,35,35,308,205,Fluctuating,1640000,None
+470,342,Crawdaunt,None,Water,Dark,Hyper Cutter,Shell Armor,Adaptability,50,Ruby,63,120,85,90,55,55,468,155,Fluctuating,1640000,Level 30
+471,343,Baltoy,None,Ground,Psychic,Levitate,None,None,50,Ruby,40,40,55,40,70,55,300,255,Medium Fast,1000000,None
+472,344,Claydol,None,Ground,Psychic,Levitate,None,None,50,Ruby,60,70,105,70,120,75,500,90,Medium Fast,1000000,Level 36
+473,345,Lileep,None,Rock,Grass,Suction Cups,None,Storm Drain,50,Ruby,66,41,77,61,87,23,355,45,Erratic,600000,None
+474,346,Cradily,None,Rock,Grass,Suction Cups,None,Storm Drain,50,Ruby,86,81,97,81,107,43,495,45,Erratic,600000,Level 40
+475,347,Anorith,None,Rock,Bug,Battle Armor,None,Swift Swim,50,Ruby,45,95,50,40,50,75,355,45,Erratic,600000,None
+476,348,Armaldo,None,Rock,Bug,Battle Armor,None,Swift Swim,50,Ruby,75,125,100,70,80,45,495,45,Erratic,600000,Level 40
+477,349,Feebas,None,Water,None,Swift Swim,Oblivious,Adaptability,50,Ruby,20,15,20,10,55,80,200,255,Erratic,600000,None
+478,350,Milotic,None,Water,None,Marvel Scale,Competitive,Cute Charm,50,Ruby,95,60,79,100,125,81,540,60,Erratic,600000,With Maxed Beauty
+478,350,Milotic,None,Water,None,Marvel Scale,Competitive,Cute Charm,50,Ruby,95,60,79,100,125,81,540,60,Erratic,600000,Level Up With Max Beauty or Trade With Prism Scale
+479,351,Castform,None,Normal,None,Forecast,None,None,50,Ruby,70,70,70,70,70,70,420,45,Medium Fast,1000000,None
+1565,351,Castform,None,Fire,None,Forecast,None,None,50,Ruby,70,70,70,70,70,70,420,45,Medium Fast,1000000,None
+1566,351,Castform,None,Water,None,Forecast,None,None,50,Ruby,70,70,70,70,70,70,420,45,Medium Fast,1000000,None
+1567,351,Castform,None,Ice,None,Forecast,None,None,50,Ruby,70,70,70,70,70,70,420,45,Medium Fast,1000000,None
+480,352,Kecleon,None,Normal,None,Color Change,None,Protean,50,Ruby,60,90,70,60,120,40,440,200,Medium Slow,1059860,None
+481,353,Shuppet,None,Ghost,None,Insomnia,Frisk,Cursed Body,35,Ruby,44,75,35,63,33,45,295,225,Fast,800000,None
+482,354,Banette,None,Ghost,None,Insomnia,Frisk,Cursed Body,35,Ruby,64,115,65,83,63,65,455,45,Fast,800000,Level 37
+483,355,Duskull,None,Ghost,None,Levitate,None,Frisk,35,Ruby,20,40,90,30,90,25,295,190,Fast,800000,None
+484,356,Dusclops,None,Ghost,None,Pressure,None,Frisk,35,Ruby,40,70,130,60,130,25,455,90,Fast,800000,Level 37
+485,357,Tropius,None,Grass,Flying,Chlorophyll,Solar Power,Harvest,50,Ruby,99,68,83,72,87,51,460,200,Slow,1250000,None
+486,358,Chimecho,None,Psychic,None,Levitate,None,None,50,Ruby,75,50,80,95,90,65,455,45,Fast,800000,During The Night
+487,359,Absol,None,Dark,None,Pressure,Super Luck,Justified,35,Ruby,65,130,60,75,60,75,465,30,Medium Slow,1059860,None
+488,360,Wynaut,None,Psychic,None,Shadow Tag,None,Telepathy,50,Ruby,95,23,48,23,48,23,260,125,Medium Fast,1000000,None
+489,361,Snorunt,None,Ice,None,Inner Focus,Ice Body,Moody,50,Ruby,50,50,50,50,50,50,300,190,Medium Fast,1000000,None
+490,362,Glalie,None,Ice,None,Inner Focus,Ice Body,Moody,50,Ruby,80,80,80,80,80,80,480,75,Medium Fast,1000000,Level 42
+491,363,Spheal,None,Ice,Water,Thick Fat,Ice Body,Oblivious,50,Ruby,70,40,50,55,50,25,290,255,Medium Slow,1059860,None
+492,364,Sealeo,None,Ice,Water,Thick Fat,Ice Body,Oblivious,50,Ruby,90,60,70,75,70,45,410,120,Medium Slow,1059860,Level 32
+493,365,Walrein,None,Ice,Water,Thick Fat,Ice Body,Oblivious,50,Ruby,110,80,90,95,90,65,530,45,Medium Slow,1059860,Level 44
+494,366,Clamperl,None,Water,None,Shell Armor,None,Rattled,50,Ruby,35,64,85,74,55,32,345,255,Erratic,600000,None
+495,367,Huntail,None,Water,None,Swift Swim,None,Water Veil,50,Ruby,55,104,105,94,75,52,485,60,Erratic,600000,Deep Sea Tooth
+496,368,Gorebyss,None,Water,None,Swift Swim,None,Hydration,50,Ruby,55,84,105,114,75,52,485,60,Erratic,600000,Deep Sea Scale
+497,369,Relicanth,None,Water,Rock,Swift Swim,Rock Head,Sturdy,50,Ruby,100,90,130,45,65,55,485,25,Slow,1250000,None
+498,370,Luvdisc,None,Water,None,Swift Swim,None,Hydration,50,Ruby,43,30,55,40,65,97,330,225,Fast,800000,None
+499,371,Bagon,None,Dragon,None,Rock Head,None,Sheer Force,35,Ruby,45,75,60,40,30,50,300,45,Slow,1250000,None
+500,372,Shelgon,None,Dragon,None,Rock Head,None,Overcoat,35,Ruby,65,95,100,60,50,50,420,45,Slow,1250000,Level 30
+501,373,Salamence,None,Dragon,Flying,Intimidate,None,Moxie,35,Ruby,95,135,80,110,80,100,600,45,Slow,1250000,Level 50
+502,374,Beldum,None,Steel,Psychic,Clear Body,None,Light Metal,35,Ruby,40,55,80,35,60,30,300,3,Slow,1250000,None
+503,375,Metang,None,Steel,Psychic,Clear Body,None,Light Metal,35,Ruby,60,75,100,55,80,50,420,3,Slow,1250000,Level 20
+504,376,Metagross,None,Steel,Psychic,Clear Body,None,Light Metal,35,Ruby,80,135,130,95,90,70,600,3,Slow,1250000,Level 45
+505,377,Regirock,Sub-Legendary,Rock,None,Clear Body,None,Sturdy,35,Ruby,80,100,200,50,100,50,580,3,Slow,1250000,None
+506,378,Regice,Sub-Legendary,Ice,None,Clear Body,None,Ice Body,35,Ruby,80,50,100,100,200,50,580,3,Slow,1250000,None
+507,379,Registeel,Sub-Legendary,Steel,None,Clear Body,None,Light Metal,35,Ruby,80,75,150,75,150,50,580,3,Slow,1250000,None
+508,380,Latias,Sub-Legendary,Dragon,Psychic,Levitate,None,None,90,Ruby,80,80,90,110,130,110,600,3,Slow,1250000,None
+509,381,Latios,Sub-Legendary,Dragon,Psychic,Levitate,None,None,90,Ruby,80,90,80,130,110,110,600,3,Slow,1250000,None
+510,382,Kyogre,Legendary,Water,None,Drizzle,None,None,0,Ruby,100,100,90,150,140,90,670,3,Slow,1250000,None
+511,383,Groudon,Legendary,Ground,None,Drought,None,None,0,Ruby,100,150,140,100,90,90,670,3,Slow,1250000,None
+512,384,Rayquaza,Legendary,Dragon,Flying,Air Lock,None,None,0,Ruby,105,150,90,150,90,95,680,45,Slow,1250000,None
+513,385,Jirachi,Mythical,Steel,Psychic,Serene Grace,None,None,100,Ruby,100,100,100,100,100,100,600,3,Slow,1250000,None
+514,386,Deoxys,Mythical,Psychic,None,Pressure,None,None,0,Ruby,50,150,50,150,50,150,600,3,Slow,1250000,None
+1391,386,Deoxys,Mythical,Psychic,None,Pressure,None,None,0,Fire Red,50,180,20,180,20,150,600,3,Slow,1250000,None
+1392,386,Deoxys,Mythical,Psychic,None,Pressure,None,None,0,Leaf Green,50,70,160,70,160,90,600,3,Slow,1250000,None
+1393,386,Deoxys,Mythical,Psychic,None,Pressure,None,None,0,Emerald,50,95,90,95,90,180,600,3,Slow,1250000,None
+591,387,Turtwig,None,Grass,None,Overgrow,None,Shell Armor,50,Diamond,55,68,64,45,55,31,318,45,Medium Slow,1059860,None
+592,388,Grotle,None,Grass,None,Overgrow,None,Shell Armor,50,Diamond,75,89,85,55,65,36,405,45,Medium Slow,1059860,Level 18
+593,389,Torterra,None,Grass,Ground,Overgrow,None,Shell Armor,50,Diamond,95,109,105,75,85,56,525,45,Medium Slow,1059860,Level 32
+34,390,Chimchar,None,Fire,None,Blaze,None,Iron Fist,50,Diamond,44,58,44,58,44,61,309,45,Medium Slow,1059860,None
+35,391,Monferno,None,Fire,Fighting,Blaze,None,Iron Fist,50,Diamond,64,78,52,78,52,81,405,45,Medium Slow,1059860,Level 14
+19,392,Infernape,None,Fire,Fighting,Blaze,None,Iron Fist,50,Diamond,76,104,71,104,71,108,534,45,Medium Slow,1059860,Level 36
+594,393,Piplup,None,Water,None,Torrent,None,Competitive,50,Diamond,53,51,53,61,56,40,314,45,Medium Slow,1059860,None
+595,394,Prinplup,None,Water,None,Torrent,None,Competitive,50,Diamond,64,66,68,81,76,50,405,45,Medium Slow,1059860,Level 16
+596,395,Empoleon,None,Water,Steel,Torrent,None,Competitive,50,Diamond,84,86,88,111,101,60,530,45,Medium Slow,1059860,Level 36
+597,396,Starly,None,Normal,Flying,Keen Eye,None,Reckless,50,Diamond,40,55,30,30,30,60,245,255,Medium Slow,1059860,None
+598,397,Staravia,None,Normal,Flying,Intimidate,None,Reckless,50,Diamond,55,75,50,40,40,80,340,120,Medium Slow,1059860,Level 14
+599,398,Staraptor,None,Normal,Flying,Intimidate,None,Reckless,50,Diamond,85,120,70,50,60,100,485,45,Medium Slow,1059860,Level 34
+600,399,Bidoof,None,Normal,None,Simple,Unaware,Moody,50,Diamond,59,45,40,35,40,31,250,255,Medium Fast,1000000,None
+601,400,Bibarel,None,Normal,Water,Simple,Unaware,Moody,50,Diamond,79,85,60,55,60,71,410,127,Medium Fast,1000000,Level 15
+602,401,Kricketot,None,Bug,None,Shed Skin,None,Run Away,50,Diamond,37,25,41,25,41,25,194,255,Medium Slow,1059860,None
+603,402,Kricketune,None,Bug,None,Swarm,None,Technician,50,Diamond,77,85,51,55,51,65,384,45,Medium Slow,1059860,Level 10
+20,403,Shinx,None,Electric,None,Rivalry,Intimidate,Guts,50,Diamond,45,65,34,40,34,45,263,235,Medium Slow,1059860,None
+21,404,Luxio,None,Electric,None,Rivalry,Intimidate,Guts,100,Diamond,60,85,49,60,49,60,363,120,Medium Slow,1059860,Level 15
+22,405,Luxray,None,Electric,None,Rivalry,Intimidate,Guts,50,Diamond,80,120,79,95,79,70,523,45,Medium Slow,1059860,Level 30
+604,406,Budew,None,Grass,Poison,Natural Cure,Poison Point,Leaf Guard,50,Diamond,40,30,35,50,70,55,280,255,Medium Slow,1059860,None
+605,407,Roserade,None,Grass,Poison,Natural Cure,Poison Point,Technician,50,Diamond,60,70,65,125,105,90,515,75,Medium Slow,1059860,Shiny Stone
+606,408,Cranidos,None,Rock,None,Mold Breaker,None,Sheer Force,50,Diamond,67,125,40,30,30,58,350,45,Erratic,600000,None
+607,409,Rampardos,None,Rock,None,Mold Breaker,None,Sheer Force,50,Diamond,97,165,60,65,50,58,495,45,Erratic,600000,Level 30
+608,410,Shieldon,None,Rock,Steel,Sturdy,None,Soundproof,50,Diamond,30,42,118,42,88,30,350,45,Erratic,600000,None
+609,411,Bastiodon,None,Rock,Steel,Sturdy,None,Soundproof,50,Diamond,60,52,168,47,138,30,495,45,Erratic,600000,Level 30
+610,412,Burmy,None,Bug,None,Shed Skin,None,Overcoat,50,Diamond,40,29,45,29,45,36,224,120,Medium Fast,1000000,None
+1645,412,Burmy,None,Bug,None,Shed Skin,None,Overcoat,50,Diamond,40,29,45,29,45,36,224,120,Medium Fast,1000000,None
+1646,412,Burmy,None,Bug,None,Shed Skin,None,Overcoat,50,Diamond,40,29,45,29,45,36,224,120,Medium Fast,1000000,None
+611,413,Wormadam,None,Bug,Grass,Anticipation,None,Overcoat,50,Diamond,60,59,85,79,105,36,424,45,Medium Fast,1000000,Level 20 When Female
+1568,413,Wormadam,None,Bug,Ground,Anticipation,None,Overcoat,50,Diamond,60,79,105,59,85,36,424,45,Medium Fast,1000000,Level 20 When Female
+1569,413,Wormadam,None,Bug,Steel,Anticipation,None,Overcoat,50,Diamond,60,69,95,69,95,36,424,45,Medium Fast,1000000,Level 20 When Female
+612,414,Mothim,None,Bug,Flying,Swarm,None,Tinted Lens,50,Diamond,70,94,50,94,50,66,424,45,Medium Fast,1000000,Level 20 When Male
+612,414,Mothim,None,Bug,Flying,Swarm,None,Tinted Lens,50,Diamond,70,94,50,94,50,66,424,45,Medium Fast,1000000,Level 20 When Male
+612,414,Mothim,None,Bug,Flying,Swarm,None,Tinted Lens,50,Diamond,70,94,50,94,50,66,424,45,Medium Fast,1000000,Level 20 When Male
+613,415,Combee,None,Bug,Flying,Honey Gather,None,Hustle,50,Diamond,30,30,42,30,42,70,244,120,Medium Slow,1059860,None
+614,416,Vespiquen,None,Bug,Flying,Pressure,None,Unnerve,50,Diamond,70,80,102,80,102,40,474,45,Medium Slow,1059860,Level 21 When Female
+615,417,Pachirisu,None,Electric,None,Run Away,Pickup,Volt Absorb,100,Diamond,60,45,70,45,90,95,405,200,Medium Fast,1000000,None
+616,418,Buizel,None,Water,None,Swift Swim,None,Water Veil,50,Diamond,55,65,35,60,30,85,330,190,Medium Fast,1000000,None
+617,419,Floatzel,None,Water,None,Swift Swim,None,Water Veil,50,Diamond,85,105,55,85,50,115,495,75,Medium Fast,1000000,Level 26
+618,420,Cherubi,None,Grass,None,Chlorophyll,None,None,50,Diamond,45,35,45,62,53,35,275,190,Medium Fast,1000000,None
+619,421,Cherrim,None,Grass,None,Flower Gift,None,None,50,Diamond,70,60,70,87,78,85,450,75,Medium Fast,1000000,Level 25
+620,422,Shellos,None,Water,None,Sticky Hold,Storm Drain,Sand Force,50,Diamond,76,48,48,57,62,34,325,190,Medium Fast,1000000,None
+1784,422,Shellos,None,Water,None,Sticky Hold,Storm Drain,Sand Force,50,Diamond,76,48,48,57,62,34,325,190,Medium Fast,1000000,None
+621,423,Gastrodon,None,Water,Ground,Sticky Hold,Storm Drain,Sand Force,50,Diamond,111,83,68,92,82,39,475,75,Medium Fast,1000000,Level 30
+1785,423,Gastrodon,None,Water,Ground,Sticky Hold,Storm Drain,Sand Force,50,Diamond,111,83,68,92,82,39,475,75,Medium Fast,1000000,Level 30
+622,424,Ambipom,None,Normal,None,Technician,Pickup,Skill Link,100,Diamond,75,100,66,60,66,115,482,45,Fast,800000,Knowing Double Hit
+623,425,Drifloon,None,Ghost,Flying,Aftermath,Unburden,Flare Boost,50,Diamond,90,50,34,60,44,70,348,125,Fluctuating,1640000,None
+624,426,Drifblim,None,Ghost,Flying,Aftermath,Unburden,Flare Boost,50,Diamond,150,80,44,90,54,80,498,60,Fluctuating,1640000,Level 28
+625,427,Buneary,None,Normal,None,Run Away,Klutz,Limber,0,Diamond,55,66,44,44,56,85,350,190,Medium Fast,1000000,None
+626,428,Lopunny,None,Normal,None,Cute Charm,Klutz,Limber,140,Diamond,65,76,84,54,96,105,480,60,Medium Fast,1000000,None
+627,429,Mismagius,None,Ghost,None,Levitate,None,None,35,Diamond,60,60,60,105,105,105,495,45,Fast,800000,Dusk Stone
+628,430,Honchkrow,None,Dark,Flying,Insomnia,Super Luck,Moxie,35,Diamond,100,125,52,105,52,71,505,30,Medium Slow,1059860,Dusk Stone
+629,431,Glameow,None,Normal,None,Limber,Own Tempo,Keen Eye,50,Diamond,49,55,42,42,37,85,310,190,Fast,800000,None
+630,432,Purugly,None,Normal,None,Thick Fat,Own Tempo,Defiant,50,Diamond,71,82,64,64,59,112,452,75,Fast,800000,Level 38
+631,433,Chingling,None,Psychic,None,Levitate,None,None,50,Diamond,45,30,50,65,50,45,285,120,Fast,800000,None
+632,434,Stunky,None,Poison,Dark,Stench,Aftermath,Keen Eye,50,Diamond,63,63,47,41,41,74,329,225,Medium Fast,1000000,None
+633,435,Skuntank,None,Poison,Dark,Stench,Aftermath,Keen Eye,50,Diamond,103,93,67,71,61,84,479,60,Medium Fast,1000000,Level 34
+634,436,Bronzor,None,Steel,Psychic,Levitate,Heatproof,Heavy Metal,50,Diamond,57,24,86,24,86,23,300,255,Medium Fast,1000000,None
+635,437,Bronzong,None,Steel,Psychic,Levitate,Heatproof,Heavy Metal,50,Diamond,67,89,116,79,116,33,500,90,Medium Fast,1000000,Level 33
+636,438,Bonsly,None,Rock,None,Sturdy,Rock Head,Rattled,50,Diamond,50,80,95,10,45,10,290,255,Medium Fast,1000000,None
+637,439,Mime Jr.,None,Psychic,None,Soundproof,Filter,Technician,50,Diamond,20,25,45,70,90,60,310,145,Medium Fast,1000000,None
+638,440,Happiny,None,Normal,None,Natural Cure,Serene Grace,Friend Guard,140,Diamond,100,5,5,15,65,30,220,130,Fast,800000,None
+639,441,Chatot,None,Normal,Flying,Keen Eye,Tangled Feet,Big Pecks,35,Diamond,76,65,45,92,42,91,411,30,Medium Slow,1059860,None
+640,442,Spiritomb,None,Ghost,Dark,Pressure,None,Infiltrator,50,Diamond,50,92,108,92,108,35,485,100,Medium Fast,1000000,None
+641,443,Gible,None,Dragon,Ground,Sand Veil,None,Rough Skin,50,Diamond,58,70,45,40,45,42,300,45,Slow,1250000,None
+642,444,Gabite,None,Dragon,Ground,Sand Veil,None,Rough Skin,50,Diamond,68,90,65,50,55,82,410,45,Slow,1250000,Level 24
+643,445,Garchomp,None,Dragon,Ground,Sand Veil,None,Rough Skin,50,Diamond,108,130,95,80,85,102,600,45,Slow,1250000,Level 48
+644,446,Munchlax,None,Normal,None,Pickup,Thick Fat,Gluttony,50,Diamond,135,85,40,40,85,5,390,50,Slow,1250000,None
+645,447,Riolu,None,Fighting,None,Steadfast,Inner Focus,Prankster,50,Diamond,40,70,40,35,40,60,285,75,Medium Slow,1059860,None
+646,448,Lucario,None,Fighting,Steel,Steadfast,Inner Focus,Justified,50,Diamond,70,110,70,115,70,90,525,45,Medium Slow,1059860,During The Day
+647,449,Hippopotas,None,Ground,None,Sand Stream,None,Sand Force,50,Diamond,68,72,78,38,42,32,330,140,Slow,1250000,None
+648,450,Hippowdon,None,Ground,None,Sand Stream,None,Sand Force,50,Diamond,108,112,118,68,72,47,525,60,Slow,1250000,Level 34
+649,451,Skorupi,None,Poison,Bug,Battle Armor,Sniper,Keen Eye,50,Diamond,40,50,90,30,55,65,330,120,Slow,1250000,None
+650,452,Drapion,None,Poison,Dark,Battle Armor,Sniper,Keen Eye,50,Diamond,70,90,110,60,75,95,500,45,Slow,1250000,Level 40
+651,453,Croagunk,None,Poison,Fighting,Anticipation,Dry Skin,Poison Touch,100,Diamond,48,61,40,61,40,50,300,140,Medium Fast,1000000,None
+652,454,Toxicroak,None,Poison,Fighting,Anticipation,Dry Skin,Poison Touch,50,Diamond,83,106,65,86,65,85,490,75,Medium Fast,1000000,Level 37
+653,455,Carnivine,None,Grass,None,Levitate,None,None,50,Diamond,74,100,72,90,72,46,454,200,Slow,1250000,None
+654,456,Finneon,None,Water,None,Swift Swim,Storm Drain,Water Veil,50,Diamond,49,49,56,49,61,66,330,190,Erratic,600000,None
+655,457,Lumineon,None,Water,None,Swift Swim,Storm Drain,Water Veil,50,Diamond,69,69,76,69,86,91,460,75,Erratic,600000,Level 31
+656,458,Mantyke,None,Water,Flying,Swift Swim,Water Absorb,Water Veil,50,Diamond,45,20,50,60,120,50,345,25,Slow,1250000,None
+657,459,Snover,None,Grass,Ice,Snow Warning,None,Soundproof,50,Diamond,60,62,50,62,60,40,334,120,Slow,1250000,None
+658,460,Abomasnow,None,Grass,Ice,Snow Warning,None,Soundproof,50,Diamond,90,92,75,92,85,60,494,60,Slow,1250000,Level 40
+683,461,Weavile,None,Dark,Ice,Pressure,None,Pickpocket,35,Diamond,70,120,65,45,85,125,510,45,Medium Slow,1059860,Holding Razor Claw At Night
+684,462,Magnezone,None,Electric,Steel,Magnet Pull,Sturdy,Analytic,50,Diamond,70,70,115,130,90,60,535,30,Medium Fast,1000000,In a Special Magnetic Field
+684,462,Magnezone,None,Electric,Steel,Magnet Pull,Sturdy,Analytic,50,Diamond,70,70,115,130,90,60,535,30,Medium Fast,1000000,Thunder Stone
+685,463,Lickilicky,None,Normal,None,Own Tempo,Oblivious,Cloud Nine,50,Diamond,110,85,95,80,95,50,515,30,Medium Fast,1000000,Knowing Rollout
+686,464,Rhyperior,None,Ground,Rock,Lightning Rod,Solid Rock,Reckless,50,Diamond,115,140,130,55,55,40,535,30,Slow,1250000,Protector
+687,465,Tangrowth,None,Grass,None,Chlorophyll,Leaf Guard,Regenerator,50,Diamond,100,100,125,110,50,50,535,30,Medium Fast,1000000,Knowing Ancient Power
+688,466,Electivire,None,Electric,None,Motor Drive,None,Vital Spirit,50,Diamond,75,123,67,95,85,95,540,30,Medium Fast,1000000,Electirizer
+699,467,Magmortar,None,Fire,None,Flame Body,None,Vital Spirit,50,Diamond,75,95,67,125,95,83,540,30,Medium Fast,1000000,Magmarizer
+713,468,Togekiss,None,Normal,Flying,Hustle,Serene Grace,Super Luck,50,Diamond,85,50,95,120,115,80,545,30,Fast,800000,Shiny Stone
+714,469,Yanmega,None,Bug,Flying,Speed Boost,Tinted Lens,Frisk,50,Diamond,86,76,86,116,56,95,515,30,Medium Fast,1000000,Knowing Ancient Power
+715,470,Leafeon,None,Grass,None,Leaf Guard,None,Chlorophyll,35,Diamond,65,110,130,60,65,95,525,45,Medium Fast,1000000,Next to Moss Rock
+715,470,Leafeon,None,Grass,None,Leaf Guard,None,Chlorophyll,35,Diamond,65,110,130,60,65,95,525,45,Medium Fast,1000000,Leaf Stone
+716,471,Glaceon,None,Ice,None,Snow Cloak,None,Ice Body,35,Diamond,65,60,110,130,95,65,525,45,Medium Fast,1000000,Next to Icy Rock
+716,471,Glaceon,None,Ice,None,Snow Cloak,None,Ice Body,35,Diamond,65,60,110,130,95,65,525,45,Medium Fast,1000000,Ice Stone
+717,472,Gliscor,None,Ground,Flying,Hyper Cutter,Sand Veil,Poison Heal,50,Diamond,75,95,125,45,75,95,510,30,Medium Slow,1059860,Holding Razor Fang At Night
+718,473,Mamoswine,None,Ice,Ground,Oblivious,Snow Cloak,Thick Fat,50,Diamond,110,130,80,70,60,80,530,50,Slow,1250000,Knowing Ancient Power
+719,474,Porygon-Z,None,Normal,None,Adaptability,Download,Analytic,50,Diamond,85,80,70,135,75,90,535,30,Medium Fast,1000000,Dubious Disc
+720,475,Gallade,None,Psychic,Fighting,Steadfast,Sharpness,Justified,35,Diamond,68,125,65,65,115,80,518,45,Slow,1250000,Dawn Stone When Male
+726,476,Probopass,None,Rock,Steel,Sturdy,Magnet Pull,Sand Force,50,Diamond,60,55,145,75,150,40,525,60,Medium Fast,1000000,Near A Special Magnetic Field
+726,476,Probopass,None,Rock,Steel,Sturdy,Magnet Pull,Sand Force,50,Diamond,60,55,145,75,150,40,525,60,Medium Fast,1000000,Near A Special Magnetic Field Or Use Thunder Stone In Legends: Arceus
+727,477,Dusknoir,None,Ghost,None,Pressure,None,Frisk,35,Diamond,45,100,135,65,135,45,525,45,Fast,800000,Reaper Cloth
+728,478,Froslass,None,Ice,Ghost,Snow Cloak,None,Cursed Body,50,Diamond,70,80,70,80,70,110,480,75,Medium Fast,1000000,Dawn Stone When Female
+729,479,Rotom,None,Electric,Ghost,Levitate,None,None,50,Diamond,50,50,77,95,77,91,440,45,Medium Fast,1000000,None
+1413,479,Rotom,None,Electric,Grass,Levitate,None,None,50,Platinum,50,65,107,105,107,86,520,45,Medium Fast,1000000,None
+1408,479,Rotom,None,Electric,Fire,Levitate,None,None,50,Platinum,50,65,107,105,107,86,520,45,Medium Fast,1000000,None
+1409,479,Rotom,None,Electric,Water,Levitate,None,None,50,Platinum,50,65,107,105,107,86,520,45,Medium Fast,1000000,None
+1410,479,Rotom,None,Electric,Ice,Levitate,None,None,50,Platinum,50,65,107,105,107,86,520,45,Medium Fast,1000000,None
+1411,479,Rotom,None,Electric,Flying,Levitate,None,None,50,Platinum,50,65,107,105,107,86,520,45,Medium Fast,1000000,None
+730,480,Uxie,Sub-Legendary,Psychic,None,Levitate,None,None,140,Diamond,75,75,130,75,130,95,580,3,Slow,1250000,None
+731,481,Mesprit,Sub-Legendary,Psychic,None,Levitate,None,None,140,Diamond,80,105,105,105,105,80,580,3,Slow,1250000,None
+732,482,Azelf,Sub-Legendary,Psychic,None,Levitate,None,None,140,Diamond,75,125,70,125,70,115,580,3,Slow,1250000,None
+733,483,Dialga,Legendary,Steel,Dragon,Pressure,None,Telepathy,0,Diamond,100,120,120,150,100,90,680,3,Slow,1250000,None
+734,484,Palkia,Legendary,Water,Dragon,Pressure,None,Telepathy,0,Diamond,90,120,100,150,120,100,680,3,Slow,1250000,None
+735,485,Heatran,Sub-Legendary,Fire,Steel,Flash Fire,None,Flame Body,100,Diamond,91,90,106,130,106,77,600,3,Slow,1250000,None
+736,486,Regigigas,Sub-Legendary,Normal,None,Slow Start,None,None,0,Diamond,110,160,110,80,110,100,670,3,Slow,1250000,None
+737,487,Giratina,Legendary,Ghost,Dragon,Pressure,None,Telepathy,0,Diamond,150,100,120,100,120,90,680,3,Slow,1250000,None
+1401,487,Giratina,Legendary,Ghost,Dragon,Levitate,None,None,0,Platinum,150,120,100,120,100,90,680,3,Slow,1250000,None
+738,488,Cresselia,Sub-Legendary,Psychic,None,Levitate,None,None,100,Diamond,120,70,110,75,120,85,580,3,Slow,1250000,None
+36,489,Phione,Mythical,Water,None,Hydration,None,None,50,Diamond,80,80,80,80,80,80,480,30,Slow,1250000,None
+37,490,Manaphy,Mythical,Water,None,Hydration,None,None,50,Diamond,100,100,100,100,100,100,600,3,Slow,1250000,None
+739,491,Darkrai,Mythical,Dark,None,Bad Dreams,None,None,0,Diamond,70,90,90,135,90,125,600,3,Slow,1250000,None
+740,492,Shaymin,Mythical,Grass,None,Natural Cure,None,None,100,Diamond,100,100,100,100,100,100,600,45,Medium Slow,1059860,None
+1407,492,Shaymin,Mythical,Grass,Flying,Serene Grace,None,None,100,Platinum,100,103,75,120,75,127,600,45,Medium Slow,1059860,None
+741,493,Arceus,Mythical,Normal,None,Multitype,None,None,0,Diamond,120,120,120,120,120,120,720,3,Slow,1250000,None
+742,494,Victini,Mythical,Psychic,Fire,Victory Star,None,None,100,Black,100,100,100,100,100,100,600,3,Slow,1250000,None
+829,495,Snivy,None,Grass,None,Overgrow,None,Contrary,70,Black,45,45,55,45,55,63,308,45,Medium Slow,1059860,None
+830,496,Servine,None,Grass,None,Overgrow,None,Contrary,70,Black,60,60,75,60,75,83,413,45,Medium Slow,1059860,Level 17
+831,497,Serperior,None,Grass,None,Overgrow,None,Contrary,70,Black,75,75,95,75,95,113,528,45,Medium Slow,1059860,Level 36
+832,498,Tepig,None,Fire,None,Blaze,None,Thick Fat,70,Black,65,63,45,45,45,45,308,45,Medium Slow,1059860,None
+833,499,Pignite,None,Fire,Fighting,Blaze,None,Thick Fat,70,Black,90,93,55,70,55,55,418,45,Medium Slow,1059860,Level 17
+834,500,Emboar,None,Fire,Fighting,Blaze,None,Reckless,70,Black,110,123,65,100,65,65,528,45,Medium Slow,1059860,Level 36
+835,501,Oshawott,None,Water,None,Torrent,None,Shell Armor,50,Black,55,55,45,63,45,45,308,45,Medium Slow,1059860,None
+836,502,Dewott,None,Water,None,Torrent,None,Shell Armor,50,Black,75,75,60,83,60,60,413,45,Medium Slow,1059860,Level 17
+837,503,Samurott,None,Water,None,Torrent,None,Shell Armor,50,Black,95,100,85,108,70,70,528,45,Medium Slow,1059860,Level 36
+838,504,Patrat,None,Normal,None,Run Away,Keen Eye,Analytic,70,Black,45,55,39,35,39,42,255,255,Medium Fast,1000000,None
+839,505,Watchog,None,Normal,None,Illuminate,Keen Eye,Analytic,70,Black,60,85,69,60,69,77,420,255,Medium Fast,1000000,Level 20
+840,506,Lillipup,None,Normal,None,Vital Spirit,Pickup,Run Away,50,Black,45,60,45,25,45,55,275,255,Medium Slow,1059860,None
+841,507,Herdier,None,Normal,None,Intimidate,Sand Rush,Scrappy,50,Black,65,80,65,35,65,60,370,120,Medium Slow,1059860,Level 16
+842,508,Stoutland,None,Normal,None,Intimidate,Sand Rush,Scrappy,50,Black,85,110,90,45,90,80,500,45,Medium Slow,1059860,Level 32
+843,509,Purrloin,None,Dark,None,Limber,Unburden,Prankster,50,Black,41,50,37,50,37,66,281,255,Medium Fast,1000000,None
+844,510,Liepard,None,Dark,None,Limber,Unburden,Prankster,50,Black,64,88,50,88,50,106,446,90,Medium Fast,1000000,Level 20
+845,511,Pansage,None,Grass,None,Gluttony,None,Overgrow,70,Black,50,53,48,53,48,64,316,190,Medium Fast,1000000,None
+846,512,Simisage,None,Grass,None,Gluttony,None,Overgrow,70,Black,75,98,63,98,63,101,498,75,Medium Fast,1000000,Leaf Stone
+847,513,Pansear,None,Fire,None,Gluttony,None,Blaze,70,Black,50,53,48,53,48,64,316,190,Medium Fast,1000000,None
+848,514,Simisear,None,Fire,None,Gluttony,None,Blaze,70,Black,75,98,63,98,63,101,498,75,Medium Fast,1000000,Fire Stone
+849,515,Panpour,None,Water,None,Gluttony,None,Torrent,70,Black,50,53,48,53,48,64,316,190,Medium Fast,1000000,None
+850,516,Simipour,None,Water,None,Gluttony,None,Torrent,70,Black,75,98,63,98,63,101,498,75,Medium Fast,1000000,Water Stone
+851,517,Munna,None,Psychic,None,Forewarn,Synchronize,Telepathy,50,Black,76,25,45,67,55,24,292,190,Fast,800000,None
+852,518,Musharna,None,Psychic,None,Forewarn,Synchronize,Telepathy,50,Black,116,55,85,107,95,29,487,75,Fast,800000,Moon Stone
+853,519,Pidove,None,Normal,Flying,Big Pecks,Super Luck,Rivalry,50,Black,50,55,50,36,30,43,264,255,Medium Slow,1059860,None
+854,520,Tranquill,None,Normal,Flying,Big Pecks,Super Luck,Rivalry,50,Black,62,77,62,50,42,65,358,120,Medium Slow,1059860,Level 21
+855,521,Unfezant,None,Normal,Flying,Big Pecks,Super Luck,Rivalry,50,Black,80,115,80,65,55,93,488,45,Medium Slow,1059860,Level 32
+856,522,Blitzle,None,Electric,None,Lightning Rod,Motor Drive,Sap Sipper,70,Black,45,60,32,50,32,76,295,190,Medium Fast,1000000,None
+857,523,Zebstrika,None,Electric,None,Lightning Rod,Motor Drive,Sap Sipper,70,Black,75,100,63,80,63,116,497,75,Medium Fast,1000000,Level 27
+858,524,Roggenrola,None,Rock,None,Sturdy,Weak Armor,Sand Force,50,Black,55,75,85,25,25,15,280,255,Medium Slow,1059860,None
+859,525,Boldore,None,Rock,None,Sturdy,Weak Armor,Sand Force,50,Black,70,105,105,50,40,20,390,120,Medium Slow,1059860,Level 25
+860,526,Gigalith,None,Rock,None,Sturdy,Sand Stream,Sand Force,50,Black,85,135,130,60,80,25,515,45,Medium Slow,1059860,None
+861,527,Woobat,None,Psychic,Flying,Unaware,Klutz,Simple,50,Black,65,45,43,55,43,72,323,190,Medium Fast,1000000,None
+862,528,Swoobat,None,Psychic,Flying,Unaware,Klutz,Simple,50,Black,67,57,55,77,55,114,425,45,Medium Fast,1000000,None
+863,529,Drilbur,None,Ground,None,Sand Rush,Sand Force,Mold Breaker,50,Black,60,85,40,30,45,68,328,120,Medium Fast,1000000,None
+864,530,Excadrill,None,Ground,Steel,Sand Rush,Sand Force,Mold Breaker,50,Black,110,135,60,50,65,88,508,60,Medium Fast,1000000,Level 31
+865,531,Audino,None,Normal,None,Healer,Regenerator,Klutz,50,Black,103,60,86,60,86,50,445,255,Fast,800000,None
+866,532,Timburr,None,Fighting,None,Guts,Sheer Force,Iron Fist,70,Black,75,80,55,25,35,35,305,180,Medium Slow,1059860,None
+867,533,Gurdurr,None,Fighting,None,Guts,Sheer Force,Iron Fist,50,Black,85,105,85,40,50,40,405,90,Medium Slow,1059860,Level 25
+868,534,Conkeldurr,None,Fighting,None,Guts,Sheer Force,Iron Fist,50,Black,105,140,95,55,65,45,505,45,Medium Slow,1059860,None
+869,535,Tympole,None,Water,None,Swift Swim,Hydration,Water Absorb,50,Black,50,50,40,50,40,64,294,255,Medium Slow,1059860,None
+870,536,Palpitoad,None,Water,Ground,Swift Swim,Hydration,Water Absorb,50,Black,75,65,55,65,55,69,384,120,Medium Slow,1059860,Level 25
+871,537,Seismitoad,None,Water,Ground,Swift Swim,Poison Touch,Water Absorb,50,Black,105,95,75,85,75,74,509,45,Medium Slow,1059860,Level 36
+872,538,Throh,None,Fighting,None,Guts,Inner Focus,Mold Breaker,50,Black,120,100,85,30,85,45,465,45,Medium Fast,1000000,None
+873,539,Sawk,None,Fighting,None,Sturdy,Inner Focus,Mold Breaker,50,Black,75,125,75,30,75,85,465,45,Medium Fast,1000000,None
+874,540,Sewaddle,None,Bug,Grass,Swarm,Chlorophyll,Overcoat,70,Black,45,53,70,40,60,42,310,255,Medium Slow,1059860,None
+875,541,Swadloon,None,Bug,Grass,Leaf Guard,Chlorophyll,Overcoat,70,Black,55,63,90,50,80,42,380,120,Medium Slow,1059860,Level 20
+876,542,Leavanny,None,Bug,Grass,Swarm,Chlorophyll,Overcoat,70,Black,75,103,80,70,80,92,500,45,Medium Slow,1059860,None
+877,543,Venipede,None,Bug,Poison,Poison Point,Swarm,Speed Boost,50,Black,30,45,59,30,39,57,260,255,Medium Slow,1059860,None
+878,544,Whirlipede,None,Bug,Poison,Poison Point,Swarm,Speed Boost,50,Black,40,55,99,40,79,47,360,120,Medium Slow,1059860,Level 22
+879,545,Scolipede,None,Bug,Poison,Poison Point,Swarm,Speed Boost,50,Black,60,100,89,55,69,112,485,45,Medium Slow,1059860,Level 30
+880,546,Cottonee,None,Grass,None,Prankster,Infiltrator,Chlorophyll,50,Black,40,27,60,37,50,66,280,190,Medium Fast,1000000,None
+881,547,Whimsicott,None,Grass,None,Prankster,Infiltrator,Chlorophyll,50,Black,60,67,85,77,75,116,480,75,Medium Fast,1000000,Sun Stone
+882,548,Petilil,None,Grass,None,Chlorophyll,Own Tempo,Leaf Guard,50,Black,45,35,50,70,50,30,280,190,Medium Fast,1000000,None
+883,549,Lilligant,None,Grass,None,Chlorophyll,Own Tempo,Leaf Guard,50,Black,70,60,75,110,75,90,480,75,Medium Fast,1000000,Sun Stone
+885,550,Basculin,None,Water,None,Reckless,Adaptability,Mold Breaker,50,Black,70,92,65,80,55,98,460,25,Medium Fast,1000000,None
+1414,550,Basculin,None,Water,None,Rock Head,Adaptability,Mold Breaker,50,Black,70,92,65,80,55,98,460,25,Medium Fast,1000000,None
+886,551,Sandile,None,Ground,Dark,Intimidate,Moxie,Anger Point,50,Black,50,72,35,35,35,65,292,180,Medium Slow,1059860,None
+887,552,Krokorok,None,Ground,Dark,Intimidate,Moxie,Anger Point,50,Black,60,82,45,45,45,74,351,90,Medium Slow,1059860,Level 29
+888,553,Krookodile,None,Ground,Dark,Intimidate,Moxie,Anger Point,50,Black,95,117,80,65,70,92,519,45,Medium Slow,1059860,Level 40
+889,554,Darumaka,None,Fire,None,Hustle,None,Inner Focus,50,Black,70,90,45,15,45,50,315,120,Medium Slow,1059860,None
+890,555,Darmanitan,None,Fire,None,Sheer Force,None,Zen Mode,50,Black,105,140,55,30,55,95,480,60,Medium Slow,1059860,Level 35
+1554,555,Darmanitan,None,Fire,Psychic,Zen Mode,None,None,50,Black,105,30,105,140,105,55,540,60,Medium Slow,1059860,None
+891,556,Maractus,None,Grass,None,Water Absorb,Chlorophyll,Storm Drain,50,Black,75,86,67,106,67,60,461,255,Medium Fast,1000000,None
+892,557,Dwebble,None,Bug,Rock,Sturdy,Shell Armor,Weak Armor,50,Black,50,65,85,35,35,55,325,190,Medium Fast,1000000,None
+893,558,Crustle,None,Bug,Rock,Sturdy,Shell Armor,Weak Armor,50,Black,70,105,125,65,75,45,485,75,Medium Fast,1000000,Level 34
+894,559,Scraggy,None,Dark,Fighting,Shed Skin,Moxie,Intimidate,35,Black,50,75,70,35,70,48,348,180,Medium Fast,1000000,None
+914,560,Scrafty,None,Dark,Fighting,Shed Skin,Moxie,Intimidate,50,Black,65,90,115,45,115,58,488,90,Medium Fast,1000000,Level 39
+915,561,Sigilyph,None,Psychic,Flying,Wonder Skin,Magic Guard,Tinted Lens,50,Black,72,58,80,103,80,97,490,45,Medium Fast,1000000,None
+916,562,Yamask,None,Ghost,None,Mummy,None,None,50,Black,38,30,85,55,65,30,303,190,Medium Fast,1000000,None
+917,563,Cofagrigus,None,Ghost,None,Mummy,None,None,50,Black,58,50,145,95,105,30,483,90,Medium Fast,1000000,Level 34
+918,564,Tirtouga,None,Water,Rock,Solid Rock,Sturdy,Swift Swim,50,Black,54,78,103,53,45,22,355,45,Medium Fast,1000000,None
+919,565,Carracosta,None,Water,Rock,Solid Rock,Sturdy,Swift Swim,50,Black,74,108,133,83,65,32,495,45,Medium Fast,1000000,Level 37
+920,566,Archen,None,Rock,Flying,Defeatist,None,None,50,Black,55,112,45,74,45,70,401,45,Medium Fast,1000000,None
+921,567,Archeops,None,Rock,Flying,Defeatist,None,None,50,Black,75,140,65,112,65,110,567,45,Medium Fast,1000000,Level 37
+922,568,Trubbish,None,Poison,None,Stench,Sticky Hold,Aftermath,50,Black,50,50,62,40,62,65,329,190,Medium Fast,1000000,None
+923,569,Garbodor,None,Poison,None,Stench,Weak Armor,Aftermath,50,Black,80,95,82,60,82,75,474,60,Medium Fast,1000000,Level 36
+939,570,Zorua,None,Dark,None,Illusion,None,None,50,Black,40,65,40,80,40,65,330,75,Medium Slow,1059860,None
+940,571,Zoroark,None,Dark,None,Illusion,None,None,50,Black,60,105,60,120,60,105,510,45,Medium Slow,1059860,Level 30
+941,572,Minccino,None,Normal,None,Cute Charm,Technician,Skill Link,50,Black,55,50,40,40,40,75,300,255,Fast,800000,None
+942,573,Cinccino,None,Normal,None,Cute Charm,Technician,Skill Link,50,Black,75,95,60,65,60,115,470,60,Fast,800000,Shiny Stone
+943,574,Gothita,None,Psychic,None,Frisk,Competitive,Shadow Tag,50,Black,45,30,50,55,65,45,290,200,Medium Slow,1059860,None
+944,575,Gothorita,None,Psychic,None,Frisk,Competitive,Shadow Tag,50,Black,60,45,70,75,85,55,390,100,Medium Slow,1059860,Level 32
+945,576,Gothitelle,None,Psychic,None,Frisk,Competitive,Shadow Tag,50,Black,70,55,95,95,110,65,490,50,Medium Slow,1059860,Level 41
+946,577,Solosis,None,Psychic,None,Overcoat,Magic Guard,Regenerator,50,Black,45,30,40,105,50,20,290,200,Medium Slow,1059860,None
+947,578,Duosion,None,Psychic,None,Overcoat,Magic Guard,Regenerator,50,Black,65,40,50,125,60,30,370,100,Medium Slow,1059860,Level 32
+948,579,Reuniclus,None,Psychic,None,Overcoat,Magic Guard,Regenerator,50,Black,110,65,75,125,85,30,490,50,Medium Slow,1059860,Level 41
+950,580,Ducklett,None,Water,Flying,Keen Eye,Big Pecks,Hydration,70,Black,62,44,50,44,50,55,305,190,Medium Fast,1000000,None
+951,581,Swanna,None,Water,Flying,Keen Eye,Big Pecks,Hydration,70,Black,75,87,63,87,63,98,473,45,Medium Fast,1000000,Level 35
+952,582,Vanillite,None,Ice,None,Ice Body,Snow Cloak,Weak Armor,50,Black,36,50,50,65,60,44,305,255,Slow,1250000,None
+953,583,Vanillish,None,Ice,None,Ice Body,Snow Cloak,Weak Armor,50,Black,51,65,65,80,75,59,395,120,Slow,1250000,Level 35
+954,584,Vanilluxe,None,Ice,None,Ice Body,Snow Warning,Weak Armor,50,Black,71,95,85,110,95,79,535,45,Slow,1250000,Level 47
+955,585,Deerling,None,Normal,Grass,Chlorophyll,Sap Sipper,Serene Grace,50,Black,60,60,50,40,50,75,335,190,Medium Fast,1000000,None
+1787,585,Deerling,None,Normal,Grass,Chlorophyll,Sap Sipper,Serene Grace,50,Black,60,60,50,40,50,75,335,190,Medium Fast,1000000,None
+1788,585,Deerling,None,Normal,Grass,Chlorophyll,Sap Sipper,Serene Grace,50,Black,60,60,50,40,50,75,335,190,Medium Fast,1000000,None
+1789,585,Deerling,None,Normal,Grass,Chlorophyll,Sap Sipper,Serene Grace,50,Black,60,60,50,40,50,75,335,190,Medium Fast,1000000,None
+956,586,Sawsbuck,None,Normal,Grass,Chlorophyll,Sap Sipper,Serene Grace,50,Black,80,100,70,60,70,95,475,75,Medium Fast,1000000,Level 34
+1790,586,Sawsbuck,None,Normal,Grass,Chlorophyll,Sap Sipper,Serene Grace,50,Black,80,100,70,60,70,95,475,75,Medium Fast,1000000,Level 34
+1791,586,Sawsbuck,None,Normal,Grass,Chlorophyll,Sap Sipper,Serene Grace,50,Black,80,100,70,60,70,95,475,75,Medium Fast,1000000,Level 34
+1792,586,Sawsbuck,None,Normal,Grass,Chlorophyll,Sap Sipper,Serene Grace,50,Black,80,100,70,60,70,95,475,75,Medium Fast,1000000,Level 34
+957,587,Emolga,None,Electric,Flying,Static,None,Motor Drive,50,Black,55,75,60,75,60,103,428,200,Medium Fast,1000000,None
+958,588,Karrablast,None,Bug,None,Swarm,Shed Skin,No Guard,50,Black,50,75,45,40,45,60,315,200,Medium Fast,1000000,None
+959,589,Escavalier,None,Bug,Steel,Swarm,Shell Armor,Overcoat,50,Black,70,135,105,60,105,20,495,75,Medium Fast,1000000,With Shelmet
+961,590,Foongus,None,Grass,Poison,Effect Spore,None,Regenerator,50,Black,69,55,45,55,55,15,294,190,Medium Fast,1000000,None
+962,591,Amoonguss,None,Grass,Poison,Effect Spore,None,Regenerator,50,Black,114,85,70,85,80,30,464,75,Medium Fast,1000000,Level 39
+963,592,Frillish,None,Water,Ghost,Water Absorb,Cursed Body,Damp,50,Black,55,40,50,65,85,40,335,190,Medium Fast,1000000,None
+964,593,Jellicent,None,Water,Ghost,Water Absorb,Cursed Body,Damp,50,Black,100,60,70,85,105,60,480,60,Medium Fast,1000000,Level 40
+965,594,Alomomola,None,Water,None,Healer,Hydration,Regenerator,50,Black,165,75,80,40,45,65,470,75,Fast,800000,None
+966,595,Joltik,None,Bug,Electric,Compound Eyes,Unnerve,Swarm,50,Black,50,47,50,57,50,65,319,190,Medium Fast,1000000,None
+967,596,Galvantula,None,Bug,Electric,Compound Eyes,Unnerve,Swarm,50,Black,70,77,60,97,60,108,472,75,Medium Fast,1000000,Level 36
+968,597,Ferroseed,None,Grass,Steel,Iron Barbs,None,None,50,Black,44,50,91,24,86,10,305,255,Medium Fast,1000000,None
+969,598,Ferrothorn,None,Grass,Steel,Iron Barbs,None,Anticipation,50,Black,74,94,131,54,116,20,489,90,Medium Fast,1000000,Level 40
+970,599,Klink,None,Steel,None,Plus,Minus,Clear Body,50,Black,40,55,70,45,60,30,300,130,Medium Slow,1059860,None
+972,600,Klang,None,Steel,None,Plus,Minus,Clear Body,50,Black,60,80,95,70,85,50,440,60,Medium Slow,1059860,Level 38
+973,601,Klinklang,None,Steel,None,Plus,Minus,Clear Body,50,Black,60,100,115,70,85,90,520,30,Medium Slow,1059860,Level 49
+974,602,Tynamo,None,Electric,None,Levitate,None,None,50,Black,35,55,40,45,40,60,275,190,Slow,1250000,None
+975,603,Eelektrik,None,Electric,None,Levitate,None,None,50,Black,65,85,70,75,70,40,405,60,Slow,1250000,Level 39
+976,604,Eelektross,None,Electric,None,Levitate,None,None,50,Black,85,115,80,105,80,50,515,30,Slow,1250000,Thunder Stone
+977,605,Elgyem,None,Psychic,None,Telepathy,Synchronize,Analytic,50,Black,55,55,55,85,55,30,335,255,Medium Fast,1000000,None
+978,606,Beheeyem,None,Psychic,None,Telepathy,Synchronize,Analytic,50,Black,75,75,75,125,95,40,485,90,Medium Fast,1000000,Level 42
+979,607,Litwick,None,Ghost,Fire,Flash Fire,Flame Body,Infiltrator,50,Black,50,30,55,65,55,20,275,190,Medium Slow,1059860,None
+980,608,Lampent,None,Ghost,Fire,Flash Fire,Flame Body,Infiltrator,50,Black,60,40,60,95,60,55,370,90,Medium Slow,1059860,Level 41
+981,609,Chandelure,None,Ghost,Fire,Flash Fire,Flame Body,Infiltrator,50,Black,60,55,90,145,90,80,520,45,Medium Slow,1059860,Dusk Stone
+983,610,Axew,None,Dragon,None,Rivalry,Mold Breaker,Unnerve,35,Black,46,87,60,30,40,57,320,75,Slow,1250000,None
+984,611,Fraxure,None,Dragon,None,Rivalry,Mold Breaker,Unnerve,35,Black,66,117,70,40,50,67,410,60,Slow,1250000,Level 38
+985,612,Haxorus,None,Dragon,None,Rivalry,Mold Breaker,Unnerve,35,Black,76,147,90,60,70,97,540,45,Slow,1250000,Level 48
+986,613,Cubchoo,None,Ice,None,Snow Cloak,Slush Rush,Rattled,50,Black,55,70,40,60,40,40,305,120,Medium Fast,1000000,None
+987,614,Beartic,None,Ice,None,Snow Cloak,Slush Rush,Swift Swim,50,Black,95,130,80,70,80,50,505,60,Medium Fast,1000000,Level 37
+988,615,Cryogonal,None,Ice,None,Levitate,None,None,50,Black,80,50,50,95,135,105,515,25,Medium Fast,1000000,None
+989,616,Shelmet,None,Bug,None,Hydration,Shell Armor,Overcoat,50,Black,50,40,85,40,65,25,305,200,Medium Fast,1000000,None
+990,617,Accelgor,None,Bug,None,Hydration,Sticky Hold,Unburden,50,Black,80,70,40,100,60,145,495,75,Medium Fast,1000000,With Karrablast
+991,618,Stunfisk,None,Ground,Electric,Static,Limber,Sand Veil,70,Black,109,66,84,81,99,32,471,75,Medium Fast,1000000,None
+992,619,Mienfoo,None,Fighting,None,Inner Focus,Regenerator,Reckless,50,Black,45,85,50,55,50,65,350,180,Medium Slow,1059860,None
+994,620,Mienshao,None,Fighting,None,Inner Focus,Regenerator,Reckless,50,Black,65,125,60,95,60,105,510,45,Medium Slow,1059860,Level 50
+995,621,Druddigon,None,Dragon,None,Rough Skin,Sheer Force,Mold Breaker,50,Black,77,120,90,60,90,48,485,45,Medium Fast,1000000,None
+996,622,Golett,None,Ground,Ghost,Iron Fist,Klutz,No Guard,50,Black,59,74,50,35,50,35,303,190,Medium Fast,1000000,None
+997,623,Golurk,None,Ground,Ghost,Iron Fist,Klutz,No Guard,50,Black,89,124,80,55,80,55,483,90,Medium Fast,1000000,Level 43
+998,624,Pawniard,None,Dark,Steel,Defiant,Inner Focus,Pressure,35,Black,45,85,70,40,40,60,340,120,Medium Fast,1000000,None
+999,625,Bisharp,None,Dark,Steel,Defiant,Inner Focus,Pressure,35,Black,65,125,100,60,70,70,490,45,Medium Fast,1000000,Level 52
+1000,626,Bouffalant,None,Normal,None,Reckless,Sap Sipper,Soundproof,50,Black,95,110,95,40,95,55,490,45,Medium Fast,1000000,None
+1001,627,Rufflet,None,Normal,Flying,Keen Eye,Sheer Force,Hustle,50,Black,70,83,50,37,50,60,350,190,Slow,1250000,None
+1002,628,Braviary,None,Normal,Flying,Keen Eye,Sheer Force,Defiant,50,Black,100,123,75,57,75,80,510,60,Slow,1250000,Level 54
+1003,629,Vullaby,None,Dark,Flying,Big Pecks,Overcoat,Weak Armor,35,Black,70,55,75,45,65,60,370,190,Slow,1250000,None
+1005,630,Mandibuzz,None,Dark,Flying,Big Pecks,Overcoat,Weak Armor,35,Black,110,65,105,55,95,80,510,60,Slow,1250000,Level 54
+1006,631,Heatmor,None,Fire,None,Gluttony,Flash Fire,White Smoke,50,Black,85,97,66,105,66,65,484,90,Medium Fast,1000000,None
+1007,632,Durant,None,Bug,Steel,Swarm,Hustle,Truant,50,Black,58,109,112,48,48,109,484,90,Medium Fast,1000000,None
+1008,633,Deino,None,Dark,Dragon,Hustle,None,None,35,Black,52,65,50,45,50,38,300,45,Slow,1250000,None
+1009,634,Zweilous,None,Dark,Dragon,Hustle,None,None,35,Black,72,85,70,65,70,58,420,45,Slow,1250000,Level 50
+1010,635,Hydreigon,None,Dark,Dragon,Levitate,None,None,35,Black,92,105,90,125,90,98,600,45,Slow,1250000,Level 64
+1011,636,Larvesta,None,Bug,Fire,Flame Body,None,Swarm,50,Black,55,85,55,50,55,60,360,45,Slow,1250000,None
+1012,637,Volcarona,None,Bug,Fire,Flame Body,None,Swarm,50,Black,85,60,65,135,105,100,550,15,Slow,1250000,Level 59
+1013,638,Cobalion,Sub-Legendary,Steel,Fighting,Justified,None,None,35,Black,91,90,129,90,72,108,580,3,Slow,1250000,None
+1014,639,Terrakion,Sub-Legendary,Rock,Fighting,Justified,None,None,35,Black,91,129,90,72,90,108,580,3,Slow,1250000,None
+1016,640,Virizion,Sub-Legendary,Grass,Fighting,Justified,None,None,35,Black,91,90,72,90,129,108,580,3,Slow,1250000,None
+1017,641,Tornadus,Sub-Legendary,Flying,None,Prankster,None,Defiant,90,Black,79,115,70,125,80,111,580,3,Slow,1250000,None
+1415,641,Tornadus,Sub-Legendary,Flying,None,Regenerator,None,None,90,Black 2,79,100,80,110,90,121,580,3,Slow,1250000,None
+1018,642,Thundurus,Sub-Legendary,Electric,Flying,Prankster,None,Defiant,90,Black,79,115,70,125,80,111,580,3,Slow,1250000,None
+1416,642,Thundurus,Sub-Legendary,Electric,Flying,Volt Absorb,None,None,90,Black 2,79,105,70,145,80,101,580,3,Slow,1250000,None
+1019,643,Reshiram,Legendary,Dragon,Fire,Turboblaze,None,None,0,Black,100,120,100,150,120,90,680,3,Slow,1250000,None
+1020,644,Zekrom,Legendary,Dragon,Electric,Teravolt,None,None,0,Black,100,150,120,120,100,90,680,3,Slow,1250000,None
+1021,645,Landorus,Sub-Legendary,Ground,Flying,Sand Force,None,Sheer Force,90,Black,89,125,90,115,80,101,600,3,Slow,1250000,None
+1417,645,Landorus,Sub-Legendary,Ground,Flying,Intimidate,None,None,90,Black 2,89,145,90,105,80,91,600,3,Slow,1250000,None
+1022,646,Kyurem,Legendary,Dragon,Ice,Pressure,None,None,0,Black,125,130,90,130,90,95,660,3,Slow,1250000,None
+1421,646,Kyurem,Legendary,Dragon,Ice,Turboblaze,None,None,0,Black 2,125,120,90,170,100,95,700,3,Slow,1250000,None
+1423,646,Kyurem,Legendary,Dragon,Ice,Teravolt,None,None,0,Black 2,125,170,100,120,90,95,700,3,Slow,1250000,None
+1023,647,Keldeo,Mythical,Water,Fighting,Justified,None,None,35,Black,91,72,90,129,90,108,580,3,Slow,1250000,None
+1786,647,Keldeo,Mythical,Water,Fighting,Justified,None,None,35,Black,91,72,90,129,90,108,580,3,Slow,1250000,None
+1024,648,Meloetta,Mythical,Normal,Psychic,Serene Grace,None,None,100,Black,100,77,77,128,128,90,600,3,Slow,1250000,None
+1570,648,Meloetta,Mythical,Normal,Fighting,Serene Grace,None,None,100,Black,100,128,90,77,77,128,600,3,Slow,1250000,None
+1025,649,Genesect,Mythical,Bug,Steel,Download,None,None,0,Black,71,120,95,120,95,99,600,3,Slow,1250000,None
