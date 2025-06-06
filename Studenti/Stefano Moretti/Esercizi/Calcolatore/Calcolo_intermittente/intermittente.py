@@ -1,5 +1,5 @@
 import datetime
-from programm_intermittent_fasting.utils import check_ore_digiuno, esci_programma
+from utils import check_ore_digiuno, esci_programma
 
 # Intermittent Fasting Calculator
 # Questo programma calcola l'ora in cui puoi mangiare dopo un periodo di digiuno.
@@ -34,13 +34,4 @@ class IntermittentFastingCalculator:
                 print(f"Si è verificato un errore: {e}. Per favore, riprova.")
                 continue
             # Chiede se l'utente vuole fare un'altra operazione
-            self.__x = esci_programma(self.__x, self.__y)      
-    
-    
-        
-
-if __name__ == "__main__":
-    fasting = IntermittentFastingCalculator()
-    fasting.calcola_ora_mangiare()
-
-            
+            self.__x = esci_programma(self.__x, self.__y)
