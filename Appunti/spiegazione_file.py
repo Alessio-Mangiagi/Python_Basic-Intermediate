@@ -42,7 +42,9 @@ with open(
 ) as f:
     reader = csv.reader(f)
     for riga in reader:
-        print(riga[0])
+        print(riga)
+
+
 lista = [
     ["Giulia", "Neri", 28],
     ["Luca", "Bianchi", 32],

@@ -1,8 +1,12 @@
 import random
+
+import Progetto_dadi.DADI
 import toolbox_AM
 import datetime
 import sys
 import os
+import Progetto_dadi
+
 
 #gioco lancio dadi
 print("Benvenuto nel gioco del lancio dei dadi!")
