@@ -1,5 +1,5 @@
 import tkinter as tk
-
+print("><(((º> sabusabu <º)))><")
 def press(num):
     """Aggiorna l'espressione nella casella di testo."""
     global expression
@@ -25,15 +25,22 @@ def clear():
 
 # Creazione della finestra principale
 root = tk.Tk()
-root.title("Calcolatrice")
-root.geometry("300x400")
+root.title("Calcolatrice"+ "  ><(((º> sabusabu <º)))><")
+root.configure(bg="#A9B4B3")
+root.geometry("400x500")
+
 
 expression = ""
 equation = tk.StringVar()
 
+for i in range(6):  # 5 righe di pulsanti + 1 per l'entry
+    root.rowconfigure(i, weight=1)
+for j in range(4):  # 4 colonne
+    root.columnconfigure(j, weight=1)
+
 # Casella di testo per l'espressione
 entry = tk.Entry(root, textvariable=equation, font=("Arial", 20), justify="right")
-entry.grid(columnspan=4, ipadx=8, ipady=8)
+entry.grid(columnspan=4, ipadx=8, ipady=8 , sticky="nsew")
 
 # Creazione dei pulsanti
 buttons = [
@@ -45,11 +52,12 @@ buttons = [
 
 for (text, row, col) in buttons:
     action = lambda x=text: press(x) if x != '=' else equalpress()
-    tk.Button(root, text=text, font=("Arial", 18), command=action, width=5, height=2).grid(row=row, column=col)
+    tk.Button(root, text=text, font=("Arial", 18), bg="#e40e1a", fg="white", command=action, width=5, height=2).grid(row=row, column=col , sticky="nsew")
 
 # Pulsante di cancellazione
-tk.Button(root, text="C", font=("Arial", 18), command=clear, width=5, height=2).grid(row=5, column=0, columnspan=4)
+tk.Button(root, text="C", font=("Arial", 18), bg="#0e19e4", fg="white", command=clear, width=5, height=2).grid(row=5, column=0, columnspan=4, sticky="nsew")
 
 root.mainloop()
 
-#rendere la finetstra piu elastica 
+
+print("><(((º> sabusabu <º)))><")
