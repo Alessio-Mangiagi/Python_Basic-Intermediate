@@ -1,5 +1,6 @@
 import tkinter as tk
 
+Class calcola:
 def get_values():
     try:
         x = float(entry_x.get())
