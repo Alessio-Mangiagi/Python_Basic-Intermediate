@@ -60,7 +60,10 @@ class Tris:
             self.disable_buttons()
         else:
             # Cambia giocatore: se era X diventa O, se era O diventa X
-            self.current_player = "O" if self.current_player == "X" else "X"
+            if self.current_player == "X":
+                self.current_player = "O"
+            else:
+                self.current_player = "X"
 
     def check_winner(self):
         """Controlla se c'è un vincitore"""
