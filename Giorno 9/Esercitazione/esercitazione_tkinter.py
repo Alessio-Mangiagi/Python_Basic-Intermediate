@@ -60,7 +60,7 @@ root.title("Calcolatrice")
 root.geometry("300x300")
 tk.Label(text="Scegli un'operazione:").pack()
 tk.Button(root, text="Addizione", command=addizione).pack()
-tk.Button(root, text="Sottrazione", command=sottrazione).pack()
+tk.Button(root, text="Sottrazione", command=sottrazione).pack(pady=10)
 tk.Button(root, text="Moltiplicazione", command=moltiplicazione).pack()
 tk.Button(root, text="Divisione", command=divisione).pack()
 
