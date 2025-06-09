@@ -1,70 +1,85 @@
+import tkinter as tk
 
-def calcolatrice():
-    print("---------------------------------\nBenvenuto alla mia Calcolatrice!\n---------------------------------")
-    print("Scegli un'operazione:\n 1. Addizione\n 2. Sottrazione\n 3. Moltiplicazione\n 4. Divisione\n 5. Esci")
-    print("---------------------------------")
+def get_values():
+    try:
+        x = float(entry_x.get())
+        y = float(entry_y.get())
+        return x, y
+    except ValueError:
+        result_label.config(text="Inserisci solo numeri!", fg="#F63131")
+        return None, None
 
-    # chiediamo di scegliere un'operazione
-    scelta = input("> Seleziona l'operazione (1, 2, 3, 4, 5): ")
-    operazioni = {
-        '1': 'Addizione',
-        '2': 'Sottrazione',
-        '3': 'Moltiplicazione',
-        '4': 'Divisione',
-        '5': 'Esci'}
-    
-    # nel caso di operazione non valida (non presente tra le operazioni), richiediamo di ripetere la scelta
-    if scelta not in operazioni: 
-        print("Operazione non valida. Riprova.\n")
-        return calcolatrice()
-    
-    # nel caso la scelta sia valida proseguiamo e chiediamo la conferma dell'operazione scelta
-    else:
-        print(f"\nHai scelto l'operazione: {operazioni.get(scelta)}")
-        conferma = input("> è esatto? (Yes/No): ")
+def addizione():
+    x, y = get_values()
+    if x is not None and y is not None:
+        risultato = x + y
+        result_label.config(text=f"Il risultato di {x} + {y} è {risultato}", fg="#FFC400")
 
-        # nel caso la risposta non sia "Yes" o "No", forniamo un messaggio di errore e richiediamo di ripetere la scelta
-        if conferma.lower() != "yes" and conferma.lower() != "no":
-            print("Errore: Risposta non valida.\nSi prega di rispondere con 'Yes' o 'No'.\n")
-            return calcolatrice()  
-        
-        # nel caso la risposta è diversa da "Yes", annulliamo e richiediamo di ripetere la scelta
-        elif conferma.lower() != "yes":
-            print("Operazione annullata. Riprova.\n")
-            return calcolatrice()  
-        
-        # nel caso la risposta sia "Yes", confermiamo e procediamo con l'operazione
-        else:
-            print("\nOperazione confermata.")
+def sottrazione():
+    x, y = get_values()
+    if x is not None and y is not None:
+        risultato = x - y
+        result_label.config(text=f"Il risultato di {x} - {y} è {risultato}", fg="#FFC400")
 
-            # se l'operazione scelta è Esci, usciamo dalla calcolatrice
-            if scelta == "5":
-                print("Grazie per aver usato la mia Calcolatrice! Arrivederci!\n")
+def moltiplicazione():
+    x, y = get_values()
+    if x is not None and y is not None:
+        risultato = x * y
+        result_label.config(text=f"Il risultato di {x} x {y} è {risultato}", fg="#FFC400")
 
-            # se l'operazione scelta esiste, chiediamo i numeri da calcolare e procediamo con l'operazione
-            else:
-                x = float(input("> Inserisci il primo numero: "))
-                y = float(input("> Inserisci il secondo numero: "))
-                print("---------------------------------")
-                if scelta == "1":
-                    print(f"Risultato di {x} + {y} è: {x+y}")
-                elif scelta == "2":
-                    print(f"Risultato di {x} - {y} è: {x-y}")
-                elif scelta == "3":
-                    print(f"Risultato di {x} * {y} è: {x*y}")
-                elif scelta == "4":
-                        try:
-                            print(f"Risultato di {x} / {y} è: {round(x/y, 2)}")
-                        except ZeroDivisionError:
-                            print("Errore: Non si può dividere per 0")
+def divisione():
+    x, y = get_values()
+    if x is not None and y is not None:
+        try:
+            risultato = x / y
+            result_label.config(text=f"Il risultato di {x} / {y} è {risultato}", fg="#FFC400")
+        except ZeroDivisionError:
+            result_label.config(text="Errore: Non si può dividere per 0", fg="#F63131")
 
-                # Alla fine dell'operazione chiediamo se continuare o chiudere
-                print("---------------------------------")
-                continua = input("> Vuoi continuare a usare la Calcolatrice? (Yes/No) ")
-                if continua.lower() == "yes":
-                    return calcolatrice()
-                else:
-                    print("Grazie per aver usato la mia Calcolatrice! Arrivederci!\n")
+# creazione finestra
 
-# Proviamo!
-calcolatrice()
+root = tk.Tk()
+root.title("Calcolatrice")
+root.geometry("800x600")
+root.resizable(False, False)
+root.configure(bg="#404040")
+
+# creazione di un frame al centro
+center_frame = tk.Frame(root, bg="#404040")
+center_frame.place(relx=0.5, rely=0.5, anchor="center")
+
+# Frame per input numeri
+input_frame = tk.Frame(center_frame, bg="#404040")
+input_frame.pack(pady=10)
+
+tk.Label(input_frame, text="Primo numero:", bg="#404040", fg="#FFC400", font=("Arial", 14)).pack(pady=5)
+entry_x = tk.Entry(input_frame, font=("Arial", 14))
+entry_x.pack(pady=5)
+
+tk.Label(input_frame, text="Secondo numero:", bg="#404040", fg="#FFC400", font=("Arial", 14)).pack(pady=5)
+entry_y = tk.Entry(input_frame, font=("Arial", 14))
+entry_y.pack(pady=5)
+
+# Sposta la creazione di result_label qui sotto i pulsanti
+
+# Primo frame per + e -
+row1 = tk.Frame(center_frame, bg="#404040")
+row1.pack(pady=10)
+button_più = tk.Button(row1, text="+", bg="#FFC400", command=addizione, font=("Arial", 40, "bold"), width=2)
+button_più.pack(side="left", padx=10)
+button_meno = tk.Button(row1, text="-", bg="#FFC400", command=sottrazione, font=("Arial", 40, "bold"), width=2)
+button_meno.pack(side="left", padx=10)
+
+# Secondo frame per x e /
+row2 = tk.Frame(center_frame, bg="#404040")
+row2.pack(pady=10)
+button_per = tk.Button(row2, text="x", bg="#FFC400", command=moltiplicazione, font=("Arial", 40, "bold"), width=2)
+button_per.pack(side="left", padx=10)
+button_div = tk.Button(row2, text="/", bg="#FFC400", command=divisione, font=("Arial", 40, "bold"), width=2)
+button_div.pack(side="left", padx=10)
+
+# Label per il risultato (ora sotto i pulsanti)
+result_label = tk.Label(center_frame, text="", bg="#404040", fg="#FFC400", font=("Arial", 18, "bold"))
+result_label.pack(pady=20)
+
+root.mainloop() #avvio schermata (A FINE CODICE)

@@ -9,8 +9,8 @@ root = tk.Tk()
 root.title("La mia applicazione")   #diamogli un titolo
 root.geometry("500x300")            #stabiliamo le dimensioni
 root.resizable(False, False)        #per non permettere il resize della finestra
-root.configure(bg="lightgreen")     #per colorare lo sfondo
-root.iconbitmap("icona.ico")        #per icona finestra
+root.configure(bg="orange")     #per colorare lo sfondo
+#root.iconbitmap("icona.ico")        #per icona finestra
 
 # Widget sono elementi grafici interattivi come bottoni.
 # Hanno struttura gerarchica. Devono essere figli della finestra principale o di un altro widget.
@@ -41,8 +41,7 @@ campo.delete(0, tk.END)
 
 # Text: input testuale lungo
 area_testo = tk.Text(root, width=40, height=10) #le dimensioni sono dei caratteri e righe
-area_testo.get("1.0", tk.END) 
-###########################################################################################
+area_testo.get("1.0", tk.END)
 
 # Avvio: Da tenere alla fine dello script. Il codice dopo non viene eseguito finché la finestra è aperta.
 root.mainloop()

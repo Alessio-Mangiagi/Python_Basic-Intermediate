@@ -10,7 +10,7 @@ class Animali:                  # classe generica per assegnare "nome" ad ogni a
         self.lingua = lingua
     
     def exit(self):             # comune a tutti gli animali. Interazione alla chiusura del gioco.
-        msg = Animal_act["General"]["exit"][self.lingua]
+        msg = Animal_act["General"]["exit"][self.lingua].format(nome=self.nome)
         print(msg)
 
 class Cane(Animali):

@@ -30,8 +30,8 @@ MSG = {
 Animal_act = {
     "General": {
         "exit": {
-            "it": "Arrivederci! Grazie per aver giocato.",
-            "en": "Goodbye! Thanks for playing."
+            "it": "{nome} ti guarda mentre ti allontani. Aspetterà il tuo ritorno.",
+            "en": "{nome} stares at you while you walk away. It will wait for your return."
         }
     },
     "Cane": {
@@ -56,8 +56,8 @@ Animal_act = {
             "en": "You give a biscuit to the dog {nome}. It eats it happily!"
         },
         "osserva": {
-            "it": "Osservi il cane {nome}. Ti guarda in attesa di un comando.",
-            "en": "You watch the dog {nome}. It looks at you waiting for a command."
+            "it": "Osservi il cane {nome}. Ti guarda scodinzolando.",
+            "en": "You watch the dog {nome}. It looks at you and wags its tail."
         }
     },
     "Gatto": {
@@ -100,8 +100,8 @@ Animal_act = {
             "en": "You say: 'Down!' The fish {nome} looks worried at the floor."
         },
         "bravo": {
-            "it": "Dici: 'Bravo!' Il pesce {nome} nuota felice.",
-            "en": "You say: 'Good!' The fish {nome} swims happily."
+            "it": "Dici: 'Bravo!' Il pesce {nome} nuota felice...\nO forse è solo un'impressione",
+            "en": "You say: 'Good!' The fish {nome} swims happily.\nMaybe it's just an impression"
         },
         "biscotto": {
             "it": "Dai un biscotto al pesce {nome}. Si avvicina alla superficie per mangiare le briciole!",
