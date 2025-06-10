@@ -24,7 +24,7 @@ root = tk.Tk()
 root.title("layaut")
 root.geometry("1280x720")
 root.configure(bg="#3653D1", highlightbackground="#3653D1", highlightcolor="#3653D1")
-root.iconbitmap("Studenti\Alessio Mangiagi\icone\favicon.ico")
+#root.iconbitmap("Studenti\Alessio Mangiagi\icone\favicon.ico")
 
 menu = tk.Menu(
     root,
