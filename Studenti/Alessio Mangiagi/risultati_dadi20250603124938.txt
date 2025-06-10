@@ -1,3 +1,0 @@
-Numero di lanci: 6
-Lista dei lanci: [5, 3, 2, 5, 5, 3]
-Somma dei lanci: 23
