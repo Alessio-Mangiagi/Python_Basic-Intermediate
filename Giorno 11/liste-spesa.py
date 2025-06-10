@@ -118,6 +118,19 @@ entry_price = ttk.Entry(add_frame, width=8)
 entry_price.pack(side="left", padx=(0, 4))
 entry_price.insert(0, "0.00")  # Valore placeholder
 
+
+# Registra il validatore per il campo prezzo
+def validate_price(char):
+    """Valida che il carattere inserito sia valido per un prezzo (cifre, punto, virgola)."""
+    return char.isdigit() or char in ".,\b"
+
+
+# Registra la funzione di validazione
+validate_price_cmd = root.register(validate_price)
+
+# Applica il validatore al campo prezzo
+entry_price.config(validate="key", validatecommand=(validate_price_cmd, "%S"))
+
 # Pulsante per aggiungere l'articolo
 ttk.Button(add_frame, text="Aggiungi", command=add_item).pack(side="left")
 
