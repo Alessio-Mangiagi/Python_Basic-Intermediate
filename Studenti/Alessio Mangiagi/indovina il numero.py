@@ -87,7 +87,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = IndovinaNumeroGUI(root)
     root.configure(bg="#3653D1", highlightbackground="#3653D1", highlightcolor="#3653D1")
-    root.iconbitmap("C:\\Users\\Alessio Mangiagi\\Desktop\\pythoncorso_riverloop\\Python_Basic-Intermediate\\Studenti\\Alessio Mangiagi\\icone\\favicon.ico")
+    root.iconbitmap("Studenti\Alessio Mangiagi\icone\favicon.ico")
     # Configura la griglia PRIMA del mainloop
     for i in range(6):  
         root.rowconfigure(i, weight=1)
