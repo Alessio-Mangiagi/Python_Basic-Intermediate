@@ -11,10 +11,17 @@ from tris import Tris  # Importa la classe Tris dal file tris.py
 def show_calcolatrice():
     calcolatrice_frame.pack(fill="both", expand=True)
     tris_frame.pack_forget()  # nascondi il frame dei tris
+    clicker_frame.pack_forget()  # nascondi il frame del clicker
 
 def show_tris():
     tris_frame.pack(fill="both", expand=True)
     calcolatrice_frame.pack_forget()  # nascondi il frame della calcolatrice
+    clicker_frame.pack_forget()  # nascondi il frame del clicker
+
+def show_clicker():
+    clicker_frame.pack(fill="both", expand=True)
+    calcolatrice_frame.pack_forget()  # nascondi il frame della calcolatrice
+    tris_frame.pack_forget()  # nascondi il frame dei tris
 
 def show_tools():
     # Qui puoi aggiungere il codice per mostrare il frame dei tools
@@ -23,6 +30,15 @@ def show_tools():
 def show_settings():
     # Qui puoi aggiungere il codice per mostrare il frame delle impostazioni
     pass
+
+# Funzione per il clicker
+
+counter = 0
+
+def n_clicks():
+    global counter
+    counter += 1
+    label.config(text=f"Hai premuto il bottone {counter} volte!")
 
 # Funzioni per la calcolatrice
 
@@ -101,6 +117,18 @@ label_clicca.place(relx=0.5, rely=0.5, anchor="n")
 
 calcolatrice_frame = tk.Frame(main_frame, bg="#3E4C68", width=900, height=720)
 
+clicker_frame = tk.Frame(main_frame, bg="#404040", width=900, height=720)
+
+# creazione del clicker
+center_click_frame = tk.Frame(clicker_frame, bg="#404040")
+center_click_frame.place(relx=0.5, rely=0.5, anchor="center")
+
+label = tk.Label(center_click_frame, text="Non hai ancora premuto il pulsante...", bg="#404040", fg="orange", font=("Arial", 20, "bold"))
+label.pack(pady=20)
+
+pulsante = tk.Button(center_click_frame, text="Clicca!", bg="#FFC400", command=n_clicks, font=("Arial", 20, "bold"))
+pulsante.pack(pady=10)
+
 ## creazione calcolatrice
 expression = ""
 equation = tk.StringVar()
@@ -141,6 +169,10 @@ calcolatrice_button.pack(pady=10)
 tris_button = tk.Button(menu, text="Tris", bg="#404040", fg="#FFFFFF", font=("Arial", 16), width=20)
 tris_button.config(command=show_tris)  # associa il bottone alla funzione
 tris_button.pack(pady=10)
+
+clicker_button = tk.Button(menu, text="Clicker", bg="#404040", fg="#FFFFFF", font=("Arial", 16), width=20)
+clicker_button.config(command=show_clicker)  # associa il bottone alla funzione
+clicker_button.pack(pady=10)
 
 tools_button = tk.Button(menu, text="Tools", bg="#404040", fg="#FFFFFF", font=("Arial", 16), width=20)
 tools_button.pack(pady=10)
