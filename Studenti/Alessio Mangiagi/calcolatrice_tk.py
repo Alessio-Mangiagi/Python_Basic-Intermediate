@@ -17,9 +17,9 @@ class Calcolatrice:
         self.expression = ""
         self.equation = tk.StringVar()
 
-        for i in range(6):
+        for i in range(2):
             master.rowconfigure(i, weight=1)
-        for j in range(4):
+        for j in range(2):
             master.columnconfigure(j, weight=1)
 
         entry = tk.Entry(master, textvariable=self.equation, font=("Arial", 20), justify="right")
