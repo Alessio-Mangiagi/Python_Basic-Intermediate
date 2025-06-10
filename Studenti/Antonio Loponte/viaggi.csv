@@ -1,3 +1,2 @@
-nome;destinazione;giorni;numero_ospiti;prezzo
-fabiana;New York;34;34;173400
-dfadf;Giappone;34;13413;72966720
+id;nome;cognome;destinazione;giorni;prezzo;servizi_extra
+1;sds;sds;Giappone;3;510;Bagagli extra(30€)
