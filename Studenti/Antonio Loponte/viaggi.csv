@@ -1,2 +1,3 @@
-id;nome;cognome;destinazione;giorni;prezzo;servizi_extra
-1;sds;sds;Giappone;3;510;Bagagli extra(30€)
+id;nome;cognome;destinazione;data_partenza;data_ritorno;giorni;prezzo;servizi_extra;aeroporto_partenza
+1;Antonio;Loponte;New York;2025-06-11;2025-06-12;1;28;;Venezia Marco Polo
+2;Antonio;Loponte;Egitto;2025-06-10;2025-06-18;8;142;Bagagli extra(30€);Milano Malpensa
