@@ -1,3 +1,4 @@
+"""
 import tkinter as tk
 
 class Myapp(tk.Tk):
@@ -12,13 +13,18 @@ class Myapp(tk.Tk):
         self.label = tk.Label(self.frame_body, text="Benvenuto")
         self.label.pack(pady=20)
 
-        self.printbutton = tk.Button(self.frame_body, text="Clicca", padx=10, pady=10, background="orange", command=self.click_pulsante)
+        self.printbutton = tk.Button(self.frame_body, text="Clicca", padx=10, pady=10, background="orange", command=self.on_button_click)
         self.printbutton.pack()
 
-    def click_pulsante(self):
+    def on_button_click(self):
         self.label.config(text="Hai premuto il pulsante")
         
 
 if __name__ == "__main__":
     app = Myapp()
     app.mainloop()
+"""
+    #--------------------------
+
+import tkinter as tk
+
