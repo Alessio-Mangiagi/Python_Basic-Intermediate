@@ -10,14 +10,14 @@ class app_esercitazione(tk.Tk):
         self.cognome_var = tk.StringVar(value="inserisci cognome")
         self.inizializza_sezione_body()
         self.inizializza_sezione_testo()
-        self.inizializza_checkbox()
-        
+        self.inizializza_sezione_radiobutton()
+        self.inizializza_sezione_checkbox()
         
 
         
 
     def inizializza_toolbar(self):
-        self.toolbar = tk.Frame(self, bg="#262222", bd=1, relief=tk.RAISED)
+        self.toolbar = tk.Frame(self, bg="lightgray", bd=1, relief=tk.RAISED)
         self.toolbar.pack(side=tk.TOP, fill=tk.X)
 
         self.button_clear = tk.Button(self.toolbar, text="C", command=self.clear())
@@ -42,33 +42,33 @@ class app_esercitazione(tk.Tk):
         self.entry_cognome = tk.Entry(self.sezione_body, font=("Arial", 14), textvariable=self.cognome_var)
         self.entry_cognome.pack(pady=10, padx=10, fill=tk.X)
 
-        self.inizializza_sezione_radiobutton()
+        
 
 
     def inizializza_sezione_radiobutton(self):
-        self.sezione_button = tk.Frame(self.sezione_body, bg="#302B2B")
+        self.sezione_button = tk.Frame(self.sezione_body, bg="lightgray")
         self.sezione_button.pack(padx=10, pady=10, side=tk.TOP, anchor=tk.CENTER)
         self.radio_genere = tk.StringVar()
         self.radio_genere.set("Maschio")
 
         self.radio_maschio = tk.Radiobutton(self.sezione_button, text="Maschio", variable=self.radio_genere, value="Maschio")
         """self.radio_maschio.pack(row=0, column=0, padx=5, pady=5, sticky="EW")"""
-        self.radio_maschio.pack(side="left", padx=40, pady=5, anchor=tk.CENTER)
+        self.radio_maschio.pack(side="left", padx=5, pady=5, anchor=tk.CENTER)
 
         self.radio_femmina = tk.Radiobutton(self.sezione_button, text="Femmina", variable=self.radio_genere, value="Femmina")
         """self.radio_femmina.grid(row=0, column=1, padx=5, pady=5, sticky="EW")"""
-        self.radio_femmina.pack(side="left", padx=40, pady=5, anchor=tk.CENTER)
+        self.radio_femmina.pack(side="left", padx=5, pady=5, anchor=tk.CENTER)
 
         self.radio_altro = tk.Radiobutton(self.sezione_button, text="Altro", variable=self.radio_genere, value="Altro")
         """self.radio_altro.grid(row=0, column=2, padx=5, pady=5, sticky="EW")"""
-        self.radio_altro.pack(side="left", padx=40, pady=5, anchor=tk.CENTER)
+        self.radio_altro.pack(side="left", padx=5, pady=5, anchor=tk.CENTER)
 
 
     def inizializza_sezione_testo(self):
         self.sezione_testo = tk.Frame(self.sezione_body, bg="lightblue")
         self.sezione_testo.pack(fill=tk.BOTH, expand=True, side=tk.BOTTOM)
         
-        self.test_1 = tk.Text(self.sezione_testo, font=("Arial", 14), bg="#2d2727", height=10, width=50)
+        self.test_1 = tk.Text(self.sezione_testo, font=("Arial", 14), bg="#e20a0a", height=10, width=50)
         
         self.scrollbar = tk.Scrollbar(self.sezione_testo, command=self.test_1.yview)
         
@@ -77,38 +77,35 @@ class app_esercitazione(tk.Tk):
         
         self.scrollbar.grid(column=1, row=1, sticky="ns")
 
-    def inizializza_checkbox(self):
+    
+    def inizializza_sezione_checkbox(self):
         self.sezione_checkbox = tk.Frame(self.sezione_body, bg="red")
-        self.sezione_checkbox.pack(fill=tk.BOTH, expand=True)
+        self.sezione_checkbox.pack(expand=True)
+
 
         self.checkbox_sport_var = tk.BooleanVar()
         self.checkbox_musica_var = tk.BooleanVar()
         self.checkbox_trekking_var = tk.BooleanVar()
         self.checkbox_paintball_var = tk.BooleanVar()
         self.checkbox_cucina_var = tk.BooleanVar()
+        
 
         self.checkbox_sport = tk.Checkbutton(self.sezione_checkbox, text="Sport", variable=self.checkbox_sport_var)
         self.checkbox_musica = tk.Checkbutton(self.sezione_checkbox, text="Musica", variable=self.checkbox_musica_var)
         self.checkbox_trekking = tk.Checkbutton(self.sezione_checkbox, text="Trekking", variable=self.checkbox_trekking_var)
-        self.checkbox_paintball = tk.Checkbutton(self.sezione_checkbox, text="Paintball", variable=self.checkbox_paintball_var)
         self.checkbox_cucina = tk.Checkbutton(self.sezione_checkbox, text="Cucina", variable=self.checkbox_cucina_var)
+        self.checkbox_paintball = tk.Checkbutton(self.sezione_checkbox, text="Paintball", variable=self.checkbox_paintball_var)
+
 
         self.checkbox_sport.pack(side=tk.LEFT, padx=5, pady=5)
         self.checkbox_musica.pack(side=tk.LEFT, padx=5, pady=5)
         self.checkbox_trekking.pack(side=tk.LEFT, padx=5, pady=5)
-        self.checkbox_paintball.pack(side=tk.LEFT, padx=5, pady=5)
         self.checkbox_cucina.pack(side=tk.LEFT, padx=5, pady=5)
+        self.checkbox_paintball.pack(side=tk.LEFT, padx=5, pady=5)
 
 
         
-
         
-        
-        
-        
-        
-        self.checkbox_sport.pack(side=tk.LEFT, padx=10, pady=10)
-
         
     
 
@@ -124,6 +121,3 @@ app = app_esercitazione()
 app.mainloop()
 
     
-
-
-

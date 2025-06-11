@@ -11,7 +11,7 @@ class Calcolatrice:
         self.master = master
         master.title("Calcolatrice")
         master.configure(bg="#3653D1", highlightbackground="#3653D1", highlightcolor="#3653D1")
-        master.iconbitmap("Studenti\Alessio Mangiagi\icone\favicon.ico")
+        #master.iconbitmap("Studenti\Alessio Mangiagi\icone\favicon.ico")
         master.geometry("400x500")
 
         self.expression = ""
