@@ -45,29 +45,30 @@ class Paint(tk.Tk):
         if self.last != [0, 0]:  # Controlla se esiste una posizione precedente
             if mode == "draw":
                 # Modalità disegno: crea una linea con il colore selezionato
+                # Disegna una linea dal punto precedente al punto corrente
                 self.canvas.create_line(
-                    self.last[0],
-                    self.last[1],
-                    x,
-                    y,
-                    fill=self.line_color,
-                    width=self.line_width,
-                    capstyle=tk.ROUND,  # Rende gli estremi delle linee rotondi
-                    smooth=True,  # Rende la linea più fluida
-                    splinesteps=36,  # Migliora la qualità della curva
+                    self.last[0],  # Coordinata x del punto precedente
+                    self.last[1],  # Coordinata y del punto precedente
+                    x,             # Coordinata x del punto corrente
+                    y,             # Coordinata y del punto corrente
+                    fill=self.line_color,         # Colore della linea selezionato
+                    width=self.line_width,        # Spessore della linea selezionato
+                    capstyle=tk.ROUND,            # Rende gli estremi delle linee rotondi
+                    smooth=True,                  # Rende la linea più fluida
+                    splinesteps=36,               # Migliora la qualità della curva
                 )
             else:
                 # Modalità cancellazione: disegna con il colore di sfondo del canvas
                 self.canvas.create_line(
-                    self.last[0],
-                    self.last[1],
-                    x,
-                    y,
-                    fill=self.canvas["bg"],  # Usa il colore di sfondo come "gomma"
-                    width=self.line_width + 5,  # Gomma più spessa della matita
-                    capstyle=tk.ROUND,
-                    smooth=True,
-                    splinesteps=36,
+                    self.last[0],  # Coordinata x del punto precedente
+                    self.last[1],  # Coordinata y del punto precedente
+                    x,             # Coordinata x del punto corrente
+                    y,             # Coordinata y del punto corrente
+                    fill=self.canvas["bg"],      # Usa il colore di sfondo come "gomma"
+                    width=self.line_width + 5,   # Gomma più spessa della matita
+                    capstyle=tk.ROUND,           # Rende gli estremi delle linee rotondi
+                    smooth=True,                 # Rende la linea più fluida
+                    splinesteps=36,              # Migliora la qualità della curva
                 )
         self.last = [x, y]  # Aggiorna la posizione precedente
 
