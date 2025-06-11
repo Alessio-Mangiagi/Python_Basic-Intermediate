@@ -52,7 +52,7 @@ class SimpleApp(tk.Tk):
                     self.last[1],
                     x,
                     y,
-                    fill="white",
+                    fill=self.canvas["bg"],
                     width=self.line_width + 5,
                 )
         self.last = [x, y]
