@@ -1,7 +1,6 @@
 import tkinter as tk  # Importa la libreria per creare interfacce grafiche
 import tkinter.messagebox as messagebox  # Importa i messaggi pop-up
 
-
 class Tris:
     def __init__(self, instanzaTkinter):
         # Inizializza il gioco del Tris
