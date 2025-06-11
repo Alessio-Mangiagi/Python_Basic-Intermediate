@@ -110,12 +110,17 @@ class ListaSpesa:
             messagebox.showinfo("Salvato", "Lista salvata in lista_spesa.txt")
         except Exception as e:
             messagebox.showerror("Errore", f"Errore durante il salvataggio: {e}")
+            
 
 if __name__ == "__main__":
     root = tk.Tk()
     app = ListaSpesa(root)
     root.mainloop()
     
+    
+    
 '''aggiungere  una variabile booleana globale per attivare o disattivare la visualizzazione della somma degli elementi
     e un metodo per calcolare la somma degli elementi della lista quando la casella di controllo è selezionata. 
     oltre ad una def che riesca se flaggata di attivare il delete per rimuovere gli elementi selezionati dalla lista.'''
+#a paint aggiungere una casella di testo con # esadecimale per il colore di sfondo della finestra principale
+# e un metodo per cambiare il colore di sfondo della finestra principale in base al colore selezionato.
