@@ -12,18 +12,16 @@ class app_esercitazione(tk.Tk):
         self.inizializza_sezione_testo()
         self.inizializza_sezione_radiobutton()
         self.inizializza_sezione_checkbox()
-        
-
-        
+        self.bind_events()
 
     def inizializza_toolbar(self):
         self.toolbar = tk.Frame(self, bg="lightgray", bd=1, relief=tk.RAISED)
         self.toolbar.pack(side=tk.TOP, fill=tk.X)
 
-        self.button_clear = tk.Button(self.toolbar, text="C", command=self.clear())
+        self.button_clear = tk.Button(self.toolbar, text="C", command=self.clear)
         self.button_clear.pack(side=tk.LEFT, padx=2, pady=2)
 
-        self.button_info = tk.Button(self.toolbar, text="Info", command=self.show_info())
+        self.button_info = tk.Button(self.toolbar, text="Info", command=self.show_info)
         self.button_info.pack(side=tk.LEFT, padx=2, pady=2)
         
     def inizializza_sezione_body(self):
@@ -41,9 +39,6 @@ class app_esercitazione(tk.Tk):
 
         self.entry_cognome = tk.Entry(self.sezione_body, font=("Arial", 14), textvariable=self.cognome_var)
         self.entry_cognome.pack(pady=10, padx=10, fill=tk.X)
-
-        
-
 
     def inizializza_sezione_radiobutton(self):
         self.sezione_button = tk.Frame(self.sezione_body, bg="lightgray")
@@ -63,7 +58,6 @@ class app_esercitazione(tk.Tk):
         """self.radio_altro.grid(row=0, column=2, padx=5, pady=5, sticky="EW")"""
         self.radio_altro.pack(side="left", padx=5, pady=5, anchor=tk.CENTER)
 
-
     def inizializza_sezione_testo(self):
         self.sezione_testo = tk.Frame(self.sezione_body, bg="lightblue")
         self.sezione_testo.pack(fill=tk.BOTH, expand=True, side=tk.BOTTOM)
@@ -77,7 +71,6 @@ class app_esercitazione(tk.Tk):
         
         self.scrollbar.grid(column=1, row=1, sticky="ns")
 
-    
     def inizializza_sezione_checkbox(self):
         self.sezione_checkbox = tk.Frame(self.sezione_body, bg="red")
         self.sezione_checkbox.pack(expand=True)
@@ -102,12 +95,17 @@ class app_esercitazione(tk.Tk):
         self.checkbox_trekking.pack(side=tk.LEFT, padx=5, pady=5)
         self.checkbox_cucina.pack(side=tk.LEFT, padx=5, pady=5)
         self.checkbox_paintball.pack(side=tk.LEFT, padx=5, pady=5)
+        # fine pack dei checkbox
 
-
-        
-        
-        
+    def Enter_Callback(self, event, color="yellow"):
+        event.widget.config(bg=color)
     
+    def Leave_Callback(self, event, color="white"):
+        event.widget.config(bg=color)
+
+    def bind_events(self):
+        self.button_clear.bind("<Enter>", lambda event: self.Enter_Callback(event, "yellow"))
+        self.button_clear.bind("<Leave>", lambda event: self.Leave_Callback(event, "white"))
 
     def clear(self):
         print("Clear")
@@ -117,7 +115,6 @@ class app_esercitazione(tk.Tk):
     
 
 app = app_esercitazione()
-
+app.bind_events()
 app.mainloop()
 
-    
