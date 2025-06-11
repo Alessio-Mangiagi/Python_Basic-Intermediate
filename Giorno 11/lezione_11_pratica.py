@@ -47,10 +47,17 @@ sezione_testo = tk.Frame(sezione_body, bg="lightblue")
 sezione_testo.pack(fill=tk.BOTH, expand=True, side=tk.LEFT)
 # text
 test_1 = tk.Text(sezione_testo, font=("Arial", 14), bg="#e20a0a", height=10, width=50)
+<<<<<<< HEAD
+scrollbar = tk.Scrollbar(sezione_testo, command=test_1.yview,)
+test_1.config(yscrollcommand=scrollbar.set)
+test_1.grid(column=0, row=1) 
+scrollbar.grid(column=1 , row=1, sticky="ns")
+=======
 scrollbar = tk.Scrollbar(sezione_testo, command=test_1.yview)
 test_1.config(yscrollcommand=scrollbar.set)
 test_1.grid(column=0, row=1)
 scrollbar.grid(column=1, row=1, sticky="ns")
+>>>>>>> b67e18398c4d505c8850e19056b000609fdbfa99
 
 
 root.mainloop()
