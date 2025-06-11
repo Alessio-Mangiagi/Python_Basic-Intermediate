@@ -10,6 +10,7 @@ class SimpleApp(tk.Tk):
         self.Initialiaze_Body()
         self._bind_events()
         self.last = [0, 0]
+        self.line_width = 1
 
     def clear(self):
         """Clear the content of the application."""
@@ -37,10 +38,22 @@ class SimpleApp(tk.Tk):
         x, y = event.x, event.y
         if self.last != [0, 0]:
             if mode == "draw":
-                self.canvas.create_line(self.last[0], self.last[1], x, y, fill="black")
+                self.canvas.create_line(
+                    self.last[0],
+                    self.last[1],
+                    x,
+                    y,
+                    fill="black",
+                    width=self.line_width,
+                )
             else:
                 self.canvas.create_line(
-                    self.last[0], self.last[1], x, y, fill="white", width=10
+                    self.last[0],
+                    self.last[1],
+                    x,
+                    y,
+                    fill="white",
+                    width=self.line_width + 5,
                 )
         self.last = [x, y]
 
@@ -49,6 +62,19 @@ class SimpleApp(tk.Tk):
 
     def active_erase(self):
         self.canvas.bind("<B1-Motion>", lambda e: self.draw(e, "erase"))
+
+    def Increase_size(self, event):
+        """Increase the size of the drawing."""
+        self.line_width += 1
+        print(f"Line width increased to {self.line_width}")
+
+    def Decrease_size(self, event):
+        """Decrease the size of the drawing."""
+        if self.line_width > 1:
+            self.line_width -= 1
+            print(f"Line width decreased to {self.line_width}")
+        else:
+            print("Line width cannot be decreased further")
 
     def Initialize_toolbar(self):
         """Initialize the application."""
@@ -102,7 +128,10 @@ class SimpleApp(tk.Tk):
         self.button_info.bind("<Leave>", lambda e: self.Leave_Callback(e, "lightgray"))
         self.button_clear.bind("<Enter>", lambda e: self.Enter_Callback(e, "lightblue"))
         self.button_clear.bind("<Leave>", lambda e: self.Leave_Callback(e, "lightgray"))
+        self.canvas.bind("<B1-Motion>", self.draw)
         self.canvas.bind("<Button-1>", self.start_drawing)
+        self.canvas.bind("<Button-2>", self.Increase_size)
+        self.canvas.bind("<Button-3>", self.Decrease_size)
 
 
 app = SimpleApp()
