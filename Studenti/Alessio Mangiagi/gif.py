@@ -36,7 +36,7 @@ import os
 import random
 # ...existing code...
 
-    def check_number(self):
+def check_number(self):
         try:
             numero = int(self.entry.get())
         except ValueError:
