@@ -1,16 +1,17 @@
 import tkinter as tk
 
 
-class SimpleApp(tk.Tk):
+class Paint(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Simple Tkinter App")
         self.geometry("600x600")
+        self.last = [0, 0]
+        self.line_width = 1
+        self.line_color = "black"
         self.Initialize_toolbar()
         self.Initialiaze_Body()
         self._bind_events()
-        self.last = [0, 0]
-        self.line_width = 1
 
     def clear(self):
         """Clear the content of the application."""
@@ -43,8 +44,11 @@ class SimpleApp(tk.Tk):
                     self.last[1],
                     x,
                     y,
-                    fill="black",
+                    fill=self.line_color,
                     width=self.line_width,
+                    capstyle=tk.ROUND,  # Rende gli estremi delle linee rotondi
+                    smooth=True,  # Rende la linea più fluida
+                    splinesteps=36,  # Migliora la qualità della curva
                 )
             else:
                 self.canvas.create_line(
@@ -54,6 +58,9 @@ class SimpleApp(tk.Tk):
                     y,
                     fill=self.canvas["bg"],
                     width=self.line_width + 5,
+                    capstyle=tk.ROUND,  # Rende gli estremi delle linee rotondi
+                    smooth=True,  # Rende la linea più fluida
+                    splinesteps=36,  # Migliora la qualità della curva
                 )
         self.last = [x, y]
 
@@ -75,6 +82,12 @@ class SimpleApp(tk.Tk):
             print(f"Line width decreased to {self.line_width}")
         else:
             print("Line width cannot be decreased further")
+
+    def set_color(self, color):
+        """Set the color for drawing."""
+        self.line_color = color
+        print(f"Line color set to {self.line_color}")
+        # self.canvas.bind("<B1-Motion>", lambda e: self.draw(e, "draw"))
 
     def Initialize_toolbar(self):
         """Initialize the application."""
@@ -104,6 +117,27 @@ class SimpleApp(tk.Tk):
             text="Gomma",
             command=self.active_erase,
         )
+
+        self.button_red = tk.Button(
+            self.tool_frame,
+            bg="red",
+            command=lambda: self.set_color("red"),
+        )
+        self.button_red.pack(padx=2, pady=2, side=tk.TOP, fill=tk.X, expand=True)
+
+        self.button_green = tk.Button(
+            self.tool_frame,
+            bg="green",
+            command=lambda: self.set_color("green"),
+        )
+        self.button_green.pack(padx=2, pady=2, side=tk.TOP, fill=tk.X, expand=True)
+
+        self.button_blue = tk.Button(
+            self.tool_frame,
+            bg="blue",
+            command=lambda: self.set_color("blue"),
+        )
+        self.button_blue.pack(padx=2, pady=2, side=tk.TOP, fill=tk.X, expand=True)
         self.button_gomma.pack(padx=2, pady=2, side=tk.TOP)
 
     def Initialiaze_Body(self):
@@ -134,5 +168,5 @@ class SimpleApp(tk.Tk):
         self.canvas.bind("<Button-3>", self.Decrease_size)
 
 
-app = SimpleApp()
+app = Paint()
 app.mainloop()
