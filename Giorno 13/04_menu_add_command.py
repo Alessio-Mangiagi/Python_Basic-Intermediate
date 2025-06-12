@@ -11,6 +11,7 @@ class MenuAddCommandApp:
         menubar.add_cascade(label="File", menu=filemenu)
         filemenu.add_command(label="Apri", command=self.apri)
         filemenu.add_command(label="Salva", command=self.salva, accelerator="Ctrl+S")
+        self.root.bind("<Control-s>", lambda event: self.salva())
         self.root.bind("<Control-s>", lambda event: self.label.config(text="Hai cliccato Salva"))
         self.root.geometry("350x150")
         self.label = tk.Label(self.root, text="Clicca su Apri o Salva nel menu File")
