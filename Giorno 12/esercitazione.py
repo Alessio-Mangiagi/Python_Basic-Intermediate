@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import messagebox
 
 # L'esercizio prevede una mini-app che permette di inserire il proprio nome, cliccare un bottone oppure premere Invio per mostrare un saluto,
 # e passare il mouse sopra la label per cambiarne il colore.
@@ -82,7 +83,7 @@ class App(tk.Tk):
             if self.label_saluto:
                 self.label_saluto.destroy()
         except Exception as e:
-            print(f"La label non esiste: {e}")
+            messagebox.showwarning("Attenzione", f"La label saluto non esiste: {e}")
 
         # Incrementa il contatore dei bottoni e aggiorna la label
         self.button_counter += 1
@@ -126,7 +127,9 @@ class App(tk.Tk):
             if self.label_saluto:
                 self.label_saluto.destroy()
         except Exception as e:
-            print(f"An error occurred: {e}")
+            messagebox.showerror(
+                "Errore", f"Si è verificato un errore durante il reset: {e}"
+            )
 
         # Resetta i contatori
         self.button_counter = 0
@@ -160,7 +163,7 @@ class App(tk.Tk):
                     )
                 self.double_click = False
         except Exception as e:
-            print(f"C'è qualche errore: {e}")
+            messagebox.showerror("Errore", f"Si è verificato un errore: {e}")
 
 
 # Crea un'istanza dell'applicazione e avvia il loop principale
