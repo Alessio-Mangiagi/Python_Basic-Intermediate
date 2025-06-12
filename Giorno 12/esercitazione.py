@@ -61,5 +61,5 @@ class App(tk.Tk):
         self.label_saluto.config(fg=colore)
 
 
-istanza_app = App()
-istanza_app.mainloop()
+instanza_app = App()
+instanza_app.mainloop()
