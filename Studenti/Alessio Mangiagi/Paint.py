@@ -23,6 +23,7 @@ class Paint(tk.Tk):
 
     def show_info(self):
         """Mostra informazioni sull'applicazione"""
+        self.canvas.delete("all")
         print("Info: This is a simple Tkinter application.")
 
     def Enter_Callback(self, event, color="lightblue"):
@@ -139,7 +140,7 @@ class Paint(tk.Tk):
             text="Gomma",
             command=self.active_erase,
         )
-
+        self.button_gomma.pack(padx=2, pady=2, side=tk.TOP)
         # Bottone per aprire il selettore di colori
         self.button_seleziona_colore = tk.Button(
         self.tool_frame,
