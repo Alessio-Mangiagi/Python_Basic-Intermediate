@@ -34,7 +34,7 @@ root.mainloop()
 
 import os
 import random
-# ...existing code...
+
 
 def check_number(self):
         try:

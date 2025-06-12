@@ -1,5 +1,12 @@
 MSG = {
     "it": {
+        "set_lang": "Seleziona la lingua: ",
+        "about": ("Questo programma ti permette di interagire con diversi animali domestici.\n"
+        "Ho realizzato questo progetto per esercitarmi con Python.\n"
+        "L'interfaccia grafica è realizzata con Tkinter e ho realizzato personalmente le icone.\n"
+        "Spero ti piaccia!"),
+        "sel_animal": "Benvenuto! Segli un animale ed assegnagli un nome\nper cominciare a giocare.",
+
         "nome": "Qual'è il nome del tuo animale? ",
         "specie": "Di che specie è il tuo animale? ",
         "specie_err": "Specie non riconosciuta. Al momento puoi scegliere tra: cane, gatto, pesce, pappagallo.",
@@ -10,9 +17,16 @@ MSG = {
             "Scrivi il comando: "
         ),
         "confused": "{nome} è confuso. Non conosce quel comando.\nProva ancora.",
-        "error": "Non ho capito, le risposte accettate sono Y e N.\nRiprova."
+        "error": "Non ho capito, le risposte accettate sono Y e N.\nRiprova.",
     },
-    "en": {
+    "eng": {
+        "set_lang": "Select language: ",
+        "about": ("This program makes you interacts with some domestic animals\n"
+        "I created this project as an exercise with Python.\n"
+        "The graphics are all made with Tkinter and I made the icons myself.\n"
+        "I hope you'd like it!"),
+        "sel_animal": "Hi! Choose an animal and give it a name\nto start playing.",
+
         "nome": "What's your animal's name? ",
         "specie": "What species is your animal? ",
         "specie_err": "Species not recognized. You can choose: dog, cat, fish, parrot.",
@@ -31,111 +45,111 @@ Animal_act = {
     "General": {
         "exit": {
             "it": "{nome} ti guarda mentre ti allontani. Aspetterà il tuo ritorno.",
-            "en": "{nome} stares at you while you walk away. It will wait for your return."
+            "eng": "{nome} stares at you while you walk away. It will wait for your return."
         }
     },
     "Cane": {
         "parla": {
             "it": "Il cane {nome} abbaia: Bau Bau!",
-            "en": "The dog {nome} barks: Woof Woof!"
+            "eng": "The dog {nome} barks: Woof Woof!"
         },
         "seduto": {
             "it": "Dici: 'Seduto!' Il cane {nome} si siede.",
-            "en": "You say: 'Sit!' The dog {nome} sits."
+            "eng": "You say: 'Sit!' The dog {nome} sits."
         },
         "terra": {
             "it": "Dici: 'A terra!' Il cane {nome} si sdraia.",
-            "en": "You say: 'Down!' The dog {nome} lies down."
+            "eng": "You say: 'Down!' The dog {nome} lies down."
         },
         "bravo": {
             "it": "Dici: 'Bravo!' Il cane {nome} scodinzola felice.",
-            "en": "You say: 'Good boy!' The dog {nome} wags its tail happily."
+            "eng": "You say: 'Good boy!' The dog {nome} wags its tail happily."
         },
         "biscotto": {
             "it": "Dai un biscotto al cane {nome}. Lo mangia con gusto!",
-            "en": "You give a biscuit to the dog {nome}. It eats it happily!"
+            "eng": "You give a biscuit to the dog {nome}. It eats it happily!"
         },
         "osserva": {
             "it": "Osservi il cane {nome}. Ti guarda scodinzolando.",
-            "en": "You watch the dog {nome}. It looks at you and wags its tail."
+            "eng": "You watch the dog {nome}. It looks at you and wags its tail."
         }
     },
     "Gatto": {
         "parla": {
             "it": "Il gatto {nome} dice: Miao!",
-            "en": "The cat {nome} says: Meow!"
+            "eng": "The cat {nome} says: Meow!"
         },
         "seduto": {
             "it": "Dici: 'Seduto!' Il gatto {nome} ti ignora.",
-            "en": "You say: 'Sit!' The cat {nome} ignores you."
+            "eng": "You say: 'Sit!' The cat {nome} ignores you."
         },
         "terra": {
             "it": "Dici: 'A terra!' Il gatto {nome} ti ignora.",
-            "en": "You say: 'Down!' The cat {nome} ignores you."
+            "eng": "You say: 'Down!' The cat {nome} ignores you."
         },
         "bravo": {
             "it": "Dici: 'Bravo!' Il gatto {nome} ti ignora.",
-            "en": "You say: 'Good!' The cat {nome} ignores you."
+            "eng": "You say: 'Good!' The cat {nome} ignores you."
         },
         "biscotto": {
             "it": "Dai un biscotto al gatto {nome}. Osserva il cibo e ci dà qualche colpetto con la zampa.",
-            "en": "You give a biscuit to the cat {nome}. It looks at the food and pats it with its paw."
+            "eng": "You give a biscuit to the cat {nome}. It looks at the food and pats it with its paw."
         },
         "osserva": {
             "it": "Osservi il gatto {nome}. Si stiracchia e comincia a leccarsi.",
-            "en": "You watch the cat {nome}. It stretches and starts licking itself."
+            "eng": "You watch the cat {nome}. It stretches and starts licking itself."
         }
     },
     "Pesce": {
         "parla": {
             "it": "Il pesce {nome} boccheggia e ti osserva.",
-            "en": "The fish {nome} gasps and looks at you."
+            "eng": "The fish {nome} gasps and looks at you."
         },
         "seduto": {
             "it": "Dici: 'Seduto!' Il pesce {nome} sembra confuso.",
-            "en": "You say: 'Sit!' The fish {nome} looks confused."
+            "eng": "You say: 'Sit!' The fish {nome} looks confused."
         },
         "terra": {
             "it": "Dici: 'A terra!' Il pesce {nome} guarda preoccupato il pavimento.",
-            "en": "You say: 'Down!' The fish {nome} looks worried at the floor."
+            "eng": "You say: 'Down!' The fish {nome} looks worried at the floor."
         },
         "bravo": {
             "it": "Dici: 'Bravo!' Il pesce {nome} nuota felice...\nO forse è solo un'impressione",
-            "en": "You say: 'Good!' The fish {nome} swims happily.\nMaybe it's just an impression"
+            "eng": "You say: 'Good!' The fish {nome} swims happily.\nMaybe it's just an impression"
         },
         "biscotto": {
             "it": "Dai un biscotto al pesce {nome}. Si avvicina alla superficie per mangiare le briciole!",
-            "en": "You give a biscuit to the fish {nome}. It comes to the surface to eat the crumbs!"
+            "eng": "You give a biscuit to the fish {nome}. It comes to the surface to eat the crumbs!"
         },
         "osserva": {
             "it": "Osservi il pesce {nome}. Nuota nel suo acquario.",
-            "en": "You watch the fish {nome}. It swims in its aquarium."
+            "eng": "You watch the fish {nome}. It swims in its aquarium."
         }
     },
     "Pappagallo": {
         "parla": {
             "it": "Il pappagallo {nome} dice: 'Ciao WRAAA!'",
-            "en": "The parrot {nome} says: 'Hello WRAAA!'"
+            "eng": "The parrot {nome} says: 'Hello WRAAA!'"
         },
         "seduto": {
             "it": "Dici: 'Seduto!' Il pappagallo {nome} si accuccia sul tavolo.",
-            "en": "You say: 'Sit!' The parrot {nome} crouches on the table."
+            "eng": "You say: 'Sit!' The parrot {nome} crouches on the table."
         },
         "terra": {
             "it": "Dici: 'A terra!' Il pappagallo {nome} vola sul pavimento.",
-            "en": "You say: 'Down!' The parrot {nome} flies to the floor."
+            "eng": "You say: 'Down!' The parrot {nome} flies to the floor."
         },
         "bravo": {
             "it": "Dici: 'Bravo!' Il pappagallo {nome} zompetta felice.",
-            "en": "You say: 'Good!' The parrot {nome} hops happily."
+            "eng": "You say: 'Good!' The parrot {nome} hops happily."
         },
         "biscotto": {
             "it": "Dai un biscotto al pappagallo {nome}. Lo afferra con una zampa e lo sminuzza con il becco.",
-            "en": "You give a biscuit to the parrot {nome}. It grabs it with a foot and shreds it with its beak."
+            "eng": "You give a biscuit to the parrot {nome}. It grabs it with a foot and shreds it with its beak."
         },
         "osserva": {
             "it": "Osservi il pappagallo {nome}. Vola su un trespolo e si sistema le piume con il becco.",
-            "en": "You watch the parrot {nome}. It flies to a perch and preens its feathers with its beak."
+            "eng": "You watch the parrot {nome}. It flies to a perch and preens its feathers with its beak."
         }
     }
 }
