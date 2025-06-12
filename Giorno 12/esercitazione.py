@@ -45,6 +45,8 @@ class App(tk.Tk):
 
     def mostra_saluto(self):
         nome = self.entry_nome.get()
+        if self.label_saluto:
+            self.label_saluto.destroy()
         if self.checkbox_saluto.get():
             self.label_saluto = tk.Label(self, text=f"Ciao {nome}!")
         else:
