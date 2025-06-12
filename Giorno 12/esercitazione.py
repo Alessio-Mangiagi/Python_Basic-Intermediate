@@ -49,8 +49,18 @@ class App(tk.Tk):
         self.label_counter_button.pack(pady=10)
         self.label_color_counter.pack(pady=10)
 
+        self.label_reset = tk.Button(self, text="Reset", command=self.reset)
+        self.label_reset.pack(pady=10)
+
+        self.double_click = False
+
 
     def mostra_saluto(self):
+        try:
+            if self.label_saluto:
+                self.label_saluto.destroy()
+        except Exception as e:
+            print(f"La label non esiste: {e}")
         self.button_counter += 1
         self.label_counter_button.config( text = "Counter button: " + str(self.button_counter) )
         nome = self.entry_nome.get()
@@ -63,11 +73,45 @@ class App(tk.Tk):
             "<Enter>", lambda e: self.cambia_colore(e, self.radiobutton_saluti.get())
         )
         self.label_saluto.bind("<Leave>", self.cambia_colore)
+        self.label_saluto.bind("<Double-Button-1>", self.cambia_testo)
 
     def cambia_colore(self, event, colore="black"):
         self.label_saluto.config(fg=colore)
         self.color_counter +=1
         self.label_color_counter.config( text = "Color counter: " + str(self.color_counter))
+        
+    def reset(self):
+        try:
+            if self.label_saluto:
+                self.label_saluto.destroy()
+        except Exception as e:
+            print(f"An error occurred: {e}")
+        self.button_counter = 0
+        self.color_counter = 0
+        self.label_counter_button.config(text="Button counter: " + str(self.button_counter))
+        self.label_color_counter.config(text="Color counter: " + str(self.color_counter))
+
+    def cambia_testo(self, event):
+        try:
+            if self.double_click != True:
+                if self.label_saluto:
+                    self.label_saluto.config(text="Hai fatto doppio click!")
+                    self.double_click = True
+                else:
+                    print("La label saluto non esiste.")
+            else:
+                if self.checkbox_saluto.get():
+                    self.label_saluto.config(text=f"Ciao {self.entry_nome.get()}!")
+                else:
+                    self.label_saluto.config(text=f"Non ti saluto {self.entry_nome.get()}!")
+                self.double_click = False        
+        except Exception as e:
+                print(f"C'è qualche errore: {e}")
+
+    
+    
+
+
 
 
 
