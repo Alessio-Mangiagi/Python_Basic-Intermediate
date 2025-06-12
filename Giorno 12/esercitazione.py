@@ -12,6 +12,8 @@ class App(tk.Tk):
 
         self.label_nome = tk.Label(self, text="Inserisci il tuo nome:")
         self.label_nome.pack(pady=10)
+        self.button_counter = 0
+        self.color_counter = 0
 
         self.entry_nome = tk.Entry(self)
         self.entry_nome.pack(pady=10)
@@ -42,11 +44,16 @@ class App(tk.Tk):
             self, text="blu", variable=self.radiobutton_saluti, value="blue"
         )
         self.radiobutton_blu.pack(pady=5)
+        self.label_counter_button = tk.Label(self, text = "Button counter: " + str(self.button_counter))
+        self.label_color_counter = tk.Label(self, text = "Color counter: " + str(self.color_counter))
+        self.label_counter_button.pack(pady=10)
+        self.label_color_counter.pack(pady=10)
+
 
     def mostra_saluto(self):
+        self.button_counter += 1
+        self.label_counter_button.config( text = "Counter button: " + str(self.button_counter) )
         nome = self.entry_nome.get()
-        if self.label_saluto:
-            self.label_saluto.destroy()
         if self.checkbox_saluto.get():
             self.label_saluto = tk.Label(self, text=f"Ciao {nome}!")
         else:
@@ -59,6 +66,9 @@ class App(tk.Tk):
 
     def cambia_colore(self, event, colore="black"):
         self.label_saluto.config(fg=colore)
+        self.color_counter +=1
+        self.label_color_counter.config( text = "Color counter: " + str(self.color_counter))
+
 
 
 instanza_app = App()
