@@ -10,9 +10,9 @@ class MenuTendinaApp:
         menubar.add_cascade(label="File", menu=filemenu)
         # Sottomenu
         submenu = tk.Menu(filemenu, tearoff=0)
+        filemenu.add_cascade(label="Sottomenu", menu=submenu)
         submenu.add_command(label="Opzione 1")
         submenu.add_command(label="Opzione 2")
-        filemenu.add_cascade(label="Sottomenu", menu=submenu)
         # Sotto-Sottomenu
         subsubmenu = tk.Menu(submenu, tearoff=0)
         subsubmenu.add_command(label="Sotto-opzione 1")

@@ -16,6 +16,7 @@ class Paint(tk.Tk):
         self.Initialize_toolbar()
         self.Initialiaze_Body()
         self._bind_events()
+        
 
     def clear(self):
         """Cancella il contenuto dell'applicazione (da implementare)"""

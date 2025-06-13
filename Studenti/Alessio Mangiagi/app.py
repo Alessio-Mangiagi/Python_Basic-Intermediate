@@ -14,4 +14,9 @@ class SimpleApp:
         for widget in self.root.winfo_children():
             widget.destroy()
     
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = SimpleApp()
+    root.mainloop()
     
+     
