@@ -49,26 +49,26 @@ class Paint(tk.Tk):
                 self.canvas.create_line(
                     self.last[0],  # Coordinata x del punto precedente
                     self.last[1],  # Coordinata y del punto precedente
-                    x,             # Coordinata x del punto corrente
-                    y,             # Coordinata y del punto corrente
-                    fill=self.line_color,         # Colore della linea selezionato
-                    width=self.line_width,        # Spessore della linea selezionato
-                    capstyle=tk.ROUND,            # Rende gli estremi delle linee rotondi
-                    smooth=True,                  # Rende la linea più fluida
-                    splinesteps=36,               # Migliora la qualità della curva
+                    x,  # Coordinata x del punto corrente
+                    y,  # Coordinata y del punto corrente
+                    fill=self.line_color,  # Colore della linea selezionato
+                    width=self.line_width,  # Spessore della linea selezionato
+                    capstyle=tk.ROUND,  # Rende gli estremi delle linee rotondi
+                    smooth=True,  # Rende la linea più fluida
+                    splinesteps=36,  # Migliora la qualità della curva
                 )
             else:
                 # Modalità cancellazione: disegna con il colore di sfondo del canvas
                 self.canvas.create_line(
                     self.last[0],  # Coordinata x del punto precedente
                     self.last[1],  # Coordinata y del punto precedente
-                    x,             # Coordinata x del punto corrente
-                    y,             # Coordinata y del punto corrente
-                    fill=self.canvas["bg"],      # Usa il colore di sfondo come "gomma"
-                    width=self.line_width + 5,   # Gomma più spessa della matita
-                    capstyle=tk.ROUND,           # Rende gli estremi delle linee rotondi
-                    smooth=True,                 # Rende la linea più fluida
-                    splinesteps=36,              # Migliora la qualità della curva
+                    x,  # Coordinata x del punto corrente
+                    y,  # Coordinata y del punto corrente
+                    fill=self.canvas["bg"],  # Usa il colore di sfondo come "gomma"
+                    width=self.line_width + 5,  # Gomma più spessa della matita
+                    capstyle=tk.ROUND,  # Rende gli estremi delle linee rotondi
+                    smooth=True,  # Rende la linea più fluida
+                    splinesteps=36,  # Migliora la qualità della curva
                 )
         self.last = [x, y]  # Aggiorna la posizione precedente
 
@@ -101,16 +101,31 @@ class Paint(tk.Tk):
     def Initialize_toolbar(self):
         """Inizializza la barra degli strumenti superiore"""
         # Crea il frame della toolbar
-        self.toolbar = tk.Frame(self, bg="lightgray", bd=1, relief=tk.RAISED)
-        self.toolbar.pack(side=tk.TOP, fill=tk.X)
 
-        # Bottone per cancellare
-        self.button_clear = tk.Button(self.toolbar, text="Clear", command=self.clear)
-        self.button_clear.pack(side=tk.LEFT, padx=2, pady=2)
+        # Crea il menu principale della finestra
+        self.toolbarmenu = tk.Menu(self)
+        # Configura la finestra per utilizzare il menu creato
+        self.config(menu=self.toolbarmenu)
 
-        # Bottone per le informazioni
-        self.button_info = tk.Button(self.toolbar, text="Info", command=self.show_info)
-        self.button_info.pack(side=tk.LEFT, padx=2, pady=2)
+        # Crea un sottomenu "Opzioni" senza la possibilità di essere staccato
+        self.optionbar = tk.Menu(self.toolbarmenu, tearoff=0)
+        # Aggiunge il sottomenu "Opzioni" al menu principale
+        self.toolbarmenu.add_cascade(label="Opzioni", menu=self.optionbar)
+        # Crea un ulteriore sottomenu per le informazioni
+        self.infobar = tk.Menu(self.optionbar, tearoff=0)
+        # Aggiunge un comando "Clear" al menu Opzioni che chiama il metodo clear()
+        self.optionbar.add_command(label="Clear", command=self.clear)
+        # Aggiunge il sottomenu "Info" al menu "Opzioni"
+        self.optionbar.add_cascade(label="Info", menu=self.infobar)
+        # Aggiunge un comando "About" al sottomenu Info che chiama show_info()
+        self.infobar.add_command(label="About", command=self.show_info)
+        # Aggiunge un comando "Help" al sottomenu Info che chiama show_info()
+        self.infobar.add_command(label="Help", command=self.show_info)
+
+        # Aggiunge una linea di separazione visiva nel menu Opzioni
+        self.optionbar.add_separator()
+        # Aggiunge un comando "Exit" che chiude l'applicazione
+        self.optionbar.add_command(label="Exit", command=self.quit)
 
     def Initialize_color_picker(self):
         """Crea una finestra separata per la selezione dei colori"""
@@ -219,10 +234,6 @@ class Paint(tk.Tk):
     def _bind_events(self):
         """Associa gli eventi ai widget dell'applicazione"""
         # Eventi hover per i bottoni della toolbar
-        self.button_info.bind("<Enter>", lambda e: self.Enter_Callback(e, "lightblue"))
-        self.button_info.bind("<Leave>", lambda e: self.Leave_Callback(e, "lightgray"))
-        self.button_clear.bind("<Enter>", lambda e: self.Enter_Callback(e, "lightblue"))
-        self.button_clear.bind("<Leave>", lambda e: self.Leave_Callback(e, "lightgray"))
 
         # Eventi del mouse sul canvas
         self.canvas.bind("<B1-Motion>", self.draw)  # Trascinamento con tasto sinistro
