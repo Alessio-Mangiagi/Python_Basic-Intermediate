@@ -20,6 +20,7 @@ class AnimalApp(tk.Tk):
         self.configure(bg= self.background)
         self.title("Little Animals")
         self.geometry("900x650")
+        self.iconbitmap("images/icon.ico")
         self.language = "it" # Default language
         self.animal = None
         self.starting_frame()
@@ -30,7 +31,11 @@ class AnimalApp(tk.Tk):
         self.start_frame = tk.Frame(self, bg="lightgreen")
         self.start_frame.pack(side=tk.TOP, fill=tk.X, pady=20)
 
-        tk.Label(self.start_frame, text="Welcome to\nLittle Animals!", font=("Verdana", 50), bg="lightgreen").pack(pady=20)
+        self.logo = tk.PhotoImage(file="images/littleanimals.png")
+
+        # Display logo of the game
+        logo_label = tk.Label(self.start_frame, image = self.logo, font=("Verdana", 50), bg="lightgreen")
+        logo_label.pack()
 
         button_frame = tk.Frame(self.start_frame, background="lightgreen")
         button_frame.pack(anchor=tk.CENTER, pady= 50)
