@@ -1,4 +1,5 @@
 import tkinter as tk
+from PIL import Image, ImageTk
 
 # creazione finestra
 
@@ -19,10 +20,13 @@ def n_clicks():
     counter += 1
     label.config(text=f"Hai premuto il bottone {counter} volte!")
 
+# img bottone
+button_img = ImageTk.PhotoImage(Image.open("button.png"))
+
 label = tk.Label(center_frame, text="Non hai ancora premuto il pulsante...", bg="#404040", fg="orange", font=("Arial", 20, "bold"))
 label.pack(pady=20)
 
-pulsante = tk.Button(center_frame, text="Clicca!", bg="#FFC400", command=n_clicks, font=("Arial", 20, "bold"))
+pulsante = tk.Button(center_frame, image = button_img , border= 0, background="#404040",  command=n_clicks)
 pulsante.pack(pady=10)
 
 root.mainloop() #avvio schermata (A FINE CODICE)
