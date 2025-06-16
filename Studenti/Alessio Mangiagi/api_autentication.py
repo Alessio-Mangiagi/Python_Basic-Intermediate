@@ -15,11 +15,28 @@ La parte della risposta che conferma l’autenticazione (ad esempio "authenticat
 import requests
 from dotenv import load_dotenv
 import os
+from requests.auth import HTTPBasicAuth
 load_dotenv()
 
-url = "https://httpbin.org/get"
-x_key = os.getenv('x_key')
-print(x_key)
-response = requests.get(url,headers=x_key)
-print(response.status_code)
-print(response.json())
+# url = "https://httpbin.org/get"
+# x_key = {'X-API-Key': os.getenv('x_key')}
+
+# response = requests.get(url,headers=x_key)
+# print(response.status_code)
+# print(response.json())
+
+# url = "https://httpbin.org/basic-auth/Alessio/password123"
+# Alessio = (os.getenv('utente'), os.getenv('password'))
+# response = requests.get(url, auth=Alessio)
+# print(response.status_code)
+# print(response.json())
+#password modificata per dare errore 401
+
+# url = "https://httpbin.org/bearer"
+# headers = {"Authorization": f"Bearer {os.getenv('token')}"}
+
+# response = requests.get(url,headers=headers)
+# print(response.status_code)
+# print(response.json())
+
+#non perdere il file .env con le chiavi di autenticazione
