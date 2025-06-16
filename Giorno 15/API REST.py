@@ -1,21 +1,21 @@
-# I principali metodi HTTP: 
+import requests
+
+# I principali metodi HTTP:
 
 
 # GET
 # GET serve per ottenere dati da una risorsa.
 # _________________________
-# import requests
-
-# # Effettuare una richiesta GET
+# Effettuare una richiesta GET
 # response = requests.get(
-#     'https://api.esempio.com/utenti',
-#     params={'attivi': 'true'}
+#    "https://httpbin.org/get",
+#    params={"nome": "Simone", "corso": "Python", "anno": 2025},
 # )
 
-# # Verificare lo stato della risposta
+# Verificare lo stato della risposta
 # if response.status_code == 200:
-#     utenti = response.json()
-#     print(utenti)
+#    utenti = response.json()
+#    print(utenti)
 # _________________________
 
 
@@ -24,20 +24,13 @@
 # _________________________
 # import requests
 
-# Effettuare una richiesta POST
-# nuovo_utente = {
-#     'nome': 'Luca',
-#     'email': 'luca@example.com'
-# }
-# response = requests.post(
-#     'https://api.esempio.com/utenti',
-#     json=nuovo_utente
-# )
+# url = "https://httpbin.org/post"
+# data = {"nome": "Simone", "corso": "Python", "anno": 2025}
 
-# # Verificare lo stato della risposta
-# if response.status_code == 201:
-#     utente_creato = response.json()
-#     print(utente_creato)
+# response = requests.post(url, data=data)
+# print(response.status_code)
+# print(response.json())
+
 # _________________________
 
 
@@ -62,6 +55,15 @@
 #     print(utente)
 # _________________________
 
+# import requests
+
+# url = "https://httpbin.org/put"
+# data = {"nome": "Simone", "corso": "Python", "anno": 2025}
+
+# response = requests.put(url, data=data)
+# print(response.status_code)
+# print(response.json())
+
 
 # DELETE
 # DELETE serve per eliminare una risorsa.
@@ -77,6 +79,27 @@
 # else:
 #     print('Errore nell\'eliminazione')
 # _________________________
+
+# import requests
+
+# url = "https://httpbin.org/delete"
+# params = {"id": 123}
+
+# response = requests.delete(url, params=params)
+# print(response.status_code)
+# print(response.json())
+
+# PATCH
+# PATCH serve per aggiornare parzialmente una risorsa.
+# _________________________
+# import requests
+
+# url = "https://httpbin.org/patch"
+# data = {"corso": "Python avanzato", "anno": 2025}
+
+# response = requests.patch(url, json=data)
+# print(response.status_code)
+# print(response.json())
 
 
 # _-_-_-_-_-_-_-_-_-_-_-_-_
@@ -101,6 +124,16 @@
 #     headers={'X-API-Key': 'chiave_segreta'}
 # )
 
+# import requests
+
+# url = "https://httpbin.org/get"
+# headers = {"X-API-Key": "12345abcdef"}
+
+# response = requests.get(url, headers=headers)
+# print(response.status_code)
+# print(response.json())
+
+
 # # --- Basic Auth ---
 # # Credenziali username:password codificate in Base64. Semplice ma deve essere usato sempre con HTTPS.
 # from requests.auth import HTTPBasicAuth
@@ -108,6 +141,17 @@
 #     'https://api.esempio.com/dati',
 #     auth=HTTPBasicAuth('utente', 'password')
 # )
+
+# import requests
+# from requests.auth import HTTPBasicAuth
+
+# url = "https://httpbin.org/basic-auth/simone/password123"
+# auth = HTTPBasicAuth("simone", "password123")
+
+# response = requests.get(url, auth=auth)
+# print(response.status_code)
+# print(response.json())
+
 
 # # --- OAuth 2.0 ---
 # # Standard avanzato che permette autorizzazioni granulari e token temporanei. Più complesso ma molto più sicuro.
@@ -119,6 +163,15 @@
 #     headers=headers
 # )
 # _________________________
+import requests
+
+url = "https://httpbin.org/bearer"
+headers = {"Authorization": "Bearer my_fake_token_abc123"}
+
+response = requests.get(url, headers=headers)
+print(response.status_code)
+print(response.json())
+
 
 # _-_-_-_-_-_-_-_-_-_-_-_-_
 # Serializzazione e deserializzazione JSON
@@ -136,7 +189,7 @@
 # API per testing e learning
 # https://jsonplaceholder.typicode.com/ # Esempio: https://jsonplaceholder.typicode.com/posts
 # https://reqres.in/ # (RICHIEDE API KEY) Esempio: https://reqres.in/api/users
-# https://bored-api.appbrewery.com/ # Esempio: https://bored-api.appbrewery.com/random 
+# https://bored-api.appbrewery.com/ # Esempio: https://bored-api.appbrewery.com/random
 # https://dog.ceo/dog-api/ #Esempio: https://dog.ceo/api/breeds/image/random
 # https://docs.spacexdata.com/ #Esempio: https://api.spacexdata.com/v4/launches/latest
 # https://restcountries.com/ #Esempio: https://restcountries.com/v3.1/name/italy
