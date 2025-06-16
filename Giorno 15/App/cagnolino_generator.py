@@ -22,5 +22,5 @@ class CagnolinoGenerator:
         self.button.pack()
 
 root = tk.Tk()
-# cagnolino_generator = CagnolinoGenerator()
+App = CagnolinoGenerator(root)
 root.mainloop()
