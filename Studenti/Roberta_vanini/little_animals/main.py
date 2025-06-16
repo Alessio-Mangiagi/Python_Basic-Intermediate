@@ -34,7 +34,7 @@ class AnimalApp(tk.Tk):
         self.logo = tk.PhotoImage(file="images/littleanimals.png")
 
         # Display logo of the game
-        logo_label = tk.Label(self.start_frame, image = self.logo, font=("Verdana", 50), bg="lightgreen")
+        logo_label = tk.Label(self.start_frame, image = self.logo,  bg="lightgreen")
         logo_label.pack()
 
         button_frame = tk.Frame(self.start_frame, background="lightgreen")
