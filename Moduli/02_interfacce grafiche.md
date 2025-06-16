@@ -1,8 +1,7 @@
 # - Interfacce grafiche -
 
 ### Giorno 9
-
-* **Teoria: Introduzione a Tkinter: finestra principale, loop, widget base**
+- **Teoria: Introduzione a Tkinter: finestra principale, loop, widget base**
 
 1. Cos'è Tkinter e perché usarlo
 2. Importazione del modulo Tkinter
@@ -20,7 +19,7 @@
 14. Differenza tra widget e metodi
 15. Cenni su interazione con l’utente
 
-* **Pratica: Creazione di una finestra con etichette, pulsanti, campi di testo**
+- **Pratica: Creazione di una finestra con etichette, pulsanti, campi di testo**
 
 1. Creazione della finestra con `Tk()`
 2. Impostazione del titolo con `.title()`
@@ -41,8 +40,7 @@
 ---
 
 ### Giorno 10
-
-* **Teoria: Layout manager: pack, grid, place**
+- **Teoria: Layout manager: pack, grid, place**
 
 1. Cos'è un layout manager
 2. Perché usare i layout manager in GUI
@@ -60,7 +58,7 @@
 14. Best practice nei layout complessi
 15. Approccio modulare con `Frame` e layout dedicati
 
-* **Pratica: Organizzazione di widget in colonne e righe**
+- **Pratica: Organizzazione di widget in colonne e righe**
 
 1. Creazione di un'interfaccia con `.grid()`
 2. Inserimento di etichette su righe distinte
@@ -81,8 +79,7 @@
 ---
 
 ### Giorno 11
-
-* **Teoria: Widget avanzati: Entry, Text, Listbox, Checkbutton, Radiobutton**
+- **Teoria: Widget avanzati: Entry, Text, Listbox, Checkbutton, Radiobutton**
 
 1. Funzione del widget `Entry`
 2. Differenza tra `Entry` e `Text`
@@ -100,7 +97,7 @@
 14. Interazioni tra widget avanzati
 15. Validazione dell’input con widget
 
-* **Pratica: Sviluppo di un form interattivo con selezioni multiple**
+- **Pratica: Sviluppo di un form interattivo con selezioni multiple**
 
 1. Creazione del layout del form
 2. Aggiunta di `Entry` per nome e cognome
@@ -122,7 +119,7 @@
 
 ### Giorno 12
 
-* **Teoria: Eventi e callback: binding e gestione degli eventi utente**
+- **Teoria: Eventi e callback: binding e gestione degli eventi utente**
 
 1. Cos’è un evento in un’interfaccia grafica
 2. Tipi di eventi in Tkinter
@@ -140,7 +137,7 @@
 14. Uso di `lambda` per passare parametri
 15. Debug di callback complesse
 
-* **Pratica: Programmazione di risposte a click, keypress, selezioni**
+- **Pratica: Programmazione di risposte a click, keypress, selezioni**
 
 1. Rilevazione del click su un pulsante
 2. Rilevazione del click in un’area vuota
@@ -161,8 +158,7 @@
 ---
 
 ### Giorno 13
-
-* **Teoria: Menu, dialoghi (messagebox), Canvas per disegno**
+- **Teoria: Menu, dialoghi (messagebox), Canvas per disegno**
 
 1. Introduzione ai menu in Tkinter
 2. Costruzione di un menu base
@@ -180,7 +176,7 @@
 14. Eventi di disegno su `Canvas`
 15. Interazione dinamica con oggetti grafici
 
-* **Pratica: Realizzazione di un piccolo editor grafico o disegno semplici**
+- **Pratica: Realizzazione di un piccolo editor grafico o disegno semplici**
 
 1. Creazione della finestra e area `Canvas`
 2. Aggiunta di menu `File`, `Modifica`
@@ -201,8 +197,7 @@
 ---
 
 ### Giorno 14
-
-* **Teoria: Confezionamento dell’app: icona, file eseguibile con PyInstaller**
+- **Teoria: Confezionamento dell’app: icona, file eseguibile con PyInstaller**
 
 1. Cos’è il packaging di un’app
 2. Differenze tra script e applicazione
@@ -220,7 +215,7 @@
 14. Debug di errori comuni nel build
 15. Distribuzione e testing dell’eseguibile
 
-* **Pratica: Creazione di un eseguibile standalone del progetto GUI**
+- **Pratica: Creazione di un eseguibile standalone del progetto GUI**
 
 1. Preparazione del file Python funzionante
 2. Creazione di un’icona `.ico`
@@ -237,5 +232,3 @@
 13. Creazione di un file `.bat` per lanciare l’app
 14. Compressione della cartella finale
 15. Invio dell’app ad altri utenti per test
-
----

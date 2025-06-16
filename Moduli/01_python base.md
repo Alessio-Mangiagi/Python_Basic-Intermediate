@@ -37,6 +37,8 @@
 14. Breve quiz su quanto appreso
 15. Preparazione al giorno 2
 
+---
+
 ### Giorno 2
 -  **Teoria: Tipi Primitivi e Operatori**
      
