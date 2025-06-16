@@ -21,7 +21,7 @@ def n_clicks():
     label.config(text=f"Hai premuto il bottone {counter} volte!")
 
 # img bottone
-button_img = ImageTk.PhotoImage(Image.open("Python_Basic-Intermediate/Studenti/Roberta_vanini/button.png"))
+button_img = ImageTk.PhotoImage(Image.open("button.png"))
 
 label = tk.Label(center_frame, text="Non hai ancora premuto il pulsante...", bg="#404040", fg="orange", font=("Arial", 20, "bold"))
 label.pack(pady=20)
