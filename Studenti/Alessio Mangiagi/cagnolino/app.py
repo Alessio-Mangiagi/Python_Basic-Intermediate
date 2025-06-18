@@ -3,8 +3,13 @@ import tkinter as tk              # Per l'interfaccia grafica
 from tkinter import messagebox    # Per mostrare messaggi popup
 import requests                   # Per le richieste HTTP alle API
 from PIL import Image, ImageTk    # Per la gestione delle immagini
-from io import BytesIO           # Per gestire i dati binari delle immagini
+from io import BytesIO  
+# Per gestire i dati binari delle immagini
+print("><(((º> sabusabu <º)))><")
 
+
+urlcane = "https://dog.ceo/api/breeds/image/random"   
+urlchack = "https://api.chucknorris.io/jokes/random"
 class SimpleApp:
     def __init__(self):
         # Inizializzazione della finestra principale
@@ -22,13 +27,11 @@ class SimpleApp:
         self.sezione_body.pack(fill=tk.BOTH, expand=True)
         
         # Etichetta del titolo
-        self.label = tk.Label(self.sezione_body, text="Cagnolino", 
-                            font=("Arial", 24), fg="white", bg="#5BB4EB")
+        self.label = tk.Label(self.sezione_body, text="Cagnolino", font=("Arial", 24), fg="white", bg="#5BB4EB")
         self.label.pack(pady=20)
         
         # Canvas per mostrare l'immagine
-        self.canvas = tk.Canvas(self.sezione_body, bg="white", 
-                              width=400, height=300)
+        self.canvas = tk.Canvas(self.sezione_body, bg="white", width=400, height=300)
         self.canvas.pack(fill=tk.BOTH, expand=True)
         
         # Frame per i pulsanti
@@ -36,24 +39,21 @@ class SimpleApp:
         button_frame.pack(fill=tk.BOTH, expand=True)
         
         # Pulsante per generare frasi
-        self.button = tk.Button(button_frame, text="Genera Frase", 
-                              font=("Arial", 14), bg="#4a9ed5", fg="white",
-                              command=self.genera_frase)
+        self.button = tk.Button(button_frame, text="Genera Frase", font=("Arial", 14), bg="#4a9ed5", fg="white",command=self.genera_frase)
         self.button.pack(side=tk.LEFT, padx=10)
         
         # Pulsante per generare immagini
-        self.button2 = tk.Button(button_frame, text="Genera Immagine",
-                               font=("Arial", 14), bg="#4a9ed5", fg="white",
-                               command=self.img_cane)    
+        self.button2 = tk.Button(button_frame, text="Genera Immagine",font=("Arial", 14), bg="#4a9ed5", fg="white", command=self.img_cane)    
         self.button2.pack(side=tk.LEFT, padx=10)
         
         # Variabile per mantenere il riferimento all'immagine
         self.photo = None
         
+        
     def img_cane(self):
         try:
             # Richiesta all'API per ottenere l'URL di un'immagine casuale di cane
-            response = requests.get("https://dog.ceo/api/breeds/image/random")
+            response = requests.get(urlcane)
             if response.status_code == 200:
                 img_url = response.json()["message"]
                 # Scarica l'immagine dall'URL ottenuto
@@ -61,20 +61,20 @@ class SimpleApp:
                 if img_response.status_code == 200:
                     # Processa e mostra l'immagine
                     img_data = Image.open(BytesIO(img_response.content))
-                    img_data = img_data.resize((380, 280), Image.LANCZOS)
+                    img_data = img_data.resize((800, 400), Image.LANCZOS)
                     self.photo = ImageTk.PhotoImage(img_data)
                     self.canvas.delete("all")
-                    self.canvas.create_image(200, 150, image=self.photo, anchor="center")
+                    self.canvas.create_image(200, 200, image=self.photo, anchor="center")
                 else:
                     messagebox.showerror("Errore", "Impossibile scaricare l'immagine.")
             else:
                 messagebox.showerror("Errore", "Impossibile ottenere l'URL dell'immagine.")
         except Exception as e:
             messagebox.showerror("Errore", f"Si è verificato un errore: {str(e)}")
-
+    
     def genera_frase(self):
         # Richiesta all'API di Chuck Norris per ottenere una frase casuale
-        response = requests.get("https://api.chucknorris.io/jokes/random")
+        response = requests.get(urlchack)
         if response.status_code == 200:
             joke = response.json()["value"]
             messagebox.showinfo("Cagnolino", joke)
