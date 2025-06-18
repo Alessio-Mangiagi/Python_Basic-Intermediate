@@ -25,6 +25,8 @@ class skynet:
         self.inserisci_testo_bottone.pack(pady=10)
         self.correzione_bottone = tk.Button(self.frame, text="Correggi", command=self.correggi_testo)
         self.correzione_bottone.pack(pady=10)
+        self.bottone_genera_idee = tk.Button(self.frame, text="Genera Idee", command=self.genera_idee)
+        self.bottone_genera_idee.pack(pady=10)
         self.testo_riassunto = tk.Text(self.frame, wrap=tk.WORD)
         self.testo_riassunto.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
         self.testo_riassunto.insert(tk.END, "La risposta apparirà qui")
@@ -57,6 +59,19 @@ class skynet:
             messagebox.showerror("Errore", f"Si è verificato un errore: {e}")
             return
 
+    def genera_idee(self):
+        testo = self.inserisci_testo.get("1.0", tk.END).strip()
+        if not testo:
+            messagebox.showwarning("Attenzione", "Inserisci del testo per generare idee.")
+            return
+        try:
+            risposta = self.chiamata_openai(message=f"Genera 5 idee basate sul seguente testo: {testo}, ritorna solo le idee con spiegazioni.")
+            idee = risposta.choices[0].message.content.strip()
+            self.testo_riassunto.delete("1.0", tk.END)
+            self.testo_riassunto.insert(tk.END, idee)
+        except Exception as e:
+            messagebox.showerror("Errore", f"Si è verificato un errore: {e}")
+            return
 
         
 
