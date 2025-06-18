@@ -29,6 +29,9 @@ parser = argparse.ArgumentParser(description="Genera testo con OpenAI")
 parser.add_argument("prompt", help="Il prompt da inviare")
 parser.add_argument("--output", help="File di output per salvare la risposta")
 parser.add_argument("--tokens", type=int, default=100, help="Numero massimo di token")
+parser.add_argument(
+    "--temperature", type=float, default=0.7, help="Temperatura per la generazione"
+)
 args = parser.parse_args()
 risposta = genera_testo(args.prompt, max_tokens=args.tokens)
 if args.output:
