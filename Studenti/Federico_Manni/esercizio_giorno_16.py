@@ -13,13 +13,14 @@ client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),
 )
 
-richiesta = input("Scrivi una frase da correggere: ")
+def corrector_openai(input, temperature=0.7, max_tokens=100, model="gpt-4.1-nano"):
+    richiesta = input("Scrivi una frase da correggere: ")
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "user", "content": f"Correggi questa frase: '{richiesta}'"}
+        ]
+        )
 
-response = client.chat.completions.create(
-    model="gpt-4.1-nano",
-    messages=[
-        {"role": "user", "content": f"Correggi questa frase: '{richiesta}'"}
-    ]
-    )
 
-print(response.choices[0].message.content)
+# print(response.choices[0].message.content)
