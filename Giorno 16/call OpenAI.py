@@ -3,7 +3,12 @@ import os
 import sys
 import time
 import logging
-from openai._exceptions import RateLimitError, AuthenticationError, OpenAIError
+# Usa il modulo pubblico per le eccezioni
+try:
+    from openai.error import RateLimitError, AuthenticationError, OpenAIError
+except ImportError:
+    # Fallback per versioni diverse
+    from openai._exceptions import RateLimitError, AuthenticationError, OpenAIError
 
 # 2. Impostazione API Key tramite variabile d'ambiente o input
 API_KEY = os.getenv('OPENAI_API_KEY')
@@ -31,19 +36,20 @@ def call_openai(prompt, model="gpt-3.5-turbo", max_tokens=100, temperature=0.7, 
             text = response.choices[0].message.content.strip()
             logging.info(f"Prompt: {prompt}\nRisposta: {text}")
             return text
-        except RateLimitError:
-            print("[!] Rate limit raggiunto. Attendo 10 secondi e riprovo...")
+        except RateLimitError as e:
+            print(f"[!] Rate limit raggiunto. Attendo 10 secondi e riprovo... Dettaglio: {e}")
             time.sleep(10)
-        except AuthenticationError:
-            print("[!] Errore di autenticazione. Controlla la tua API Key.")
+        except AuthenticationError as e:
+            print(f"[!] Errore di autenticazione. Controlla la tua API Key. Dettaglio: {e}")
+            logging.error(f"Errore autenticazione: {e}")
             break
         except OpenAIError as e:
             print(f"[!] Errore OpenAI: {e}")
             logging.error(f"Errore OpenAI: {e}")
             break
         except Exception as e:
-            print(f"[!] Errore generico: {e}")
-            logging.error(f"Errore generico: {e}")
+            print(f"[!] Errore generico: {type(e).__name__}: {e}")
+            logging.error(f"Errore generico: {type(e).__name__}: {e}")
             break
     return None
 
