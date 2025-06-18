@@ -1,11 +1,12 @@
-from openai import OpenAI
+# from openai import OpenAI
 import tkinter as tk
+from openai import OpenAI
 
 class mainframe:
     def __init__(self):
         self.root= tk.Tk()
         self.root.title("My Ai-chat interface")
-        self.root.geometry("900X500")
+        self.root.geometry("900x500")
         self.root.config(bg= "lightblue")
         self.pagina()
 
