@@ -27,3 +27,14 @@ class mini_chatGpt:
 if __name__ == "__main__":
     app = mini_chatGpt()
     app.root.mainloop()
+
+# dotenv serve solo se vuoi caricare variabili d'ambiente da un file .env (ad esempio per la tua API key OpenAI).
+# Se non usi variabili d'ambiente o non hai un file .env, non è necessario installarlo.
+# Se vuoi usarlo, installa con:
+# pip install python-dotenv
+
+# Esempio di utilizzo:
+# from dotenv import load_dotenv
+# load_dotenv()
+# import os
+# api_key = os.getenv("OPENAI_API_KEY")
