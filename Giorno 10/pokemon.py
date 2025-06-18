@@ -1,7 +1,19 @@
 import tkinter as tk
 import random
+import logging
 from pathlib import Path
 from PIL import Image, ImageTk, ImageOps  # Pillow per ridimensionamento e specchiatura
+from openai import OpenAI
+
+# Configurazione OpenAI
+client = OpenAI()
+
+# Configurazione logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[logging.FileHandler("openai_api.log"), logging.StreamHandler()],
+)
 
 # Costanti per l'interfaccia grafica
 BAR_LENGTH = 120  # Lunghezza barra HP
@@ -12,6 +24,32 @@ ANIM_DELAY = 40  # Millisecondi tra i frame dell'animazione
 SPRITE_MAX = (
     96  # Dimensione massima (lato più lungo) per ogni sprite dopo il ridimensionamento
 )
+
+
+def ask_openai(input, temperature=0.7, max_tokens=300, model="gpt-4.1-nano"):
+    """Funzione per chiedere a OpenAI di generare una risposta"""
+    logging.info(
+        f"Making API request with model: {model}, temperature: {temperature}, max_tokens: {max_tokens}"
+    )
+    logging.debug(f"Input message: {input}")
+
+    try:
+        completion = client.chat.completions.create(
+            model=model,
+            messages=[
+                {
+                    "role": "user",
+                    "content": input,
+                }
+            ],  # role può essere "system", "user" o "assistant"
+            max_tokens=max_tokens,
+            temperature=temperature,
+        )
+        logging.info("API request successful")
+        return completion.choices[0].message.content
+    except Exception as e:
+        logging.error(f"API request failed: {str(e)}")
+        raise
 
 
 class Move:
@@ -94,14 +132,14 @@ class BattleUI:
             "Pikachu",
             100,
             pika_moves,
-            Path(r"Giorno 10\pikachu.png"),
+            Path(r"Giorno 10\images\pikachu.png"),
             mirror=False,  # Il Pokémon del giocatore guarda normalmente
         )
         self.enemy = Pokemon(
             "Charmander",
             100,
             char_moves,
-            Path(r"Giorno 10\charmender.png"),
+            Path(r"Giorno 10\images\charmender.png"),
             mirror=True,  # Il nemico è specchiato per guardare verso il giocatore
         )
 
@@ -155,10 +193,12 @@ class BattleUI:
                 command=lambda idx=i: self.player_attack(idx),
             )
             btn.grid(row=i // 2, column=i % 2, padx=4, pady=4)  # Griglia 2x2
-            self.move_buttons.append(btn)
-
-        # Pulsante per ricominciare
+            self.move_buttons.append(btn)  # Pulsante per ricominciare
         tk.Button(root, text="Restart 🔄", width=15, command=self.restart).pack(pady=4)
+
+        # ========== Cronologia delle mosse per l'AI ========== #
+        self.move_history = []  # Lista per tenere traccia delle mosse fatte
+        self.turn_number = 0  # Numero del turno corrente
 
     # ------------------------------------------------------------------ #
     #                             Metodi di supporto                     #
@@ -219,9 +259,10 @@ class BattleUI:
     def _enable_moves(self):
         """Abilita tutti i pulsanti delle mosse"""
         for b in self.move_buttons:
-            b.config(state="normal")
+            b.config(
+                state="normal"
+            )  # ------------------------------------------------------------------ #
 
-    # ------------------------------------------------------------------ #
     #                           Loop di battaglia                         #
     # ------------------------------------------------------------------ #
     def player_attack(self, idx: int):
@@ -230,6 +271,20 @@ class BattleUI:
             return
         move = self.player.moves[idx]
         dmg = move.damage()
+
+        # Registra la mossa nella cronologia
+        self.turn_number += 1
+        self.move_history.append(
+            {
+                "turn": self.turn_number,
+                "player": self.player.name,
+                "move": move.name,
+                "damage": dmg,
+                "player_hp_after": self.player.hp,
+                "enemy_hp_after": self.enemy.hp - dmg if self.enemy.hp - dmg > 0 else 0,
+            }
+        )
+
         self.msg_var.set(f"{self.player.name} used {move.name}!\nDamage: {dmg}")
         self._disable_moves()  # Disabilita i pulsanti durante l'animazione
         # Avvia l'animazione di attacco (movimento verso l'alto)
@@ -243,24 +298,111 @@ class BattleUI:
         self._update_bars()  # Aggiorna le barre HP
         if self.enemy.fainted:
             self._end_battle(victory=True)  # Il giocatore vince
-        else:
-            # Dopo 600ms, il nemico contrattacca
+        else:  # Dopo 600ms, il nemico contrattacca
             self.root.after(600, self._enemy_attack)
 
     def _enemy_attack(self):
         """Gestisce l'attacco del nemico"""
         if self.player.fainted or self.enemy.fainted:
             return
-        move = random.choice(self.enemy.moves)  # Sceglie una mossa casuale
+
+        # Usa l'AI per scegliere la mossa del nemico
+        try:
+            move = self._choose_ai_move()
+        except Exception as e:
+            logging.warning(
+                f"AI move selection failed, falling back to random: {str(e)}"
+            )
+            move = random.choice(self.enemy.moves)  # Fallback alla scelta casuale
+
         dmg = move.damage()
         self.msg_var.set(f"{self.enemy.name} used {move.name}!\nDamage: {dmg}")
         # Avvia l'animazione di attacco (movimento verso il basso)
         self._animate_attack(
-            self.enemy_item, ANIM_PIXELS, lambda: self._after_enemy_attack(dmg)
+            self.enemy_item, ANIM_PIXELS, lambda: self._after_enemy_attack(move, dmg)
         )
 
-    def _after_enemy_attack(self, dmg: int):
+    def _choose_ai_move(self):
+        """Usa l'AI per scegliere la mossa migliore per il nemico"""
+        # Costruisce il prompt per l'AI con informazioni sulla battaglia
+        enemy_hp_percent = (self.enemy.hp / self.enemy.max_hp) * 100
+        player_hp_percent = (self.player.hp / self.player.max_hp) * 100
+
+        moves_info = []
+        for i, move in enumerate(self.enemy.moves):
+            moves_info.append(
+                f"{i}: {move.name} (damage: {move.dmg_min}-{move.dmg_max})"
+            )
+
+        # Costruisce la cronologia delle mosse
+        history_text = "No moves yet"
+        if self.move_history:
+            history_lines = []
+            for entry in self.move_history[-6:]:  # Mostra solo gli ultimi 6 turni
+                history_lines.append(
+                    f"Turn {entry['turn']}: {entry['player']} used {entry['move']} "
+                    f"(dmg: {entry['damage']}) -> Player: {entry['player_hp_after']}HP, "
+                    f"Enemy: {entry['enemy_hp_after']}HP"
+                )
+            history_text = "\n".join(history_lines)
+
+        prompt = f"""You are controlling {self.enemy.name} in a Pokemon battle.
+        
+Current battle status:
+- {self.enemy.name} HP: {self.enemy.hp}/{self.enemy.max_hp} ({enemy_hp_percent:.1f}%)
+- {self.player.name} HP: {self.player.hp}/{self.player.max_hp} ({player_hp_percent:.1f}%)
+
+Available moves:
+{chr(10).join(moves_info)}
+
+Battle history (recent moves):
+{history_text}
+
+Choose the best move strategically. Consider:
+- Previous moves used by both players and their effectiveness
+- If you're low on HP, prioritize high damage moves
+- If opponent is low on HP, try to finish them
+- Consider the damage range of each move
+- Look for patterns in opponent's move choices
+
+Respond with ONLY the number (0, 1, 2, or 3) of the move you want to use."""
+
+        response = None
+        try:
+            response = ask_openai(prompt, temperature=0.3, max_tokens=10)
+            if response is None:
+                raise ValueError("AI returned None response")
+            # Estrae il numero dalla risposta
+            move_idx = int(response.strip())
+            if 0 <= move_idx < len(self.enemy.moves):
+                logging.info(
+                    f"AI chose move {move_idx}: {self.enemy.moves[move_idx].name}"
+                )
+                return self.enemy.moves[move_idx]
+            else:
+                raise ValueError(f"Invalid move index: {move_idx}")
+        except (ValueError, IndexError, TypeError) as e:
+            response_str = str(response) if response is not None else "None"
+            logging.warning(f"Failed to parse AI response '{response_str}': {str(e)}")
+            raise
+
+    def _after_enemy_attack(self, move, dmg: int):
         """Chiamata dopo l'animazione dell'attacco del nemico"""
+
+        # Registra la mossa del nemico nella cronologia
+        self.move_history.append(
+            {
+                "turn": self.turn_number,
+                "player": self.enemy.name,
+                "move": move.name,
+                "damage": dmg,
+                "player_hp_after": (
+                    self.player.hp - dmg if self.player.hp - dmg > 0 else 0
+                ),
+                "enemy_hp_after": self.enemy.hp,
+            }
+        )
+
         self.player.take_hit(dmg)  # Applica il danno al giocatore
         self._update_bars()  # Aggiorna le barre HP
         if self.player.fainted:
@@ -313,6 +455,9 @@ class BattleUI:
         self.msg_var.set("A wild Charmander appeared!")
         # Riabilita i pulsanti delle mosse
         self._enable_moves()
+        # Resetta la cronologia delle mosse e il numero del turno
+        self.move_history.clear()
+        self.turn_number = 0
 
 
 # Punto di ingresso del programma
