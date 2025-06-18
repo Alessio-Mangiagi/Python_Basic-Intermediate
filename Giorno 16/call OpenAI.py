@@ -21,7 +21,7 @@ openai.api_key = API_KEY
 # 11. Logging delle risposte
 logging.basicConfig(filename='openai_responses.log', level=logging.INFO, format='%(asctime)s %(message)s')
 
-def call_openai(prompt, model="gpt-3.5-turbo", max_tokens=100, temperature=0.7, retries=3):
+def call_openai(prompt, model="gpt-4.1-nano", max_tokens=100, temperature=0.7, retries=3):
     """
     Funzione riutilizzabile per chiamare OpenAI API (nuova interfaccia >=1.0.0) con gestione errori e logging.
     """
@@ -56,7 +56,7 @@ def call_openai(prompt, model="gpt-3.5-turbo", max_tokens=100, temperature=0.7, 
 def main():
     print("Prompt di esempio (puoi modificarlo):")
     prompt = input("Inserisci il prompt: ") or "Scrivi una poesia su un fiume."
-    model = "gpt-3.5-turbo"  # Modello economico
+    model = "gpt-4.1-nano"  # Modello economico
     max_tokens = 50   # Risposta breve per risparmiare
     temperature = 0.5  # Risposta più concisa
     print(f"[INFO] Uso modello economico: {model}, max_tokens={max_tokens}, temperature={temperature}")
