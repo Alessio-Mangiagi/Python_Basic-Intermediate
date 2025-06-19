@@ -25,7 +25,7 @@ bottone_clear.pack(side=tk.LEFT, padx=2, pady=2)
 botton_info = tk.Button(toolbar, text="Mostra Messaggio", command=show_message, bg="#4750d2", fg="white")
 botton_info.pack(side=tk.LEFT, padx=2, pady=2)
 
-var_nome = tk.StringVar():
+var_nome = tk.StringVar()
 
 entry = tk.Entry(root, font=("Arial", 14))  
 entry.pack(padx=10, pady=10, fill=tk.BOTH, expand=True) 
