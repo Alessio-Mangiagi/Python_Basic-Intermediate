@@ -11,8 +11,8 @@ while True:
     user_input = input("Utente: ")
     messages.append({"role": "user", "content": user_input})
     try:
-        response = openai.resources.chat.completions.create(
-            model="gpt-3.5-turbo",
+        response = openai.chat.completions.create(
+            model="gpt-4.1-nano",
             messages=messages,
             max_tokens=150
         )
