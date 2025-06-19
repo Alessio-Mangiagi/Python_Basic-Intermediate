@@ -1,36 +1,36 @@
 ### Giorno 17
-- **Teoria: Chat Completions vs Completion, Prompt design e temperature**
+- **Teoria: Embeddings e loro utilizzo**
 
-1. Differenza tra completions e chat completions.
-2. Struttura dei messaggi in chat completions.
-3. Ruoli: system, user, assistant.
-4. Come la storia del dialogo influenza il contesto.
-5. Temperature: cosa controlla realmente.
-6. Temperature bassa: output deterministico.
-7. Temperature alta: output creativo.
-8. Uso del top_p per il nucleus sampling.
-9. Prompt design: definizione chiara del contesto.
-10. Esempi di prompt ben progettati.
-11. Prompt chaining: concatenare più chiamate.
-12. Prompt injection: rischi e attenzioni.
-13. Come valutare la qualità delle risposte.
-14. Limiti del contesto (token limit).
-15. Quando usare completion vs chat completion.
+1. Definizione di embedding.
+2. Perché gli embeddings sono utili.
+3. Differenza tra embeddings e completions.
+4. Cos’è lo spazio vettoriale.
+5. Misura di similarità: cosine similarity.
+6. Introduzione a `openai.Embedding.create()`.
+7. Tipici usi: ricerca semantica.
+8. Usi in classificazione di testo.
+9. Usi in clustering e raggruppamento.
+10. Embedding di frasi, documenti e paragrafi.
+11. Limiti dimensionali e prestazionali.
+12. Persistenza degli embeddings in database.
+13. Librerie ausiliarie: numpy, faiss.
+14. Visualizzazione di embeddings con PCA/t-SNE.
+15. Considerazioni etiche sull’uso degli embeddings.
 
-- **Pratica: Costruzione di un chatbot CLI**
+- **Pratica: Ricerca semantica di frasi e similitudini**
 
-1. Creazione di uno script Python base.
-2. Gestione dell’input utente da terminale.
-3. Invio dell’input a `openai.resources.chat.completions.create`.
-4. Costruzione del contesto iniziale (`system` prompt).
-5. Memorizzazione dello storico dei messaggi (lista di dizionari con ruolo/contenuto).
-6. Aggiunta di loop per conversazioni multiple.
-7. Gestione degli errori delle API (`openai.OpenAIError`).
-8. Gestione dell’interruzione con `KeyboardInterrupt`.
-9. Logging delle conversazioni su file.
-10. Aggiunta del parametro `temperature` configurabile.
-11. Limite massimo di token per evitare errori.
-12. Modularizzazione del codice.
-13. Creazione di un file di configurazione.
-14. Debug con stampa del payload inviato.
-15. Testare il chatbot con prompt vari.
+1. Preparazione di un dataset di frasi.
+2. Creazione degli embeddings tramite `openai.resources.embeddings.create()`.
+3. Conversione degli embeddings in vettori numpy.
+4. Calcolo della similarità con `cosine_similarity`.
+5. Funzione di ricerca semantica base.
+6. Normalizzazione dei vettori.
+7. Gestione batch per chiamate multiple.
+8. Ordinamento dei risultati per similarità.
+9. Test di frasi simili e frasi diverse.
+10. Creazione di un’interfaccia CLI per ricerca.
+11. Gestione dell’API Key e parametri.
+12. Logging delle chiamate API.
+13. Salvataggio degli embeddings su file.
+14. Utilizzo di database vettoriali (es. FAISS).
+15. Testing su dataset esteso.
