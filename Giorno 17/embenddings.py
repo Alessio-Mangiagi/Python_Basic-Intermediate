@@ -97,12 +97,31 @@ def cosine_sim_normalized_array(vec1, vec2_list):
 
 # Lista di frasi di esempio per il confronto
 frasi = [
-    "Questa è una frase.",
-    "Questa è un'altra frase.",
-    "la pizza è buona",
-    "la pasta è buona",
-    "Questa macchina è veloce",
-    "Questa macchina è lenta",
+    # Frasi Semanticamente Simili - Group 1: Apprendimento Python
+    "Python è un linguaggio facile da imparare",
+    "Imparare a programmare in Python è semplice",
+    "Python è un linguaggio di programmazione accessibile",
+    # Frasi Semanticamente Simili - Group 2: Intelligenza Artificiale
+    "L'intelligenza artificiale sta rivoluzionando il mondo",
+    "L'AI sta trasformando la società moderna",
+    "Le tecnologie di machine learning stanno cambiando tutto",
+    # Frasi Lessicalmente Simili ma Semanticamente Diverse
+    "La rete neurale ha molti nodi",
+    "La rete da pesca ha molti nodi",
+    "La rete stradale ha molti nodi",
+    # Frasi Semanticamente Diverse - Cucina
+    "La cucina italiana è deliziosa",
+    "I piatti della nonna sono sempre i migliori",
+    # Frasi Semanticamente Diverse - Programmazione
+    "La programmazione in Python è divertente",
+    "Scrivere codice pulito è importante",
+    # Frasi Semanticamente Diverse - Sport
+    "Il calcio è lo sport più popolare",
+    "La pallavolo richiede coordinazione di squadra",
+    # Frasi Completamente Diverse
+    "Il sole splende oggi",
+    "Gli oceani sono profondi",
+    "La musica classica è rilassante",
 ]
 
 # Crea gli embeddings per tutte le frasi usando il modello text-embedding-3-small
@@ -111,60 +130,63 @@ response = client.embeddings.create(model="text-embedding-3-small", input=frasi)
 embeddings = [e.embedding for e in response.data]
 # print(np.array(embeddings))  # Riga commentata per debug
 
-# Chiede all'utente di inserire una frase per il confronto
-risposta = input("Inserisci una frase per il confronto: ")
+# # Chiede all'utente di inserire una frase per il confronto
+# risposta = input("Inserisci una frase per il confronto: ")
 
-# Crea l'embedding per la frase inserita dall'utente
-embedding_1 = (
-    client.embeddings.create(
-        model="text-embedding-3-small",
-        input=[risposta],
-    )
-    .data[0]  # Prende il primo elemento della risposta
-    .embedding  # Estrae il vettore embedding
-)
+# # Crea l'embedding per la frase inserita dall'utente
+# embedding_1 = (
+#     client.embeddings.create(
+#         model="text-embedding-3-small",
+#         input=[risposta],
+#     )
+#     .data[0]  # Prende il primo elemento della risposta
+#     .embedding  # Estrae il vettore embedding
+# )
 
-# Normalizza l'embedding dell'input utente
-# reshape(1, -1) trasforma il vettore in una matrice 1xN per compatibilità
-embedding_1_norm = normalize(np.array(embedding_1).reshape(1, -1))
+# # Normalizza l'embedding dell'input utente
+# # reshape(1, -1) trasforma il vettore in una matrice 1xN per compatibilità
+# embedding_1_norm = normalize(np.array(embedding_1).reshape(1, -1))
 
-# Normalizza tutti gli embeddings delle frasi di riferimento
-# reshape crea una matrice dove ogni riga è un embedding
-embeddings_norm = normalize(np.array(embeddings).reshape(len(embeddings), -1))
+# # Normalizza tutti gli embeddings delle frasi di riferimento
+# # reshape crea una matrice dove ogni riga è un embedding
+# embeddings_norm = normalize(np.array(embeddings).reshape(len(embeddings), -1))
 
-# Calcola la similarità usando vettori normalizzati
-similarity = cosine_sim_normalized_array(embedding_1_norm, embeddings_norm)
-print("Similarità coseno tra l'input e gli embeddings normalizzati:")
-# Itera attraverso i risultati di similarità
-for i, sim in enumerate(similarity):
-    sim2 = round(sim[0], 3)  # Arrotonda a 3 decimali (sim[0] perché sim è un array)
-    perc = sim2 * 100  # Converte in percentuale
-    print(f"Frase {i + 1}: {perc}% → {frasi[i]}")
+# # Calcola la similarità usando vettori normalizzati
+# similarity = cosine_sim_normalized_array(embedding_1_norm, embeddings_norm)
+# print("Similarità coseno tra l'input e gli embeddings normalizzati:")
+# # Itera attraverso i risultati di similarità
+# for i, sim in enumerate(similarity):
+#     sim2 = round(sim[0], 3)  # Arrotonda a 3 decimali (sim[0] perché sim è un array)
+#     perc = sim2 * 100  # Converte in percentuale
+#     print(f"Frase {i + 1}: {perc}% → {frasi[i]}")
 
-# Calcola la similarità usando la funzione standard (senza normalizzazione manuale)
-similarity = search_similarity(embedding_1, embeddings)
-print("Similarità coseno tra l'input e gli embeddings:")
-# Itera attraverso i risultati
-for i, sim in enumerate(similarity):
-    sim2 = round(sim, 3)  # Arrotonda a 3 decimali
-    perc = sim2 * 100  # Converte in percentuale
-    print(f"Frase {i + 1}: {perc}% → {frasi[i]}")
+# # Calcola la similarità usando la funzione standard (senza normalizzazione manuale)
+# similarity = search_similarity(embedding_1, embeddings)
+# print("Similarità coseno tra l'input e gli embeddings:")
+# # Itera attraverso i risultati
+# for i, sim in enumerate(similarity):
+#     sim2 = round(sim, 3)  # Arrotonda a 3 decimali
+#     perc = sim2 * 100  # Converte in percentuale
+#     print(f"Frase {i + 1}: {perc}% → {frasi[i]}")
 
-# Trova la frase più simile usando la funzione dedicata
-best_text, best_similarity = search_similarity_and_return_best(
-    embedding_1, embeddings, frasi
-)
+# # Trova la frase più simile usando la funzione dedicata
+# best_text, best_similarity = search_similarity_and_return_best(
+#     embedding_1, embeddings, frasi
+# )
 
-# Trova i top 3 risultati più simili
-top_n_results = search_similarity_and_return_top_n(embedding_1, embeddings, frasi, n=3)
-print("\nTop 3 risultati:")
-# Stampa i risultati ordinati per similarità
-for i, (text, sim) in enumerate(top_n_results):
-    sim2 = round(sim, 3)  # Arrotonda a 3 decimali
-    perc = sim2 * 100  # Converte in percentuale
-    print(f"{i + 1}. {perc}% → {text}")
+# # Trova i top 3 risultati più simili
+# top_n_results = search_similarity_and_return_top_n(embedding_1, embeddings, frasi, n=3)
+# print("\nTop 3 risultati:")
+# # Stampa i risultati ordinati per similarità
+# for i, (text, sim) in enumerate(top_n_results):
+#     sim2 = round(sim, 3)  # Arrotonda a 3 decimali
+#     perc = sim2 * 100  # Converte in percentuale
+#     print(f"{i + 1}. {perc}% → {text}")
 
-# Stampa il risultato finale con la frase più simile
-print(
-    f"\nLa frase più simile è: '{best_text}' con una similarità di {best_similarity:.4f}"
-)
+# # Stampa il risultato finale con la frase più simile
+# print(
+#     f"\nLa frase più simile è: '{best_text}' con una similarità di {best_similarity:.4f}"
+# )
+
+similiarity = cosine_similarity([embeddings[2]], [embeddings[9]])[0]
+print(f"Similarità coseno tra il primo e il secondo embedding: {similiarity[0]:.2f}")
