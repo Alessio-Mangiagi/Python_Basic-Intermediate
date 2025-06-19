@@ -1,0 +1,208 @@
+L'apprendimento automatico (in inglese machine learning, abbreviato in ML) è una branca dell'intelligenza artificiale che raccoglie metodi sviluppati negli ultimi decenni del XX secolo in varie comunità scientifiche, sotto diversi nomi quali: statistica computazionale, riconoscimento di pattern, reti neurali artificiali, filtraggio adattivo, teoria dei sistemi dinamici, elaborazione delle immagini, data mining, algoritmi adattivi, ecc; che utilizza metodi statistici per migliorare la performance di un algoritmo nell'identificare pattern nei dati. Nell'ambito dell'informatica, l'apprendimento automatico è una variante alla programmazione tradizionale nella quale in una macchina si predispone l'abilità di apprendere qualcosa dai dati in maniera autonoma, senza istruzioni esplicite[1][2]. Gli algoritmi di apprendimento automatico sono utilizzati in un'ampia varietà di branche del sapere, come la medicina, il filtraggio delle e-mail, il riconoscimento vocale e la visione artificiale, dove è difficile o non fattibile sviluppare algoritmi convenzionali per eseguire i compiti richiesti[3].
+Arthur Samuel, che coniò il termine nel 1959[4], in linea di principio identifica due approcci distinti. Il primo metodo, indicato come rete neurale, sviluppa macchine ad apprendimento automatico per impiego generale il cui comportamento è appreso da una rete di commutazione connessa casualmente, a seguito di una routine di apprendimento basata su ricompensa e punizione (apprendimento per rinforzo). Il secondo metodo, più specifico, consiste nel riprodurre l'equivalente di una rete altamente organizzata progettata per imparare solo attività specifiche. La seconda procedura, che necessita di supervisione e richiede la riprogrammazione per ogni nuova applicazione, è molto più efficiente dal punto di vista computazionale.
+L'apprendimento automatico è strettamente legato al riconoscimento di pattern e alla teoria computazionale dell'apprendimento[5] ed esplora lo studio e la costruzione di algoritmi che possano apprendere da un insieme di dati e fare delle predizioni su questi,[6] costruendo in modo induttivo un modello basato su dei campioni. L'apprendimento automatico viene impiegato in quei campi dell'informatica nei quali progettare e programmare algoritmi espliciti è impraticabile; tra le possibili applicazioni citiamo il filtraggio delle email per evitare spam, l'individuazione di intrusioni in una rete o di intrusi che cercano di violare dati,[7] il riconoscimento ottico dei caratteri[8], i motori di ricerca e la visione artificiale.
+L'apprendimento automatico è collegato, e spesso si sovrappone, alla statistica computazionale, che si occupa dell'elaborazione di predizioni tramite l'uso di computer. L'apprendimento automatico è anche fortemente legato all'ottimizzazione matematica, che fornisce metodi, teorie e domini di applicazione a questo campo. Per usi commerciali, è conosciuto come analisi predittiva.
+Storia
+[modifica | modifica wikitesto]
+L'apprendimento automatico si sviluppa con lo studio dell'intelligenza artificiale, e vi è strettamente collegato: infatti già dai primi tentativi di definire l'intelligenza artificiale come disciplina accademica, alcuni ricercatori si erano mostrati interessati alla possibilità che le macchine imparassero dai dati. Questi ricercatori, in particolare Marvin Minsky, Arthur Samuel e Frank Rosenblatt, provarono ad avvicinarsi al problema sia attraverso vari metodi formali, sia con quelle che vengono definite reti neurali nei tardi anni '50. Le reti neurali erano allora costituite da singoli percettroni e da modelli matematici derivati dal modello lineare generalizzato della statistica, come l'ADALINE di Widrow[9][10]. Si provò a sfruttare anche ragionamenti probabilistici, in particolare nelle diagnosi mediche automatiche[11].
+Sempre negli anni '50, Alan Turing propose l'idea di una macchina che apprende, ovvero in grado di imparare e dunque diventare intelligente. La proposta specifica di Turing anticipa gli algoritmi genetici[12].
+Tuttavia già dalla metà degli anni '50 lo studio dell'intelligenza artificiale si stava concentrando su approcci logici di tipo knowledge-based, nota oggi sotto il nome di GOFAI, causando un distacco tra lo studio dell'IA e quello dell'apprendimento automatico. Sistemi di tipo probabilistico erano invasi di problemi sia teoretici sia pratici in termini di acquisizione e rappresentazione dei dati[11]. Negli anni Ottanta, i sistemi esperti dominavano il campo dell'IA, e i sistemi basati sulla statistica non venivano più studiati[13]. Lo studio dell'apprendimento simbolico e knowledge-based continuò nell'ambito dell'IA, portando a sviluppare la programmazione logica induttiva, ma ora la ricerca più prettamente statistica si svolgeva al di fuori del campo vero e proprio dell'intelligenza artificiale, nel riconoscimento di pattern e nell'information retrieval[11]. Un altro motivo per cui lo studio dell'apprendimento automatico fu abbandonato fu la pubblicazione del libro Perceptrons: an introduction to computational geometry di Marvin Minsky e Seymour Papert, che vi descrivevano alcune delle limitazioni dei percettroni e delle reti neurali. La ricerca sulle reti neurali subì un significativo rallentamento a causa dell'interpretazione del libro, che le descriveva come intrinsecamente limitate[14][15]. Anche la linea di ricerca sulle reti neurali continuò al di fuori del campo dell'IA, portata avanti da ricercatori provenienti da altre discipline quali Hopfield, Rumelhart, Hinton e Fukushima. Il loro successo principale fu a metà degli anni '80 con la riscoperta della backpropagation[11] e della self-organization[16].
+L'apprendimento automatico, sviluppatosi come campo di studi separato dall'IA classica, cominciò a rifiorire negli anni '90. Il suo obiettivo cambiò dall'ottenere l'intelligenza artificiale ad affrontare problemi risolvibili di natura pratica. Distolse inoltre la propria attenzione dagli approcci simbolici che aveva ereditato dall'IA, e si diresse verso metodi e modelli presi in prestito dalla statistica e dalla teoria della probabilità[13]. L'apprendimento automatico ha inoltre beneficiato dalla nascita di Internet, che ha reso l'informazione digitale più facilmente reperibile e distribuibile.
+Un teorema pubblicato nell'agosto 2022 ha dimostrato che, nel caso di un computer quantistico, per una vasta classe di problemi è errata l'ipotesi secondo cui la dimensione del campione di dati che deve essere processato dalla macchina ad apprendimento automatico sia descritta da uno spazio di Hilbert che cresce esponenzialmente col numero di qubit addestrati. Ad esempio, per vari anni si è ipotizzato che per addestrare 30 qubit fosse necessario un miliardo di punti-dato. La quantità di dati che è necessario elaborare è significativamente inferiore e rende possibile eseguire la compilazione e l'addestramento del modello ad apprendimento automatico direttamente su un computer classico.[17]
+Generalità
+[modifica | modifica wikitesto]
+Tom M. Mitchell ha fornito la definizione più citata di apprendimento automatico nel suo libro "Machine Learning": "Si dice che un programma apprende dall'esperienza E con riferimento a alcune classi di compiti T e con misurazione della performance P, se le sue performance nel compito T, come misurato da P, migliorano con l'esperienza E."[18] In poche parole, si potrebbe semplificare dicendo che un programma apprende se c'è un miglioramento delle prestazioni dopo un compito svolto. Questa definizione di Mitchell è rilevante poiché fornisce una definizione operativa dell'apprendimento automatico, invece che in termini cognitivi. Fornendo questa definizione, Mitchell di fatto segue la proposta che Alan Turing fece nel suo articolo "Computing Machinery and Intelligence", sostituendo la domanda "Le macchine possono pensare?" con la domanda "Le macchine possono fare quello che noi (in quanto entità pensanti) possiamo fare?"[19].
+Teoria dell'apprendimento
+[modifica | modifica wikitesto]
+L'obiettivo principe dell'apprendimento automatico è che una macchina sia in grado di generalizzare dalla propria esperienza[20], ossia che sia in grado di svolgere ragionamenti induttivi. In questo contesto, per generalizzazione si intende l'abilità di una macchina di portare a termine in maniera accurata esempi o compiti nuovi, che non ha mai affrontato, dopo aver fatto esperienza su un insieme di dati di apprendimento. Gli esempi di addestramento (in inglese chiamati training examples) si assume provengano da una qualche distribuzione di probabilità, generalmente sconosciuta e considerata rappresentativa dello spazio delle occorrenze del fenomeno da apprendere; la macchina ha il compito di costruire un modello probabilistico generale dello spazio delle occorrenze, in maniera tale da essere in grado di produrre previsioni sufficientemente accurate quando sottoposta a nuove ipotesi.
+L'analisi computazionale degli algoritmi di apprendimento automatico e delle loro prestazioni è una branca dell'Informatica teorica chiamata teoria dell'apprendimento. Dato che gli esempi di addestramento sono insiemi finiti di dati e non c'è modo di sapere l'evoluzione futura di un modello, la teoria dell'apprendimento non offre alcuna garanzia sulle prestazioni degli algoritmi. D'altro canto, è piuttosto comune che tali prestazioni siano vincolate da limiti probabilistici. Il bias-variance tradeoff è uno dei modi di quantificare l'errore di generalizzazione.
+Affinché la generalizzazione offra le migliori prestazioni possibili, la complessità dell'ipotesi induttiva deve essere pari alla complessità della funzione sottostante i dati. Se l'ipotesi è meno complessa della funzione, allora il modello manifesta underfitting. Quando la complessità del modello viene aumentata in risposta, allora l'errore di apprendimento diminuisce. Al contrario invece se l'ipotesi è troppo complessa, allora il modello manifesta overfitting e la generalizzazione sarà più scarsa[21].
+Oltre ai limiti di prestazioni, i teorici dell'apprendimento studiano la complessità temporale e la fattibilità dell'apprendimento stesso. Una computazione è considerata fattibile se può essere svolta in tempo polinomiale.
+Tipi di problemi e compiti
+[modifica | modifica wikitesto]
+I compiti dell'apprendimento automatico vengono tipicamente classificati in tre ampie categorie, a seconda della natura del "segnale" utilizzato per l'apprendimento o del "feedback" disponibile al sistema di apprendimento. Queste categorie, anche dette paradigmi, sono:[11]
+•	apprendimento supervisionato, in cui al modello vengono forniti degli esempi nella forma di possibili input e i rispettivi output desiderati e l'obiettivo è quello di estrarre una regola generale che associ l'input all'output corretto;
+•	apprendimento non supervisionato, in cui il modello ha lo scopo di trovare una struttura negli input forniti, senza che questi vengano etichettati in alcun modo;
+•	apprendimento per rinforzo, in cui il modello interagisce con un ambiente dinamico nel quale cerca di raggiungere un obiettivo (per esempio guidare un veicolo), avendo un insegnante che gli dice solo se ha raggiunto l'obiettivo. Un altro esempio è quello di imparare a giocare un gioco giocando contro un avversario[22].
+A metà strada tra l'apprendimento supervisionato e quello non supervisionato c'è l'apprendimento semi-supervisionato, nel quale l'insegnante fornisce un dataset incompleto per l'allenamento, cioè un insieme di dati per l'allenamento tra i quali ci sono dati senza il rispettivo output desiderato. La trasduzione è un caso speciale di questo principio, nel quale l'intero insieme delle istanze del problema è noto durante l'apprendimento, eccetto la parte degli output desiderati che è mancante.
+Un'altra categorizzazione dei compiti dell'apprendimento automatico si rileva quando si considera l'output desiderato del sistema di apprendimento automatico.[22]
+•	Nella classificazione, gli output sono divisi in due o più classi e il sistema di apprendimento deve produrre un modello che assegni gli input non ancora visti a una o più di queste. Questo viene affrontato solitamente in maniera supervisionata. Il filtraggio anti-spam è un esempio di classificazione, dove gli input sono le email e le classi sono "spam" e "non spam".
+•	Nella regressione, che è anch'essa un problema supervisionato, l'output e il modello utilizzati sono continui. Un esempio di regressione è la determinazione della quantità di olio presente in un oleodotto, avendo le misurazioni dell'attenuazione dei raggi gamma che passano attraverso il condotto. Un altro esempio è la predizione del valore del tasso di cambio di una valuta nel futuro, dati i suoi valori in tempi recenti.[23]
+•	Nel clustering un insieme di input viene diviso in gruppi. Diversamente da quanto accade per la classificazione, i gruppi non sono noti prima, rendendolo tipicamente un compito non supervisionato. Un tipico esempio di clustering è l'analisi del comportamento degli utenti di un sito web.
+Statistica e apprendimento automatico
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Statistica.
+L'apprendimento automatico e la statistica sono discipline strettamente collegate. Secondo Michael I. Jordan, le idee dell'apprendimento automatico, dai principi metodologici agli strumenti teorici, sono stati sviluppati prima in statistica[24]. Jordan ha anche suggerito il termine data science come nome con cui chiamare l'intero campo di studi[24].
+Leo Breiman ha distinto due paradigmi statistici di modellazione: modello basato sui dati e modello basato sugli algoritmi[25], dove "modello basato sugli algoritmi" indica approssimativamente algoritmi di apprendimento automatico come la foresta casuale.
+Alcuni statistici hanno adottato metodi provenienti dall'apprendimento automatico, il che ha portato alla creazione di una disciplina combinata chiamata "apprendimento statistico"[26].
+Data mining e apprendimento automatico
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Data mining.
+L'apprendimento automatico viene a volte unito al data mining,[27] che si focalizza maggiormente sull'analisi esplorativa dei dati ed utilizza principalmente il paradigma di apprendimento chiamato "apprendimento non supervisionato"[28]. Invece, l'apprendimento automatico può essere anche supervisionato[29].
+L'apprendimento automatico e il data mining infatti si sovrappongono in modo significativo, ma mentre l'apprendimento automatico si concentra sulla previsione basata su proprietà note apprese dai dati, il data mining si concentra sulla scoperta di proprietà prima sconosciute nei dati. Il data mining sfrutta i metodi dell'apprendimento automatico, ma con obiettivi differenti; d'altro canto, l'apprendimento automatico utilizza i metodi di data mining come metodi di apprendimento non supervisionato o come passi di preprocessing per aumentare l'accuratezza dell'apprendimento. Gran parte della confusione tra le due comunità di ricerca scaturisce dall'assunzione di base del loro operato: nell'apprendimento automatico, le prestazioni sono generalmente valutate in base all'abilità di riprodurre conoscenza già acquisita, mentre in data mining il compito chiave è la scoperta di conoscenza che prima non si aveva.
+Ottimizzazione e apprendimento automatico
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Ottimizzazione (informatica).
+L'apprendimento automatico ha legami molto stretti con l'ottimizzazione: molti problemi di apprendimento sono formulati come la minimizzazione di una qualche funzione di costo su un insieme di esempi di apprendimento. La funzione di costo (o funzione di perdita) rappresenta la discrepanza tra le previsioni del modello che si sta addestrando e le istanze del problema reale. Le differenze tra i due campi (l'apprendimento automatico e l'ottimizzazione) sorgono dall'obiettivo della generalizzazione: mentre gli algoritmi di ottimizzazione possono minimizzare la perdita su un insieme di apprendimento, l'apprendimento automatico si preoccupa di minimizzare la perdita su campioni mai visti dalla macchina[30].
+Soft computing e apprendimento automatico
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Soft computing.
+La risoluzione automatica di problemi avviene, nel campo dell'informatica, in due modi differenti: tramite paradigmi di hard computing o tramite paradigmi di soft computing. Per hard computing si intende la risoluzione di un problema tramite l'esecuzione di un algoritmo ben definito e decidibile. La maggior parte dei paradigmi di hard computing sono metodi ormai consolidati, ma presentano alcuni lati negativi: infatti richiedono sempre un modello analitico preciso e definibile, e spesso un alto tempo di computazione. Le tecniche di soft computing d'altro canto antepongono il guadagno nella comprensione del comportamento di un sistema a scapito della precisione, spesso non necessaria. I paradigmi di soft computing si basano su due principi[31]:
+•	L'apprendimento a partire da dati sperimentali;
+•	L'integrazione di conoscenza umana, strutturata e preesistente, all'interno di modelli matematici computabili.
+L'apprendimento automatico si avvale delle tecniche di soft computing.
+Approcci
+[modifica | modifica wikitesto]
+Programmazione logica induttiva
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Programmazione logica induttiva.
+La programmazione logica induttiva (anche ILP, dall'inglese inductive logic programming) è un approccio all'apprendimento di regole che usa la programmazione logica come rappresentazione uniforme per gli esempi di input, per la conoscenza di base della macchina, e per le ipotesi. Data una codifica della (nota) conoscenza di base e un insieme di esempi rappresentati come fatti in una base di dati logica, un sistema ILP deriva un programma logico ipotetico da cui conseguono tutti gli esempi positivi, e nessuno di quelli negativi. La programmazione induttiva è un campo simile che considera ogni tipo di linguaggio di programmazione per rappresentare le ipotesi invece che soltanto la programmazione logica, come ad esempio programmi funzionali.
+Albero di decisione
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Albero di decisione.
+L'albero di decisione è un metodo di apprendimento per approssimazione di una funzione obiettivo discreta in cui l'elemento che apprende è rappresentato da un albero di decisione. Gli alberi di decisione possono essere rappresentati da un insieme di regole if-else per migliorare la leggibilità umana.
+Regole di associazione
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Regole di associazione.
+L'apprendimento automatico basato su regole di associazione è un metodo di apprendimento che identifica, apprende ed evolve delle "regole" con l'intento di immagazzinare, manipolare e applicare conoscenza. La caratteristica principale di questo tipo di apprendimento è l'identificazione ed utilizzo di un insieme di regole relazionali che rappresenta nel suo insieme la conoscenza catturata dal sistema. Ciò si pone in controtendenza con altri tipi di apprendimento automatico che normalmente identificano un singolo modello che può essere applicato universalmente ad ogni istanza per riuscire a fare su di essa una previsione[32]. Gli approcci dell'apprendimento basato su regole di associazione includono il sistema immunitario artificiale.
+Reti neurali artificiali
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Rete neurale artificiale.
+Una rete neurale artificiale è un sistema adattivo che cambia la sua struttura basata su informazioni esterne o interne che scorrono attraverso la rete durante la fase di apprendimento. In termini pratici le reti neurali sono strutture non-lineari di dati statistici organizzate come strumenti di modellazione. Esse possono essere utilizzate per simulare relazioni complesse tra ingressi e uscite che altre funzioni analitiche non riescono a rappresentare. Inoltre esse sono robuste agli errori presenti nei dati di addestramento.
+Programmazione genetica
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Algoritmo genetico.
+Gli algoritmi genetici forniscono un approccio all'apprendimento che è liberamente ispirato all'evoluzione simulata. La ricerca di una soluzione del problema inizia con una popolazione di soluzioni iniziale. I membri della popolazione attuale danno luogo a una popolazione di nuova generazione per mezzo di operazioni quali la mutazione casuale e crossover, che sono modellati sui processi di evoluzione biologica. Ad ogni passo, le soluzioni della popolazione attuale sono valutate rispetto a una determinata misura di fitness, con le ipotesi più adatte selezionate probabilisticamente come semi per la produzione della prossima generazione. Gli algoritmi genetici sono stati applicati con successo a una varietà di compiti di apprendimento e di altri problemi di ottimizzazione. Ad esempio, essi sono stati usati per imparare raccolte di norme per il controllo del robot e per ottimizzare la topologia dei parametri di apprendimento per reti neurali artificiali.
+Reti bayesiane
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Reti bayesiane.
+Il ragionamento bayesiano fornisce un approccio probabilistico di inferenza. Esso si basa sul presupposto che le quantità di interesse sono disciplinate da distribuzioni di probabilità e che le decisioni ottimali possono essere prese a seguito dell'analisi di queste probabilità insieme ai dati osservati. Nell'ambito dell'apprendimento automatico, la teoria Bayesiana è importante perché fornisce un approccio quantitativo per valutare le prove a sostegno dell'ipotesi alternativa. Il Ragionamento bayesiano fornisce la base per l'apprendimento negli algoritmi che manipolano direttamente le probabilità.
+Macchine a vettori di supporto
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Macchina a vettori di supporto.
+Macchine a vettori di supporto (Support Vector Machine, SVM) sono un insieme di metodi di apprendimento supervisionato usati per la classificazione e la regressione di pattern. Dato un insieme di esempi di addestramento, ciascuno contrassegnato come appartenente a due possibili categorie, un algoritmo di addestramento SVM costruisce un modello in grado di prevedere a quale categoria deve appartenere un nuovo esempio di input.
+Apprendimento profondo
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Apprendimento profondo.
+La discesa dei prezzi per l'hardware e lo sviluppo di GPU per uso personale negli ultimi anni hanno contribuito allo sviluppo del concetto di apprendimento profondo, che consiste nello sviluppare livelli nascosti multipli nelle reti neurali artificiali. Questo approccio tenta di modellizzare il modo in cui il cervello umano processa luce e suoni e li interpreta in vista e udito. Alcune delle applicazioni più affermate dell'apprendimento profondo sono la visione artificiale e il riconoscimento vocale[33].
+Tecniche non supervisionate
+[modifica | modifica wikitesto]
+Clustering
+[modifica | modifica wikitesto]
+ Lo stesso argomento in dettaglio: Clustering.
+La cluster analisi, o clustering, è in grado di rilevare similarità strutturali tra le osservazioni di un dataset attraverso l'assegnazione di un insieme di osservazioni in sottogruppi (cluster) di elementi tra loro omogenei[1]. Il clustering è un metodo di apprendimento non supervisionato, e una tecnica comune per l'analisi statistica dei dati.
+Esempi di applicazioni pratiche
+[modifica | modifica wikitesto]
+Riconoscimento vocale del testo
+[modifica | modifica wikitesto]
+Tutti i sistemi di riconoscimento vocale di maggior successo utilizzano metodi di apprendimento automatico. Ad esempio, il SPHINXsystem[34] impara le strategie di altoparlanti specifici per riconoscere i suoni primitivi (fonemi) e le parole del segnale vocale osservato. Metodi di apprendimento basati su reti neurali e su modelli di Markov nascosti sono efficaci per la personalizzazione automatica di vocabolari, caratteristiche del microfono, rumore di fondo, ecc.
+Guida automatica di veicoli
+[modifica | modifica wikitesto]
+Metodi di apprendimento automatico sono stati usati per addestrare i veicoli controllati da computer. Ad esempio, il sistema ALVINN[35] ha usato le sue strategie per imparare a guidare senza assistenza a 70 miglia all'ora per 90 miglia su strade pubbliche, tra le altre auto. Con tecniche simili sono possibili applicazioni in molti problemi di controllo basato su sensori.
+Classificazione di nuove strutture astronomiche
+[modifica | modifica wikitesto]
+Metodi di apprendimento automatico sono stati applicati ad una varietà di banche dati di grandi dimensioni per imparare regolarità generali implicite nei dati. Ad esempio, algoritmi di apprendimento basati su alberi di decisione sono stati usati dalla NASA per classificare oggetti celesti a partire dal secondo Palomar Observatory Sky Survey[36]. Questo sistema è oggi utilizzato per classificare automaticamente tutti gli oggetti nel Sky Survey, che si compone di tre terabyte di dati immagine.
+Giocatore di backgammon di classe mondiale
+[modifica | modifica wikitesto]
+I programmi per computer di maggior successo per il gioco del backgammon sono basati su algoritmi di apprendimento. Ad esempio, il miglior programma di computer al mondo per backgammon, TD-Gammon[37], ha sviluppato la sua strategia giocando oltre un milione di partite di prova contro se stesso. Tecniche simili hanno applicazioni in molti problemi pratici in cui gli spazi di ricerca molto rilevanti devono essere esaminati in modo efficiente.
+Apprendimento automatico in finanza
+[modifica | modifica wikitesto]
+Le istituzioni finanziarie hanno utilizzato a lungo sistemi di reti neurali artificiali per rilevare addebiti o reclami al di fuori della norma, segnalandoli per le indagini umane.[38] L'uso dell'intelligenza artificiale nel settore bancario può essere fatto risalire al 1987,[39] quando la Security Pacific National Bank negli Stati Uniti ha istituito una task force per la prevenzione delle frodi per contrastare l'uso non autorizzato delle carte di debito. Programmi come Kasisto e Moneystream utilizzano l'intelligenza artificiale nei servizi finanziari.
+Progettazione in ingegneria e architettura
+[modifica | modifica wikitesto]
+Diversi studi di architettura, urbanistica e ingegneria adottano metodi di apprendimento automatico per l'ottimizzazione topologica delle strutture, metodi che ricalcano processi genetici sono disponibili all'interno di alcuni programmi di modellazione tridimensionale[40], e vengono già utilizzati per ottimizzazione degli spazi sulla base di flussi o delle performance ambientali per gli edifici[41]. Un numero ancora limitato di studi professionali e ricercatori ha iniziato ad adoperare le reti generative avversarie per organizzare la distribuzione spaziale[42] degli ambienti e la Fluidodinamica computazionale[43].
+Relazioni con altre discipline
+[modifica | modifica wikitesto]
+•	Intelligenza artificiale.
+Rappresentazioni simboliche di apprendimento dei concetti.
+Macchina di apprendimento come un problema di ricerca.
+Apprendimento come approccio alternativo per migliorare la soluzione dei problemi.
+•	Metodi bayesiani.
+Teorema di Bayes come base per il calcolo delle probabilità di ipotesi.
+Il classificatore Naive Bayes.
+•	Teoria della complessità.
+Limiti teorici della complessità intrinseca dei diversi compiti di apprendimento, misurato in termini di sforzo computazionale.
+•	Teoria del controllo.
+Procedure per imparare a controllare i processi al fine di ottimizzare gli obiettivi predefiniti e che imparano a predire lo stato successivo del processo che si sta controllando.
+•	Teoria dell'informazione.
+Misure di entropia e di contenuto informativo.
+Lunghezza minima descrizione delle modalità di apprendimento.
+Codici ottimali e la loro relazione alle sequenze di allenamento ottimale per la codifica di una ipotesi.
+•	Filosofia.
+Rasoio di Occam, suggerisce che l'ipotesi più semplice è la migliore.
+Analisi della giustificazione per generalizzare i dati osservati.
+•	Psicologia e neurobiologia.
+La legge di potenza della pratica, che stabilisce che in un intervallo molto ampio di problemi di apprendimento, il tempo di risposta della gente migliora con la pratica secondo una legge di potenza.
+Gli studi neurobiologici motivano modelli di reti neurali artificiali di apprendimento.
+Etica
+[modifica | modifica wikitesto]
+L'apprendimento automatico solleva un numero di problematiche etiche. I sistemi addestrati con insiemi di dati faziosi o pregiudizievoli possono esibire questi pregiudizi quando vengono interpellati: in questo modo possono essere digitalizzati pregiudizi culturali quali il razzismo istituzionale e il classismo[44]. Di conseguenza la raccolta responsabile dei dati può diventare un aspetto critico dell'apprendimento automatico.
+In ragione dell'innata ambiguità dei linguaggi naturali, le macchine addestrate su corpi linguistici necessariamente apprenderanno questa ambiguità[45].
+Note
+[modifica | modifica wikitesto]
+1.	^ Salta a:a b De Mauro, Andrea., Big data analytics : guida per iniziare a classificare e interpretare dati con il machine learning, Apogeo, 2019, ISBN 9788850334780, OCLC 1065010076. URL consultato il 10 novembre 2019.
+2.	^ Bishop, Christopher M., Pattern recognition and machine learning, Springer, 2006, ISBN 0387310738, OCLC 71008143. URL consultato il 10 novembre 2019.
+3.	^ Junyan Hu, Hanlin Niu e Joaquin Carrasco, Voronoi-Based Multi-Robot Autonomous Exploration in Unknown Environments via Deep Reinforcement Learning, in IEEE Transactions on Vehicular Technology, vol. 69, n. 12, 2020-12, pp. 14413-14423, DOI:10.1109/TVT.2020.3034800. URL consultato il 20 maggio 2022.
+4.	^ Arthur L. Samuel, Some studies in machine learning using the game of checkers, in IBM Journal of research and development, 1959.
+5.	^ https://www.britannica.com/EBchecked/topic/1116194/machine-learning
+6.	^ Ron Kohavi; Foster Provost (1998). "Glossary of terms". Machine Learning. 30: 271–27
+7.	^ TechCrunch.
+8.	^ Wernick, Yang, Brankov, Yourganov and Strother, Machine Learning in Medical Imaging, IEEE Signal Processing Magazine, vol. 27, no. 4, July 2010, pp. 25-38
+9.	^ B. Widrow, M.E. Hoff (1960), Adaptive switching circuits, in IRE WESCON, Conv. Rec., pt. 4, pp. 96-104.
+10.	^ Science in Action (TV series) television program produced by the California Academy of Sciences, su youtube.com.
+11.	^ Salta a:a b c d e Russell, Stuart; Norvig, Peter (2003) [1995]. Artificial Intelligence: A Modern Approach (2nd ed.). Prentice Hall. ISBN 978-0-13-790395-5
+12.	^ (EN) Alan Turing, COMPUTING MACHINERY AND INTELLIGENCE, in MIND, vol. 59, n. 236, ottobre 1950, pp. 433-460, DOI:10.1093/mind/LIX.236.433. URL consultato l'8 giugno 2016 (archiviato dall'url originale il 12 aprile 2016).
+13.	^ Salta a:a b (EN) Pat Langley, The changing science of machine learning, in Machine Learning, vol. 82, ottobre 2011, pp. 275-279, DOI:10.1007/s10994-011-5242-y.
+14.	^ (EN) Harvey Cohen, The Perceptron, su harveycohen.net. URL consultato il 5 giugno 2016.
+15.	^ (EN) Robert Colner, A brief history of machine learning, su slideshare.net. URL consultato il 5 giugno 2016.
+16.	^ (EN) Kunihiko Fukushima, Cognitron: A self-organizing multilayered neural network, in Biological Cybernetics, vol. 20, n. 3, 1º settembre 1975, pp. 121-136, DOI:10.1007/BF00342633. URL consultato il 12 novembre 2019.
+17.	^ Quantum AI Breakthrough: New Theorem Shrinks Need for Training Data, su hpcwire.com, 24 agosto 2022.
+18.	^ Mitchell, T. (1997). Machine Learning. McGraw Hill. p. 2. ISBN 0-07-042807-7.
+19.	^ Harnad, Stevan (2008), "The Annotation Game: On Turing (1950) on Computing, Machinery, and Intelligence", in Epstein, Robert; Peters, Grace, The Turing Test Sourcebook: Philosophical and Methodological Issues in the Quest for the Thinking Computer, Kluwer
+20.	^ Bishop, C. M. (2006), Pattern Recognition and Machine Learning, Springer, ISBN 0-387-31073-8
+21.	^ Ethem Alpaydin. " Introduction to Machine Learning." The MIT Press, 2010
+22.	^ Salta a:a b Machine learning and pattern recognition "can be viewed as two facets of the same field."
+23.	^ Bishop, C. M. (2006), Machine Learning and Pattern Recognition, Clarendon Press, pp. 5–6
+24.	^ Salta a:a b (EN) M. I. Jordan, statistics and machine learning, su reddit, 10 settembre 2014. URL consultato il 1º ottobre 2014.
+25.	^ (EN) L. Breiman, Statistical Modeling: The Two Cultures, su projecteuclid, Cornell University Library. URL consultato l'8 agosto 2015.
+26.	^ (EN) Gareth James, Daniela Witten, Trevor Hastie e Robert Tibshirani, An Introduction to Statistical Learning, Springer, 2013, p. vii. URL consultato il 14 dicembre 2016 (archiviato dall'url originale il 23 giugno 2019).
+27.	^ Mannila, Heikki (1996). Data mining: machine learning, statistics, and databases. Int'l Conf. Scientific and Statistical Database Management. IEEE Computer Society.
+28.	^ Friedman, Jerome H. (1998). "Data Mining and Statistics: What's the connection?". Computing Science and Statistics. 29 (1): 3–9.
+29.	^ http://www.darkreading.com/threat-intelligence/3-flavors-of-machine-learning--who-what-and-where/a/d-id/1324278
+30.	^ Nicolas Le Roux, Yoshua Bengio e Andrew Fitzgibbon, Improving First and Second-Order Methods by Modeling Uncertainty, in Suvrit Sra, Sebastian Nowozin e Stephen J. Wright (a cura di), Optimization for Machine Learning, MIT Press, 2012, p.  404..
+31.	^ Kecman, V (2001), Learning and Soft Computing, MIT Press, ISBN 978-0-262-52790-3
+32.	^ (EN) George W. Bassel, Enrico Blaab, Julietta Marquez, Michael J. Holdsworth e Jaume Bacardit, Functional Network Construction in Arabidopsis Using Rule-Based Machine Learning on Large-Scale Data Sets, in The Plant Cell, vol. 23, n. 9, settembre 2011, pp. 3101-3116, DOI:10.1105/tpc.111.088153, ISSN 1532-298X (WC · ACNP), PMID 21896882.
+33.	^ Honglak Lee, Roger Grosse, Rajesh Ranganath, Andrew Y. Ng. " Convolutional Deep Belief Networks for Scalable Unsupervised Learning of Hierarchical Representations." Proceedings of the 26th Annual International Conference on Machine Learning, 2009
+34.	^ Automatic speech recognition: the development of the SPHINX system, Lee 1989
+35.	^ D. Pomerleau. Alvinn: An autonomous land vehicle in a neural network. In Advances in Neural Information Processing Systems 1, 1989.
+36.	^ Automated Star/Galaxy Classification for Digitized Poss-II, Weir, N., Fayyad, U. M., & Djorgovski, S, Astronomical Journal v.109, p.2401
+37.	^ G. Tesauro, Temporal difference learning and TD-Gammon." Comm. of the ACM 38:3, 58-68 (1995), su research.ibm.com (archiviato dall'url originale l'11 gennaio 2013).
+38.	^ Matthew F. Dixon, Igor Halperin, Paul Bilokon, Machine Learning in Finance: From Theory to Practice, Springer, 2021, ISBN 9783030410674. URL consultato il 2 settembre 2021 (archiviato dall'url originale il 2 settembre 2021).
+39.	^ Charles A. Christy, Impact of Artificial Intelligence on Banking, su Los Angeles Times, 17 gennaio 1990. URL consultato il 10 settembre 2019.
+40.	^ David Rutten, Galapagos: On the Logic and Limitations of Generic Solvers, in Architectural Design, vol. 83, n. 2.
+41.	^ Evolving Floorplans, su joelsimon.net.
+42.	^ Giuseppe Gallo, Fulvio Wirz e Giovanni Francesco Tuzzolino, The role of Artificial Intelligence in architectural design: conversation with designers and researchers, in Proceedings of S.Arch 2020, the 7th international conference on architecture and built environment - Tokyo.
+43.	^ Giuseppe Gallo, Architettura e second digital turn, l'evoluzione degli strumenti informatici e il progetto, Tesi dottorale, Università degli studi di Palermo, 2021.
+44.	^ (EN) Nick Bostrom, The Ethics of Artificial Intelligence (PDF), su nickbostrom.com, 2011. URL consultato l'11 aprile 2016 (archiviato dall'url originale il 4 marzo 2016).
+45.	^ [1]
+Bibliografia
+[modifica | modifica wikitesto]
+ 
+Questa voce o sezione sull'argomento informatica non è ancora formattata secondo gli standard.
+________________________________________
+Contribuisci a migliorarla secondo le convenzioni di Wikipedia. Segui i suggerimenti del progetto di riferimento.
+•	Diego Gosmar (2020), Machine Learning. Il sesto chakra dell'intelligenza artificiale, ISBN 979-8644551132. Amazon libri..
+•	Andrea De Mauro, Big Data Analytics. Analizzare e interpretare dati con il machine learning, ISBN 978-8850334780, Apogeo, 2019.
+•	Gareth James, Daniela Witten, Trevor Hastie e Robert Tibshirani, An Introduction to Statistical Learning (PDF), Springer, 2013, DOI:10.1007/978-1-4614-7138-7, ISBN 978-1-4614-7137-0.
+•	Sanjeev Kulkarni, Gilbert Harman (2011): An Elementary Introduction to Statistical Learning Theory, J.Wiley, ISBN 978-1-118-02347-1
+•	Trevor Hastie, Robert Tibshirani, Jerome Friedman (2009): The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Springer, 2nd ed. Accessibile in https://web.archive.org/web/20150126123924/http://statweb.stanford.edu/~tibs/ElemStatLearn/
+•	Christopher M. Bishop, Pattern Recognition and Machine Learning, Springer, 2006, ISBN 0-387-31073-8.
+•	Witten, I. & Frank, E. (2005), Data Mining: Practical Machine Learning Tools and Techniques, Morgan Kaufmann.
+•	Alpaydin, E. (2020), Introduction to Machine Learning, 4e. MIT Press. ISBN 9780262043793
+•	Murphy, P (2012), Machine Learning. MIT Press
+•	Vojislav Kecman, Learning and Soft Computing: Support Vector Machines, Neural Networks and Fuzzy Logic Models, MIT Press, 2001, ISBN 978-0-262-52790-3.
+•	Vladimir Vapnik (1998): Statistical Learning Theory, Wiley-Interscience, ISBN 0-471-03003-1.
+•	Mitchell, T. (1997), Machine Learning, McGraw Hill. ISBN 0-07-042807-7
+•	Langley, P. (1996), Elements of Machine Learning, Morgan Kaufmann.
+•	Domingos, P. (2015). The master algorithm: How the quest for the ultimate learning machine will remake our world. Basic Books.
+
