@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chatbot Interface</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .chat-container {
+                width: 90%;
+                max-width: 800px;
+                height: 80vh;
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            .chat-header {
+                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                color: white;
+                padding: 20px;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .chat-messages {
+                flex: 1;
+                padding: 20px;
+                overflow-y: auto;
+                background: #f8f9fa;
+            }
+
+            .message {
+                margin-bottom: 15px;
+                display: flex;
+                align-items: flex-start;
+            }
+
+            .message.user {
+                justify-content: flex-end;
+            }
+
+            .message.assistant {
+                justify-content: flex-start;
+            }
+
+            .message-content {
+                max-width: 70%;
+                padding: 12px 18px;
+                border-radius: 20px;
+                position: relative;
+                word-wrap: break-word;
+            }
+
+            .message.user .message-content {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border-bottom-right-radius: 5px;
+            }
+
+            .message.assistant .message-content {
+                background: white;
+                color: #333;
+                border: 1px solid #e0e0e0;
+                border-bottom-left-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .chat-input-container {
+                padding: 20px;
+                background: white;
+                border-top: 1px solid #e0e0e0;
+                display: flex;
+                gap: 10px;
+            }
+
+            .chat-input {
+                flex: 1;
+                padding: 15px;
+                border: 2px solid #e0e0e0;
+                border-radius: 25px;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+
+            .chat-input:focus {
+                border-color: #667eea;
+            }
+
+            .send-button {
+                padding: 15px 25px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: bold;
+                transition: transform 0.2s;
+            }
+
+            .send-button:hover {
+                transform: translateY(-2px);
+            }
+
+            .send-button:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+                transform: none;
+            }
+
+            .loading {
+                display: none;
+                text-align: center;
+                padding: 10px;
+                font-style: italic;
+                color: #666;
+            }
+
+            .error-message {
+                background: #ffebee;
+                color: #c62828;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 10px 0;
+                border-left: 4px solid #c62828;
+            }
+
+            /* Scrollbar styling */
+            .chat-messages::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .chat-messages::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            .chat-messages::-webkit-scrollbar-thumb {
+                background: #c1c1c1;
+                border-radius: 3px;
+            }
+
+            .chat-messages::-webkit-scrollbar-thumb:hover {
+                background: #a8a8a8;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="chat-container">
+            <div class="chat-header">🤖 Assistente AI</div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message assistant">
+                    <div class="message-content">
+                        Ciao! Sono il tuo assistente AI. Come posso aiutarti
+                        oggi?
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading">L'assistente sta pensando...</div>
+
+            <div class="chat-input-container">
+                <input
+                    type="text"
+                    class="chat-input"
+                    id="messageInput"
+                    placeholder="Scrivi il tuo messaggio..."
+                    autocomplete="off"
+                />
+                <button
+                    class="send-button"
+                    id="sendButton"
+                    onclick="sendMessage()"
+                >
+                    Invia
+                </button>
+            </div>
+        </div>
+
+        <script>
+            let sessionId = generateSessionId();
+
+            function generateSessionId() {
+                return (
+                    "session_" +
+                    Math.random().toString(36).substr(2, 9) +
+                    "_" +
+                    Date.now()
+                );
+            }
+
+            function addMessage(content, isUser = false) {
+                const messagesContainer =
+                    document.getElementById("chatMessages");
+                const messageDiv = document.createElement("div");
+                messageDiv.className = `message ${
+                    isUser ? "user" : "assistant"
+                }`;
+
+                const contentDiv = document.createElement("div");
+                contentDiv.className = "message-content";
+                contentDiv.textContent = content;
+
+                messageDiv.appendChild(contentDiv);
+                messagesContainer.appendChild(messageDiv);
+
+                // Scroll to bottom
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            function showLoading(show = true) {
+                const loading = document.getElementById("loading");
+                const sendButton = document.getElementById("sendButton");
+                const messageInput = document.getElementById("messageInput");
+
+                loading.style.display = show ? "block" : "none";
+                sendButton.disabled = show;
+                messageInput.disabled = show;
+            }
+
+            function showError(message) {
+                const messagesContainer =
+                    document.getElementById("chatMessages");
+                const errorDiv = document.createElement("div");
+                errorDiv.className = "error-message";
+                errorDiv.textContent = `Errore: ${message}`;
+                messagesContainer.appendChild(errorDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            async function sendMessage() {
+                const messageInput = document.getElementById("messageInput");
+                const message = messageInput.value.trim();
+
+                if (!message) return;
+
+                // Add user message to chat
+                addMessage(message, true);
+                messageInput.value = "";
+
+                // Show loading
+                showLoading(true);
+
+                try {
+                    const response = await fetch("/api/chat/", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRFToken": getCookie("csrftoken"),
+                        },
+                        body: JSON.stringify({
+                            message: message,
+                            session_id: sessionId,
+                        }),
+                    });
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                        addMessage(data.response, false);
+                    } else {
+                        showError(data.error || "Errore sconosciuto");
+                    }
+                } catch (error) {
+                    console.error("Error:", error);
+                    showError("Errore di connessione. Riprova più tardi.");
+                } finally {
+                    showLoading(false);
+                }
+            }
+
+            // Handle Enter key press
+            document
+                .getElementById("messageInput")
+                .addEventListener("keypress", function (e) {
+                    if (e.key === "Enter") {
+                        sendMessage();
+                    }
+                });
+
+            // Get CSRF token
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== "") {
+                    const cookies = document.cookie.split(";");
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (
+                            cookie.substring(0, name.length + 1) ===
+                            name + "="
+                        ) {
+                            cookieValue = decodeURIComponent(
+                                cookie.substring(name.length + 1)
+                            );
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+        </script>
+    </body>
+</html>

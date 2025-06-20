@@ -1,0 +1,80 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Django - Run Server",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": ["runserver", "127.0.0.1:8000"],
+            "django": true,
+            "autoReload": {
+                "enable": true
+            },
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "chatbot_project.settings"
+            },
+            "python": "${workspaceFolder}/../../../venv/Scripts/python.exe"
+        },
+        {
+            "name": "Django - Debug Server",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": ["runserver", "127.0.0.1:8000", "--noreload"],
+            "django": true,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "chatbot_project.settings",
+                "DJANGO_DEBUG": "True"
+            },
+            "python": "${workspaceFolder}/../../../venv/Scripts/python.exe",
+            "justMyCode": false
+        },
+        {
+            "name": "Django - Run Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": ["test"],
+            "django": true,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "chatbot_project.settings"
+            },
+            "python": "${workspaceFolder}/../../../venv/Scripts/python.exe"
+        },
+        {
+            "name": "Django - Migrate",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": ["migrate"],
+            "django": true,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "chatbot_project.settings"
+            },
+            "python": "${workspaceFolder}/../../../venv/Scripts/python.exe"
+        },
+        {
+            "name": "Django - Shell",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": ["shell"],
+            "django": true,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "chatbot_project.settings"
+            },
+            "python": "${workspaceFolder}/../../../venv/Scripts/python.exe"
+        }
+    ]
+}
