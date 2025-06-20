@@ -4,6 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Chatbot Interface</title>
+
+        <!-- Libreria Marked.js per il parsing Markdown -->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+        <!-- Libreria Highlight.js per syntax highlighting del codice -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
         <style>
             * {
                 margin: 0;
@@ -90,6 +101,27 @@
                 border-top: 1px solid #e0e0e0;
                 display: flex;
                 gap: 10px;
+                align-items: center;
+            }
+
+            /* Stili per il toggle streaming */
+            .streaming-toggle {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 14px;
+                color: #666;
+                cursor: pointer;
+                white-space: nowrap;
+            }
+
+            .streaming-toggle input[type="checkbox"] {
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+
+            .streaming-label {
+                user-select: none;
             }
 
             .chat-input {
@@ -162,6 +194,138 @@
             .chat-messages::-webkit-scrollbar-thumb:hover {
                 background: #a8a8a8;
             }
+
+            /* ===== STILI PER CONTENUTO MARKDOWN ===== */
+
+            /* Stili generali per il contenuto Markdown */
+            .message-content {
+                line-height: 1.6;
+            }
+
+            /* Titoli Markdown */
+            .message-content h1 {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin: 10px 0;
+                color: #333;
+                border-bottom: 2px solid #e0e0e0;
+                padding-bottom: 5px;
+            }
+
+            .message-content h2 {
+                font-size: 1.3em;
+                font-weight: bold;
+                margin: 8px 0;
+                color: #444;
+            }
+
+            .message-content h3 {
+                font-size: 1.1em;
+                font-weight: bold;
+                margin: 6px 0;
+                color: #555;
+            }
+
+            /* Paragrafi */
+            .message-content p {
+                margin: 8px 0;
+            }
+
+            /* Liste */
+            .message-content ul,
+            .message-content ol {
+                margin: 10px 0;
+                padding-left: 20px;
+            }
+
+            .message-content li {
+                margin: 4px 0;
+            }
+
+            /* Codice inline */
+            .message-content code {
+                background-color: #f4f4f4;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: "Courier New", Consolas, monospace;
+                font-size: 0.9em;
+                color: #c7254e;
+                border: 1px solid #e1e1e8;
+            }
+
+            /* Blocchi di codice */
+            .message-content pre {
+                background-color: #f8f8f8;
+                border: 1px solid #e1e1e8;
+                border-radius: 8px;
+                padding: 12px;
+                margin: 10px 0;
+                overflow-x: auto;
+                font-family: "Courier New", Consolas, monospace;
+                font-size: 0.9em;
+            }
+
+            .message-content pre code {
+                background: none;
+                border: none;
+                padding: 0;
+                color: inherit;
+            }
+
+            /* Citazioni */
+            .message-content blockquote {
+                border-left: 4px solid #667eea;
+                margin: 10px 0;
+                padding: 10px 15px;
+                background-color: #f9f9f9;
+                font-style: italic;
+                color: #666;
+            }
+
+            /* Link */
+            .message-content a {
+                color: #667eea;
+                text-decoration: none;
+            }
+
+            .message-content a:hover {
+                text-decoration: underline;
+            }
+
+            /* Tabelle */
+            .message-content table {
+                border-collapse: collapse;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .message-content th,
+            .message-content td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            .message-content th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+
+            /* Testo in grassetto e corsivo */
+            .message-content strong {
+                font-weight: bold;
+            }
+
+            .message-content em {
+                font-style: italic;
+            }
+
+            /* Separatori orizzontali */
+            .message-content hr {
+                border: none;
+                border-top: 2px solid #e0e0e0;
+                margin: 15px 0;
+            }
         </style>
     </head>
     <body>
@@ -178,8 +342,13 @@
             </div>
 
             <div class="loading" id="loading">L'assistente sta pensando...</div>
-
             <div class="chat-input-container">
+                <!-- Checkbox per attivare/disattivare lo streaming -->
+                <label class="streaming-toggle">
+                    <input type="checkbox" id="streamingCheckbox" />
+                    <span class="streaming-label">📡 Streaming</span>
+                </label>
+
                 <input
                     type="text"
                     class="chat-input"
@@ -210,6 +379,11 @@
             }
 
             function addMessage(content, isUser = false) {
+                /**
+                 * Aggiunge un messaggio alla chat con supporto Markdown
+                 * @param {string} content - Il contenuto del messaggio
+                 * @param {boolean} isUser - Se true, è un messaggio dell'utente; se false, dell'assistente
+                 */
                 const messagesContainer =
                     document.getElementById("chatMessages");
                 const messageDiv = document.createElement("div");
@@ -219,13 +393,60 @@
 
                 const contentDiv = document.createElement("div");
                 contentDiv.className = "message-content";
-                contentDiv.textContent = content;
+
+                if (isUser) {
+                    // I messaggi dell'utente rimangono come testo semplice
+                    contentDiv.textContent = content;
+                } else {
+                    // I messaggi dell'assistente vengono processati con Markdown
+                    try {
+                        // Configura marked per sicurezza e funzionalità
+                        marked.setOptions({
+                            breaks: true, // Converte i line break in <br>
+                            gfm: true, // GitHub Flavored Markdown
+                            sanitize: false, // Non rimuovere HTML (sicuro per il nostro caso)
+                            highlight: function (code, lang) {
+                                // Syntax highlighting per i blocchi di codice
+                                if (lang && hljs.getLanguage(lang)) {
+                                    try {
+                                        return hljs.highlight(code, {
+                                            language: lang,
+                                        }).value;
+                                    } catch (err) {
+                                        console.warn(
+                                            "Highlight.js error:",
+                                            err
+                                        );
+                                    }
+                                }
+                                return hljs.highlightAuto(code).value;
+                            },
+                        });
+
+                        // Converte il Markdown in HTML
+                        const htmlContent = marked.parse(content);
+                        contentDiv.innerHTML = htmlContent;
+
+                        // Applica syntax highlighting a tutti i blocchi di codice
+                        contentDiv
+                            .querySelectorAll("pre code")
+                            .forEach((block) => {
+                                hljs.highlightElement(block);
+                            });
+                    } catch (error) {
+                        // Fallback: se il parsing Markdown fallisce, mostra il testo normale
+                        console.warn("Markdown parsing error:", error);
+                        contentDiv.textContent = content;
+                    }
+                }
 
                 messageDiv.appendChild(contentDiv);
                 messagesContainer.appendChild(messageDiv);
 
                 // Scroll to bottom
                 messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+                return messageDiv; // Ritorna l'elemento per poterlo modificare successivamente
             }
 
             function showLoading(show = true) {
@@ -250,18 +471,264 @@
 
             async function sendMessage() {
                 const messageInput = document.getElementById("messageInput");
+                const streamingCheckbox =
+                    document.getElementById("streamingCheckbox");
                 const message = messageInput.value.trim();
 
+                // Se il messaggio è vuoto, non fare nulla
                 if (!message) return;
 
-                // Add user message to chat
+                // Aggiungi il messaggio dell'utente alla chat
                 addMessage(message, true);
                 messageInput.value = "";
 
-                // Show loading
-                showLoading(true);
+                // Controlla se lo streaming è attivato
+                const isStreaming = streamingCheckbox.checked;
 
+                // Mostra il loading con testo diverso a seconda del mode
+                showLoading(true);
+                if (isStreaming) {
+                    document.getElementById("loading").textContent =
+                        "📡 Streaming in corso...";
+                } else {
+                    document.getElementById("loading").textContent =
+                        "L'assistente sta pensando...";
+                }
+
+                if (isStreaming) {
+                    // Usa Server-Sent Events per streaming in tempo reale
+                    handleStreamingResponse(message);
+                } else {
+                    // Usa la richiesta normale
+                    handleNormalResponse(message);
+                }
+            }
+
+            function handleStreamingResponse(message) {
+                /**
+                 * Gestisce la risposta in streaming usando Server-Sent Events (SSE)
+                 * Questo permette di ricevere la risposta pezzo per pezzo in tempo reale
+                 */
+
+                // Prepariamo i dati da inviare
+                const requestData = {
+                    message: message,
+                    session_id: sessionId,
+                };
+
+                // Creiamo l'URL per la richiesta con i parametri
+                const url = new URL(
+                    "/api/chat/stream/",
+                    window.location.origin
+                );
+
+                // Usiamo fetch per inviare i dati iniziali
+                fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRFToken": getCookie("csrftoken"),
+                    },
+                    body: JSON.stringify(requestData),
+                })
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error("Errore nella richiesta");
+                        }
+
+                        // Inizializziamo le variabili per il messaggio in streaming
+                        let currentMessageDiv = null;
+                        let currentMessageContent = null;
+                        let accumulatedText = "";
+
+                        // Leggiamo lo stream
+                        const reader = response.body.getReader();
+
+                        function readStream() {
+                            return reader.read().then(({ done, value }) => {
+                                if (done) {
+                                    showLoading(false);
+                                    return;
+                                }
+
+                                // Decodifichiamo i chunk ricevuti
+                                const chunk = new TextDecoder().decode(value);
+                                const lines = chunk.split("\n");
+
+                                for (const line of lines) {
+                                    if (line.startsWith("data: ")) {
+                                        try {
+                                            const data = JSON.parse(
+                                                line.slice(6)
+                                            );
+
+                                            if (data.type === "start") {
+                                                // Iniziamo un nuovo messaggio
+                                                const messagesContainer =
+                                                    document.getElementById(
+                                                        "chatMessages"
+                                                    );
+                                                currentMessageDiv =
+                                                    document.createElement(
+                                                        "div"
+                                                    );
+                                                currentMessageDiv.className =
+                                                    "message assistant";
+
+                                                currentMessageContent =
+                                                    document.createElement(
+                                                        "div"
+                                                    );
+                                                currentMessageContent.className =
+                                                    "message-content";
+                                                currentMessageContent.textContent =
+                                                    "";
+
+                                                currentMessageDiv.appendChild(
+                                                    currentMessageContent
+                                                );
+                                                messagesContainer.appendChild(
+                                                    currentMessageDiv
+                                                );
+
+                                                accumulatedText = "";
+                                                showLoading(false);
+                                            } else if (
+                                                data.type === "chunk" &&
+                                                currentMessageContent
+                                            ) {
+                                                // Aggiungiamo il chunk al messaggio
+                                                accumulatedText += data.content;
+
+                                                // Durante lo streaming, mostra il testo grezzo
+                                                // (il Markdown verrà renderizzato alla fine)
+                                                currentMessageContent.textContent =
+                                                    accumulatedText;
+
+                                                // Scroll automatico
+                                                const messagesContainer =
+                                                    document.getElementById(
+                                                        "chatMessages"
+                                                    );
+                                                messagesContainer.scrollTop =
+                                                    messagesContainer.scrollHeight;
+                                            } else if (data.type === "end") {
+                                                // Fine dello streaming: renderizza il Markdown
+                                                if (
+                                                    currentMessageContent &&
+                                                    accumulatedText
+                                                ) {
+                                                    try {
+                                                        // Configura marked per il rendering finale
+                                                        marked.setOptions({
+                                                            breaks: true,
+                                                            gfm: true,
+                                                            sanitize: false,
+                                                            highlight:
+                                                                function (
+                                                                    code,
+                                                                    lang
+                                                                ) {
+                                                                    if (
+                                                                        lang &&
+                                                                        hljs.getLanguage(
+                                                                            lang
+                                                                        )
+                                                                    ) {
+                                                                        try {
+                                                                            return hljs.highlight(
+                                                                                code,
+                                                                                {
+                                                                                    language:
+                                                                                        lang,
+                                                                                }
+                                                                            )
+                                                                                .value;
+                                                                        } catch (err) {
+                                                                            console.warn(
+                                                                                "Highlight.js error:",
+                                                                                err
+                                                                            );
+                                                                        }
+                                                                    }
+                                                                    return hljs.highlightAuto(
+                                                                        code
+                                                                    ).value;
+                                                                },
+                                                        });
+
+                                                        // Converte il testo accumulato in HTML con Markdown
+                                                        const htmlContent =
+                                                            marked.parse(
+                                                                accumulatedText
+                                                            );
+                                                        currentMessageContent.innerHTML =
+                                                            htmlContent;
+
+                                                        // Applica syntax highlighting
+                                                        currentMessageContent
+                                                            .querySelectorAll(
+                                                                "pre code"
+                                                            )
+                                                            .forEach(
+                                                                (block) => {
+                                                                    hljs.highlightElement(
+                                                                        block
+                                                                    );
+                                                                }
+                                                            );
+                                                    } catch (error) {
+                                                        // Fallback: se il parsing fallisce, mantieni il testo grezzo
+                                                        console.warn(
+                                                            "Markdown parsing error during streaming:",
+                                                            error
+                                                        );
+                                                        currentMessageContent.textContent =
+                                                            accumulatedText;
+                                                    }
+                                                }
+
+                                                // Fine dello streaming
+                                                showLoading(false);
+                                                return;
+                                            } else if (data.type === "error") {
+                                                // Errore durante lo streaming
+                                                showError(data.error);
+                                                showLoading(false);
+                                                return;
+                                            }
+                                        } catch (e) {
+                                            console.error(
+                                                "Errore nel parsing del chunk:",
+                                                e
+                                            );
+                                        }
+                                    }
+                                }
+
+                                // Continua a leggere lo stream
+                                return readStream();
+                            });
+                        }
+
+                        return readStream();
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                        showError(
+                            "Errore di connessione durante lo streaming. Riprova più tardi."
+                        );
+                        showLoading(false);
+                    });
+            }
+
+            async function handleNormalResponse(message) {
+                /**
+                 * Gestisce la risposta normale (non streaming)
+                 * Questa è la logica originale che abbiamo sempre usato
+                 */
                 try {
+                    // Invia la richiesta senza streaming
                     const response = await fetch("/api/chat/", {
                         method: "POST",
                         headers: {
@@ -271,13 +738,16 @@
                         body: JSON.stringify({
                             message: message,
                             session_id: sessionId,
+                            streaming: false,
                         }),
                     });
 
                     const data = await response.json();
 
                     if (data.success) {
-                        addMessage(data.response, false);
+                        // Aggiungi la risposta del chatbot
+                        const responseText = data.response;
+                        addMessage(responseText, false);
                     } else {
                         showError(data.error || "Errore sconosciuto");
                     }

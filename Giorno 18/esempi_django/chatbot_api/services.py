@@ -65,14 +65,21 @@ class ChatbotService:
         # Prendiamo solo gli ultimi 20 messaggi per evitare di sovraccaricare l'API
         return list(ChatMessage.objects.values_list("id", flat=True)[:20])
 
-    def chat(self, user_message: str, session_id: str = None) -> Dict[str, Any]:
+    def chat(
+        self, user_message: str, session_id: str = None, streaming: bool = False
+    ) -> Dict[str, Any]:
         """
         Elabora un messaggio dell'utente e restituisce la risposta del chatbot
         Questo è il metodo principale che:
         1. Recupera la cronologia della conversazione
         2. Aggiunge il nuovo messaggio
-        3. Chiama l'API OpenAI
+        3. Chiama l'API OpenAI (normale o streaming)
         4. Salva tutto nel database
+
+        Args:
+            user_message: Il messaggio dell'utente
+            session_id: ID della sessione di chat (opzionale)
+            streaming: Se True, attiva lo streaming delle risposte
         """
         try:
             # Recuperiamo i messaggi della sessione se esiste un session_id,
@@ -86,25 +93,11 @@ class ChatbotService:
             # Aggiungiamo il nuovo messaggio dell'utente alla conversazione
             messages.append({"role": "user", "content": user_message})
 
-            # Chiamiamo l'API di OpenAI per ottenere la risposta
-            response = openai.chat.completions.create(
-                model="gpt-4.1-nano",  # Il modello AI da utilizzare
-                messages=messages,  # Tutta la cronologia della conversazione
-                max_tokens=150,  # Massimo numero di token (parole) nella risposta
-            )
-
-            # Estraiamo la risposta del chatbot dalla risposta dell'API
-            assistant_response = response.choices[0].message.content
-
-            # Salviamo sia la domanda che la risposta nel database
-            self._save_chat_message(user_message, assistant_response, session_id)
-
-            # Ritorniamo un dizionario con il successo dell'operazione
-            return {
-                "response": assistant_response,  # La risposta del chatbot
-                "session_id": session_id or "default",  # L'ID della sessione
-                "success": True,  # Operazione riuscita
-            }
+            # Se è richiesto lo streaming, usiamo una logica diversa
+            if streaming:
+                return self._chat_with_streaming(messages, user_message, session_id)
+            else:
+                return self._chat_normal(messages, user_message, session_id)
 
         # Gestiamo gli errori specifici dell'API OpenAI
         except openai.OpenAIError as e:
@@ -114,6 +107,8 @@ class ChatbotService:
                 "response": "Mi dispiace, si è verificato un errore. Riprova più tardi.",
                 "session_id": session_id or "default",
                 "success": False,
+                "is_streaming": streaming,  # Manteniamo l'informazione sul tipo di richiesta
+                "is_final": True,  # Gli errori sono sempre "finali"
                 "error": str(e),  # Includiamo il messaggio di errore
             }
 
@@ -124,6 +119,8 @@ class ChatbotService:
                 "response": "Si è verificato un errore inaspettato.",
                 "session_id": session_id or "default",
                 "success": False,
+                "is_streaming": streaming,  # Manteniamo l'informazione sul tipo di richiesta
+                "is_final": True,  # Gli errori sono sempre "finali"
                 "error": str(e),
             }
 
@@ -145,3 +142,75 @@ class ChatbotService:
             # Nota: created_at si riempie automaticamente grazie ad auto_now_add=True
             # session_id non è utilizzato in questa implementazione semplificata
         )
+
+    def _chat_normal(
+        self, messages: List[Dict[str, str]], user_message: str, session_id: str = None
+    ) -> Dict[str, Any]:
+        """
+        Gestisce la chat normale (senza streaming)
+        Questa è la logica originale che abbiamo sempre usato
+        """
+        # Chiamiamo l'API di OpenAI per ottenere la risposta completa
+        response = openai.chat.completions.create(
+            model="gpt-4.1-nano",  # Il modello AI da utilizzare
+            messages=messages,  # Tutta la cronologia della conversazione
+            max_tokens=1000,  # Massimo numero di token (parole) nella risposta
+            stream=False,  # Streaming disabilitato = risposta completa in una volta
+        )
+
+        # Estraiamo la risposta del chatbot dalla risposta dell'API
+        assistant_response = response.choices[0].message.content
+
+        # Salviamo sia la domanda che la risposta nel database
+        self._save_chat_message(user_message, assistant_response, session_id)
+
+        # Ritorniamo un dizionario con il successo dell'operazione
+        return {
+            "response": assistant_response,  # La risposta completa del chatbot
+            "session_id": session_id or "default",  # L'ID della sessione
+            "success": True,  # Operazione riuscita
+            "is_streaming": False,  # Non è streaming
+            "is_final": True,  # È la risposta finale
+        }
+
+    def _chat_with_streaming(
+        self, messages: List[Dict[str, str]], user_message: str, session_id: str = None
+    ) -> Dict[str, Any]:
+        """
+        Gestisce la chat con streaming
+        In modalità streaming, la risposta arriva pezzo per pezzo in tempo reale
+        Questo metodo raccoglie tutti i pezzi e li concatena per salvare nel database
+        """
+        # Chiamiamo l'API OpenAI con streaming abilitato
+        response_stream = openai.chat.completions.create(
+            model="gpt-4.1-nano",  # Il modello AI da utilizzare
+            messages=messages,  # Tutta la cronologia della conversazione
+            max_tokens=1000,  # Massimo numero di token (parole) nella risposta
+            stream=True,  # Streaming abilitato = risposta arriva pezzo per pezzo
+        )
+
+        # Inizializziamo una stringa vuota per raccogliere tutti i pezzi
+        complete_response = ""
+
+        # Iteriamo attraverso tutti i chunk (pezzi) che arrivano
+        for chunk in response_stream:
+            # Ogni chunk contiene un pezzo della risposta
+            if chunk.choices[0].delta.content is not None:
+                # Aggiungiamo il pezzo alla risposta completa
+                chunk_content = chunk.choices[0].delta.content
+                complete_response += chunk_content
+
+        # Ora che abbiamo la risposta completa, la salviamo nel database
+        # (In una implementazione più avanzata, potresti voler salvare i chunk uno per uno)
+        self._save_chat_message(user_message, complete_response, session_id)
+
+        # Ritorniamo la risposta completa
+        # Nota: In questa implementazione semplificata ritorniamo la risposta completa
+        # In un'implementazione più avanzata, dovresti ritornare ogni chunk separatamente
+        return {
+            "response": complete_response,  # La risposta completa assemblata
+            "session_id": session_id or "default",  # L'ID della sessione
+            "success": True,  # Operazione riuscita
+            "is_streaming": True,  # Era in modalità streaming
+            "is_final": True,  # Questo è l'ultimo (e unico) chunk che ritorniamo
+        }

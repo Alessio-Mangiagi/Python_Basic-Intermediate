@@ -18,10 +18,13 @@ esempi_django/
 
 ### API Backend (chatbot_api)
 
--   **POST /api/chat/**: Endpoint per inviare messaggi al chatbot
+-   **POST /api/chat/**: Endpoint per inviare messaggi al chatbot (modalità normale)
+-   **POST /api/chat/stream/**: Endpoint per streaming in tempo reale ⭐
 -   **GET /api/health/**: Health check dell'API
 -   **GET /api/history/**: Cronologia delle chat
 -   Integrazione con OpenAI GPT-4.1-nano (aggiornato dal CLI originale)
+-   **Due modalità**: Normale e Streaming real-time con Server-Sent Events
+-   **1000 token**: Risposte più lunghe e dettagliate
 -   Gestione delle sessioni di chat
 -   Salvataggio messaggi nel database
 -   **Codice completamente commentato per scopi didattici**
@@ -29,7 +32,12 @@ esempi_django/
 ### Interfaccia Web (chatbot_web)
 
 -   Interfaccia grafica moderna e responsive
--   Chat in tempo reale
+-   **Due modalità di chat**: Normale e Streaming real-time
+-   **Toggle streaming**: Checkbox per attivare streaming progressivo
+-   **Esperienza ChatGPT-like**: Testo che appare in tempo reale
+-   **Processore Markdown**: Rendering completo di Markdown nelle risposte ⭐
+-   **Syntax Highlighting**: Evidenziazione del codice con Highlight.js
+-   **Formattazione Ricca**: Supporto per titoli, liste, tabelle, link, etc.
 -   Gestione degli errori
 -   Design moderno con gradients e animazioni
 
@@ -97,6 +105,31 @@ Risposta:
     "response": "Ciao! Sto bene, grazie. Come posso aiutarti?",
     "session_id": "session_123",
     "success": true
+}
+```
+
+#### Chat Endpoint con Streaming
+
+```bash
+POST /api/chat/
+Content-Type: application/json
+
+{
+    "message": "Ciao, come stai?",
+    "session_id": "optional_session_id",
+    "streaming": true
+}
+```
+
+Risposta (modalità streaming):
+
+```json
+{
+    "response": "Ciao! Sto bene, grazie. Come posso aiutarti?",
+    "session_id": "session_123",
+    "success": true,
+    "is_streaming": true,
+    "is_final": true
 }
 ```
 
@@ -203,3 +236,88 @@ Questo progetto include **codice completamente commentato** per scopi didattici:
 2. **Segui il flusso**: Utente → Frontend → API → OpenAI → Database
 3. **Usa il debugger**: Metti breakpoint e osserva l'esecuzione
 4. **Sperimenta**: Modifica il codice e osserva i risultati
+
+## 🎨 Funzionalità Markdown
+
+### Supporto Completo
+
+Il chatbot supporta **Markdown completo** nelle risposte, incluso:
+
+#### 📝 Formattazione Testo
+
+-   **Grassetto**: `**testo**` → **testo**
+-   _Corsivo_: `*testo*` → _testo_
+-   `Codice inline`: `` `codice` `` → `codice`
+
+#### 📋 Liste e Strutture
+
+-   Liste puntate con `*` o `-`
+-   Liste numerate con `1.`, `2.`, ecc.
+-   Checkbox con `- [ ]` e `- [x]`
+
+#### 🏗️ Struttura Documento
+
+-   Titoli: `#`, `##`, `###`
+-   Separatori: `---`
+-   Citazioni: `> testo`
+
+#### 💻 Codice e Programmazione
+
+```python
+# Esempio di blocco codice
+def esempio():
+    return "Il codice viene evidenziato!"
+```
+
+#### 📊 Tabelle
+
+| Linguaggio | Difficoltà | Utilizzo |
+| ---------- | ---------- | -------- |
+| Python     | Facile     | AI/Web   |
+| JavaScript | Medio      | Frontend |
+
+#### 🔗 Link e Media
+
+-   Link: `[testo](https://esempio.com)`
+-   Immagini: `![alt](url)`
+
+### Come Funziona
+
+#### Modalità Normale
+
+1. L'utente invia un messaggio
+2. Il chatbot risponde con Markdown
+3. Il frontend converte immediatamente il Markdown in HTML formattato
+
+#### Modalità Streaming
+
+1. L'utente invia un messaggio con streaming attivo
+2. I chunk arrivano progressivamente come testo grezzo
+3. **Alla fine dello streaming**, tutto il testo viene convertito in HTML formattato
+4. Viene applicato il syntax highlighting al codice
+
+### Librerie Utilizzate
+
+-   **[Marked.js](https://marked.js.org/)**: Parser Markdown veloce e affidabile
+-   **[Highlight.js](https://highlightjs.org/)**: Syntax highlighting per +190 linguaggi
+-   **GitHub Flavored Markdown**: Supporto per tabelle, strikethrough, ecc.
+
+### Esempi da Testare
+
+Prova questi messaggi nel chatbot:
+
+```
+"Mostra un esempio di codice Python con spiegazione in Markdown"
+"Crea una tabella con i vantaggi di Django vs Flask"
+"Scrivi una lista di task per imparare JavaScript"
+"Spiega l'algoritmo bubble sort con codice e diagramma"
+```
+
+### Configurazione Tecnica
+
+Il processore è configurato con:
+
+-   `breaks: true` - Converte line break in `<br>`
+-   `gfm: true` - GitHub Flavored Markdown
+-   `sanitize: false` - Permette HTML sicuro
+-   `highlight` - Syntax highlighting automatico

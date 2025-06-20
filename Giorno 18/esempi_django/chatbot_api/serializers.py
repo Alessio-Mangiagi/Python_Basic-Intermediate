@@ -23,10 +23,14 @@ class ChatRequestSerializer(serializers.Serializer):
     # Campo opzionale per l'ID della sessione (required=False significa che non è obbligatorio)
     session_id = serializers.CharField(max_length=100, required=False)
 
+    # Campo opzionale per attivare lo streaming delle risposte (default: False)
+    # Se True, la risposta arriverà pezzo per pezzo in tempo reale
+    streaming = serializers.BooleanField(required=False, default=False)
+
 
 # Serializer per formattare le risposte che inviamo al client
 class ChatResponseSerializer(serializers.Serializer):
-    # La risposta del chatbot
+    # La risposta del chatbot (può essere completa o parziale se streaming=True)
     response = serializers.CharField()
 
     # L'ID della sessione utilizzata
@@ -34,6 +38,12 @@ class ChatResponseSerializer(serializers.Serializer):
 
     # Indica se l'operazione è andata a buon fine
     success = serializers.BooleanField()
+
+    # Indica se la risposta è in modalità streaming
+    is_streaming = serializers.BooleanField(default=False)
+
+    # Se streaming=True, indica se questo è l'ultimo chunk della risposta
+    is_final = serializers.BooleanField(default=True)
 
     # Messaggio di errore (opzionale, solo se success=False)
     error = serializers.CharField(required=False)
