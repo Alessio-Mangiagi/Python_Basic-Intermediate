@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+from tkinter import simpledialog
 
 print("><(((º> sabusabu <º)))><")
 
@@ -8,7 +9,7 @@ class ListaSpesa:
     def __init__(self, root):
         self.root = root
         root.title("Lista della Spesa")
-        root.geometry("900x400")
+        root.geometry("700x500")  # Dimensione più adatta
         root.iconbitmap("Studenti/Alessio Mangiagi/icone/favicon.ico")
         root.configure(bg="#3D6882")
         
@@ -32,6 +33,7 @@ class ListaSpesa:
         main.pack(side="right", fill="both", expand=True)
         tk.Label(main, text="somma elementi", bg="#3653D1", fg="white", font=("Arial", 24)).pack(pady=20)
         
+        
         #check box
         self.check_var = tk.BooleanVar()
         self.check_button = tk.Checkbutton(main, text="Mostra somma", variable=self.check_var, bg="#3653D1", fg="white", font=("Arial", 14))
@@ -51,7 +53,7 @@ class ListaSpesa:
         self.price_label = tk.Label(barra, text="Prezzo:", bg="#f0f0f0")
         self.price_label.pack(pady=2)
         self.price_entry = tk.Entry(barra)
-        self.price_entry.pack(pady=5, padx=10, fill=tk.X)
+        self.price_entry.pack(pady=10, padx=10, fill=tk.X)
 
         self.add_button = tk.Button(barra, text="Aggiungi", command=self.add_item)
         self.add_button.pack(pady=5)
@@ -66,6 +68,9 @@ class ListaSpesa:
         # Bottone per salvare su TXT
         self.save_txt_button = tk.Button(barra, text="Salva su TXT", command=self.salva_su_txt)
         self.save_txt_button.pack(pady=10)
+        # Pulsante per calcolare lo sconto
+        self.sconto_button = tk.Button(barra, text="Calcola Sconto", command=self.calcola_sconto)
+        self.sconto_button.pack(pady=10)
 
     def add_item(self):
         item = self.entry.get()
@@ -103,13 +108,24 @@ class ListaSpesa:
                 f.write("Prodotto\tPrezzo (€)\n")
                 f.write("-" * 25 + "\n")
                 for item, prezzo in zip(self.items, self.prices):
-                    f.write(f"{item}\t€{prezzo:.2f}\n")
+                    f.write(f"{item}\t€{prezzo:.2f}\n") 
                 f.write("-" * 25 + "\n")
                 totale = sum(self.prices)
                 f.write(f"Totale:\t€{totale:.2f}\n")
             messagebox.showinfo("Salvato", "Lista salvata in lista_spesa.txt")
         except Exception as e:
             messagebox.showerror("Errore", f"Errore durante il salvataggio: {e}")
+            
+    def calcola_sconto(self):
+        if not self.prices:
+            messagebox.showinfo("Info", "Nessun prezzo inserito.")
+            return
+        sconto = simpledialog.askfloat("Sconto", "Inserisci la percentuale di sconto (es. 20 per 20%):", minvalue=0, maxvalue=100)
+        if sconto is None:
+            return
+        totale = sum(self.prices)
+        totale_scontato = totale * (1 - sconto/100)
+        messagebox.showinfo("Totale scontato", f"Totale originale: €{totale:.2f}\nSconto: {sconto:.1f}%\nTotale scontato: €{totale_scontato:.2f}")
             
 
 if __name__ == "__main__":
